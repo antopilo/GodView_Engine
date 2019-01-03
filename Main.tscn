@@ -7,6 +7,7 @@
 
 
 [node name="Main" type="Node2D"]
+position = Vector2( 357.982, 166.386 )
 
 [node name="CurrentLevel" type="Node2D" parent="."]
 
