@@ -2,3 +2,5 @@
 
 [node name="Main" type="Node2D"]
 
+[node name="Salut Emeryc t gay" type="Node2D" parent="."]
+
