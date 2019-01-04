@@ -2,7 +2,7 @@
 
 ----
 
-This is a engine made using the Godot engine. It is meant to be used for top down games. It is also currently under development by *Antoine Pilote* and *Emeryc Primeau*. It is fairly new still, but a lot more is planned. We won't support this engine, so if you plan to use this, you've been warned.
+This is a engine made using the Godot engine. It is meant to be used for top down games. It is also currently under development by *@antopilo* and *@emerycp*. It is fairly new still, but a lot more is planned. We won't support this engine, so if you plan to use this, you've been warned.
 
 ## Planned features
 
