@@ -5,15 +5,15 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 
-radius = 20.3558
-height = 43.0276
+radius = 31.549
+height = 65.1349
 
 [node name="Main" type="Node2D"]
-position = Vector2( 357.982, 166.386 )
 
 [node name="CurrentLevel" type="Node2D" parent="."]
 
 [node name="Layers" type="Node2D" parent="CurrentLevel"]
+editor/display_folded = true
 
 [node name="MainGround" type="Node2D" parent="CurrentLevel/Layers"]
 
@@ -25,8 +25,8 @@ position = Vector2( 357.982, 166.386 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
-position = Vector2( -0.135277, 0.067636 )
-scale = Vector2( 0.657301, 1.31113 )
+position = Vector2( -0.135284, 0.0676346 )
+scale = Vector2( 1, 2 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

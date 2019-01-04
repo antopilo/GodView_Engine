@@ -9,6 +9,8 @@ public class Player : KinematicBody2D
     const float DECELERATION = 10;
     const float MAXSPEED = 100;
     const float STOP_TRESHOLD = 10.1f;
+     
+    private Sprite spriteNode;
 
     // Direction de nos Inputs
     private Vector2 InputDirection = new Vector2();
@@ -19,16 +21,29 @@ public class Player : KinematicBody2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-
+        spriteNode = GetNode("Sprite") as Sprite;
     }
 
     public override void _PhysicsProcess(float delta)
     {
         GetInputDirection(); // Obtient la Direction des inputs
         UpdateVelocity();
-
         MoveAndSlide(Velocity);
+
+        if (Input.IsActionJustPressed("mouse1"))
+        {
+            spriteNode.Centered = !spriteNode.Centered;
+        }
+
+        Update();
+        
     }
+
+    public override void _Draw()
+    {
+        DrawLine(GetGlobalMousePosition() - this.GlobalPosition, new Vector2(), Color.ColorN("blue"));
+    }
+
 
     private void GetInputDirection()
     {
@@ -59,12 +74,13 @@ public class Player : KinematicBody2D
         if (Mathf.Abs(Velocity.y) > MAXSPEED)
             Velocity.y = MAXSPEED * Mathf.Sign(Velocity.y);
 
-        //Deceleration
+        // Deceleration
         if (InputDirection.x == 0)
             Velocity.x -= DECELERATION * Mathf.Sign(Velocity.x);
         if (InputDirection.y == 0)
             Velocity.y -= DECELERATION * Mathf.Sign(Velocity.y);
 
+        // Zero snaping
         if (Mathf.Abs(Velocity.x) < STOP_TRESHOLD && InputDirection.x == 0)
             Velocity.x = 0;
         if (Mathf.Abs(Velocity.y) < STOP_TRESHOLD && InputDirection.y == 0)
