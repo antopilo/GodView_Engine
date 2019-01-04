@@ -1,34 +1,37 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Content/Player.cs" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
-[sub_resource type="CapsuleShape2D" id=1]
-
-radius = 31.549
-height = 65.1349
+[ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=1]
 
 [node name="Main" type="Node2D"]
+position = Vector2( 357.982, 166.386 )
 
 [node name="CurrentLevel" type="Node2D" parent="."]
 
+[node name="Player" parent="CurrentLevel" instance=ExtResource( 1 )]
+
 [node name="Layers" type="Node2D" parent="CurrentLevel"]
-editor/display_folded = true
 
 [node name="MainGround" type="Node2D" parent="CurrentLevel/Layers"]
 
+[node name="TileMap" type="TileMap" parent="CurrentLevel/Layers/MainGround"]
+format = 1
+
 [node name="Entities" type="Node2D" parent="CurrentLevel/Layers"]
+
+[node name="TileMap" type="TileMap" parent="CurrentLevel/Layers/Entities"]
+format = 1
 
 [node name="Environnement" type="Node2D" parent="CurrentLevel/Layers"]
 
-[node name="Player" type="KinematicBody2D" parent="."]
-script = ExtResource( 1 )
+[node name="TileMap" type="TileMap" parent="CurrentLevel/Layers/Environnement"]
+format = 1
 
-[node name="Sprite" type="Sprite" parent="Player"]
-position = Vector2( -0.135284, 0.0676346 )
-scale = Vector2( 1, 2 )
-texture = ExtResource( 2 )
+[node name="Nodes" type="Node2D" parent="CurrentLevel"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 1 )
+[node name="EditorHandler" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="NodeHandler" type="Node2D" parent="EditorHandler"]
+
+[node name="GameHandler" type="Node2D" parent="."]
 
