@@ -1,5 +1,7 @@
+<p align="center">
 <img src="/docs/GodViewBanner.png?style=flat-square"
       alt="Logo Banner" />
+</p>
 
 <h1 align="center">GodView Engine</h1>
 
