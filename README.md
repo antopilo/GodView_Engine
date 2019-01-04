@@ -8,12 +8,12 @@ This is a engine made using the Godot engine. It is meant to be used for top dow
 
 At this stage there is a LOT to still to implement. but here is what is planned so far. Note : This can change during development.
 TODOS:
-- [] Node system(Level meta modification).
-- [] Layer system.
-- [] TileMap Editor.
-- [] Level saving(JSON).
-- [] Warping system(linking levels).
-- [] Loading levels from file.
+- [ ] Node system(Level meta modification).
+- [ ] Layer system.
+- [ ] TileMap Editor.
+- [ ] Level saving(JSON).
+- [ ] Warping system(linking levels).
+- [ ] Loading levels from file.
 
 ## Editor
 We are planning to do an in-game editor that supports tiled based editing, and node based editing. We also want to be able to Save the levels in a human readable format like JSON. We will also have per-level environment settings, for example Lighting, Mood, Theme, etc.
@@ -25,11 +25,11 @@ We have a simple Player Controller. Since player movement is always unique per g
 
 TODOS:
 - [X] Basic movement
-- [] Art
-- [] Projectiles
-- [] Advanced movement
-- [] Progression system
-- [] Character customization
+- [ ] Art
+- [ ] Projectiles
+- [ ] Advanced movement
+- [ ] Progression system
+- [ ] Character customization
 
 ## Levels
 
