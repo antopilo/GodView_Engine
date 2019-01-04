@@ -1,4 +1,4 @@
-![](docs\GodViewBanner.png)
+![](/docs/GodViewBanner.png)
 
 ----
 
