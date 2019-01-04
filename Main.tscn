@@ -1,10 +1,12 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Content/Player.cs" type="Script" id=1]
-[ext_resource path="res://Content/Art/MoveIcon.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
+radius = 20.3558
+height = 43.0276
 
 [node name="Main" type="Node2D"]
 position = Vector2( 357.982, 166.386 )
