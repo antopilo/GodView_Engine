@@ -6,7 +6,7 @@ using System;
 /// Il s'occupe principalement a conserver l'etat du jeu lorsque le mode est active. Il fait un 
 /// freeze du jeu, et active les menus ainsi que les options du mode editor. Il garde reference 
 /// aux autre handler pour pouvoir les appeler si besoin. Si aucun menu n'a ete fait encore c'est 
-/// parce que c'est une decision d'équipe de choisir une bonne vision pour le editor.
+/// parce que c'est une decision d'equipe de choisir une bonne vision pour le editor.
 ///   
 /// TODO: Choisir a quoi l'editor devrait ressemble.
 /// </summary>
