@@ -6,11 +6,14 @@
 [ext_resource path="res://Engine/Icons/MoveHandle.png" type="Texture" id=4]
 
 [node name="Main" type="Node2D"]
-position = Vector2( 357.982, 166.386 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CurrentLevel" type="Node2D" parent="."]
 
 [node name="Player" parent="CurrentLevel" instance=ExtResource( 1 )]
+position = Vector2( 432.802, 243.619 )
 
 [node name="Layers" type="Node2D" parent="CurrentLevel"]
 editor/display_folded = true
@@ -38,8 +41,10 @@ pause_mode = 2
 
 [node name="WorldNode" type="Control" parent="CurrentLevel/Nodes"]
 editor/display_folded = true
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 336.489
+margin_top = 99.9887
+margin_right = 376.489
+margin_bottom = 139.989
 script = ExtResource( 2 )
 
 [node name="Body" type="TextureButton" parent="CurrentLevel/Nodes/WorldNode"]
@@ -59,6 +64,13 @@ texture_normal = ExtResource( 4 )
 [node name="NodeHandler" type="Node2D" parent="EditorHandler"]
 
 [node name="LevelHandler" type="Node2D" parent="EditorHandler"]
+
+[node name="Status" type="Label" parent="EditorHandler"]
+margin_left = 2.99368
+margin_top = 3.59241
+margin_right = 82.9937
+margin_bottom = 17.5924
+text = "EDITOR MODE"
 
 [node name="GameHandler" type="Node2D" parent="."]
 
