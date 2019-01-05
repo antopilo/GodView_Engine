@@ -4,8 +4,6 @@ This document describe the current state of the Main scene(Main.tscn). This docu
 
 > NOTE: this is subject to any changes during developpement.
 
-![1546636078587](C:\Users\Antoine\AppData\Roaming\Typora\typora-user-images\1546636078587.png)
-
 > As you can see The Scene Contains 3 distinct node. "CurrentLevel", Editor Handler and the "GameHandler". The "GameHandler "sole purpose is to handle the transition between the game view and the editor view. It is meant to keep in memory the player position, and objects states for seamless transitions.
 
 ## Defining a Level
