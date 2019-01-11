@@ -9,6 +9,7 @@ public class Player : KinematicBody2D
     const float MAXSPEED = 100;
     const float STOP_TRESHOLD = 10.1f;
      
+	public Camera2D PlayerCamera;
     private Sprite SpriteNode;
     private Position2D HandPosition;
     
@@ -24,6 +25,7 @@ public class Player : KinematicBody2D
     {
         SpriteNode = GetNode("Sprite") as Sprite;
         HandPosition = GetNode("HandPosition") as Position2D;
+		PlayerCamera = GetNode("Camera") as Camera2D;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -99,4 +101,15 @@ public class Player : KinematicBody2D
         if (Mathf.Abs(Velocity.y) < STOP_TRESHOLD && InputDirection.y == 0)
             Velocity.y = 0;
     }
+	
+	// Signals
+	private void _on_InteractionRange_area_entered(object area)
+	{
+	    // Replace with function body.
+	}
+	
+	private void _on_InteractionRange_area_exited(object area)
+	{
+	    // Replace with function body.
+	}
 }
