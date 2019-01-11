@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chest5.png-3d3dbce2176d7ee962cb474bb4a6328f.stex"
+path="res://.import/FlameOrb.png-420fd7f8f4b3e25abfaa95ee57804dd8.stex"
 
 [deps]
 
-source_file="res://Content/Art/Entities/Chest/Chest5.png"
-dest_files=[ "res://.import/Chest5.png-3d3dbce2176d7ee962cb474bb4a6328f.stex" ]
+source_file="res://Content/Art/Spells/FlameOrb.png"
+dest_files=[ "res://.import/FlameOrb.png-420fd7f8f4b3e25abfaa95ee57804dd8.stex" ]
 
 [params]
 

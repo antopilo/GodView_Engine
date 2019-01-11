@@ -23,7 +23,7 @@ public class Player : KinematicBody2D
     public override void _Ready()
     {
         SpriteNode = GetNode("Sprite") as Sprite;
-        HandPosition = GetNode("Position2D") as Position2D;
+        HandPosition = GetNode("HandPosition") as Position2D;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -40,12 +40,12 @@ public class Player : KinematicBody2D
         if (GetGlobalMousePosition().x < this.GlobalPosition.x)
         {
             SpriteNode.FlipH = true;
-            HandPosition.Position = new Vector2(-11, -11);
+            HandPosition.Position = new Vector2(-6, -6);
         }
         else
         {
             SpriteNode.FlipH = false;
-            HandPosition.Position = new Vector2(11, -11);
+            HandPosition.Position = new Vector2(6, -6);
         }
 
         Update();

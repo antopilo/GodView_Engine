@@ -1,16 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=2]
 
 [node name="Root" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 37, 17 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-zoom = Vector2( 0.3, 0.3 )
 
 [node name="CurrentLevel" type="Node2D" parent="."]
 
@@ -18,10 +11,19 @@ zoom = Vector2( 0.3, 0.3 )
 
 [node name="MainGround" type="Node2D" parent="CurrentLevel/Layers"]
 
-[node name="Entities" type="Node2D" parent="CurrentLevel/Layers"]
+[node name="Grass" type="TileMap" parent="CurrentLevel/Layers/MainGround"]
+cell_size = Vector2( 16, 16 )
+format = 1
 
-[node name="Chest" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
-position = Vector2( 102, 39 )
+[node name="Entities" type="YSort" parent="CurrentLevel/Layers"]
 
-[node name="Environnement" type="Node2D" parent="CurrentLevel/Layers"]
+[node name="Chest" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 1 )]
+position = Vector2( 64, 32 )
+
+[node name="Player" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 144, 48 )
+
+[node name="Camera2D" type="Camera2D" parent="CurrentLevel/Layers/Entities/Player"]
+current = true
+zoom = Vector2( 0.3, 0.3 )
 
