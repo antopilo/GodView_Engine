@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WorldIcon.png-1a1f4f4429967805380d5333a9d46b8e.stex"
+path="res://.import/screenshot.png-ca0ed05bcac7cc4ee1d4c2d972ece23f.stex"
 
 [deps]
 
-source_file="res://Content/Art/WorldIcon.png"
-dest_files=[ "res://.import/WorldIcon.png-1a1f4f4429967805380d5333a9d46b8e.stex" ]
+source_file="res://addons/godot-git-control.funabab/screenshot.png"
+dest_files=[ "res://.import/screenshot.png-ca0ed05bcac7cc4ee1d4c2d972ece23f.stex" ]
 
 [params]
 

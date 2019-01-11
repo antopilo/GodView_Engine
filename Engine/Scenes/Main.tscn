@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Engine/Scripts/WorldNode.cs" type="Script" id=2]
+[ext_resource path="res://Engine/Scripts/Nodes/WorldNode.cs" type="Script" id=2]
 [ext_resource path="res://Engine/Icons/WorldIcon.png" type="Texture" id=3]
 [ext_resource path="res://Engine/Icons/MoveHandle.png" type="Texture" id=4]
 
-[node name="Main" type="Node2D"]
+[node name="Editor" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -40,16 +40,18 @@ format = 1
 pause_mode = 2
 
 [node name="WorldNode" type="Control" parent="CurrentLevel/Nodes"]
-editor/display_folded = true
-margin_left = 336.489
-margin_top = 99.9887
-margin_right = 376.489
-margin_bottom = 139.989
+margin_left = 336.0
+margin_top = 100.0
+margin_right = 386.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 50, 50 )
+rect_clip_content = true
 script = ExtResource( 2 )
 
 [node name="Body" type="TextureButton" parent="CurrentLevel/Nodes/WorldNode"]
 margin_right = 50.0
 margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
 texture_normal = ExtResource( 3 )
 
 [node name="MoveHandle" type="TextureButton" parent="CurrentLevel/Nodes/WorldNode"]
@@ -57,6 +59,7 @@ margin_left = -15.0
 margin_top = -15.0
 margin_right = 15.0
 margin_bottom = 15.0
+rect_min_size = Vector2( 30, 30 )
 texture_normal = ExtResource( 4 )
 
 [node name="EditorHandler" type="Node2D" parent="."]

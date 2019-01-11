@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MoveIcon.png-0f3d3ffe292a08eb3c97bf7e5968f618.stex"
+path="res://.import/godot-git.png-d7ac435f39d77eea6618833b75aed563.stex"
 
 [deps]
 
-source_file="res://Content/Art/MoveIcon.png"
-dest_files=[ "res://.import/MoveIcon.png-0f3d3ffe292a08eb3c97bf7e5968f618.stex" ]
+source_file="res://addons/godot-git-control.funabab/godot-git.png"
+dest_files=[ "res://.import/godot-git.png-d7ac435f39d77eea6618833b75aed563.stex" ]
 
 [params]
 
@@ -17,7 +17,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

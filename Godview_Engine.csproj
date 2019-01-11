@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5950F100-DD9C-4D9F-8B5E-310BBC1CFFDF}</ProjectGuid>
+    <ProjectGuid>{C38C3E9D-D549-460D-9BD0-F352F3570F3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
-    <RootNamespace>ZeldaEngine</RootNamespace>
-    <AssemblyName>ZeldaEngine</AssemblyName>
+    <RootNamespace>Godview_Engine</RootNamespace>
+    <AssemblyName>Godview_Engine</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
@@ -49,9 +49,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\Player.cs" />
-    <Compile Include="Engine\Scripts\EditorScripts\EditorHandler.cs" />
-    <Compile Include="Engine\Scripts\WorldNode.cs" />
+    <Compile Include="Content\Scripts\Player.cs" />
+    <Compile Include="Engine\Scripts\Nodes\WorldNode.cs" />
+    <Compile Include="Engine\Scripts\Handlers\EditorHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -15,9 +15,22 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ZeldaEngine"
-run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/name="Godview_Engine"
+run/main_scene="res://Engine/Scenes/Main.tscn"
+config/icon="res://Engine/Icons/icon.png"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
+window/size/test_width=1600
+window/size/test_height=900
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "godot-git-control.funabab" )
 
 [input]
 

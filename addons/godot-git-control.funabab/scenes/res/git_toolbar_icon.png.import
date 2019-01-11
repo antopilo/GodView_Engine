@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/git_toolbar_icon.png-5b363365a37a52a0dbce2e357353b701.stex"
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://addons/godot-git-control.funabab/scenes/res/git_toolbar_icon.png"
+dest_files=[ "res://.import/git_toolbar_icon.png-5b363365a37a52a0dbce2e357353b701.stex" ]
 
 [params]
 
