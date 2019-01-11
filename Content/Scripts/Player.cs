@@ -4,13 +4,14 @@ using System;
 public class Player : KinematicBody2D
 {
     // Contrainte
-    const float GRAVITY = 20;
     const float ACCELERATION = 35;
     const float DECELERATION = 10;
     const float MAXSPEED = 100;
     const float STOP_TRESHOLD = 10.1f;
      
-    private Sprite spriteNode;
+    private Sprite SpriteNode;
+    private Position2D HandPosition;
+    
 
     // Direction de nos Inputs
     private Vector2 InputDirection = new Vector2();
@@ -21,7 +22,8 @@ public class Player : KinematicBody2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        spriteNode = GetNode("Sprite") as Sprite;
+        SpriteNode = GetNode("Sprite") as Sprite;
+        HandPosition = GetNode("Position2D") as Position2D;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -32,7 +34,18 @@ public class Player : KinematicBody2D
 
         if (Input.IsActionJustPressed("mouse1"))
         {
-            spriteNode.Centered = !spriteNode.Centered;
+            SpriteNode.Centered = !SpriteNode.Centered;
+        }
+
+        if (GetGlobalMousePosition().x < this.GlobalPosition.x)
+        {
+            SpriteNode.FlipH = true;
+            HandPosition.Position = new Vector2(-11, -11);
+        }
+        else
+        {
+            SpriteNode.FlipH = false;
+            HandPosition.Position = new Vector2(11, -11);
         }
 
         Update();
@@ -41,7 +54,7 @@ public class Player : KinematicBody2D
 
     public override void _Draw()
     {
-        DrawLine(GetGlobalMousePosition() - this.GlobalPosition, new Vector2(), Color.ColorN("blue"));
+        DrawLine(GetGlobalMousePosition() - this.GlobalPosition, HandPosition.Position, Color.ColorN("blue"));
     }
 
 
