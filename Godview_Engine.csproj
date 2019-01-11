@@ -52,6 +52,7 @@
     <Compile Include="Content\Scripts\Player.cs" />
     <Compile Include="Engine\Scripts\Nodes\WorldNode.cs" />
     <Compile Include="Engine\Scripts\Handlers\EditorHandler.cs" />
+    <Compile Include="Engine\Scripts\Objects\SpriteStack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
