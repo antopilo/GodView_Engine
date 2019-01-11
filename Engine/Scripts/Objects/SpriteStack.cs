@@ -8,6 +8,15 @@ public class SpriteStack : Node2D
 {
     const int MaxSpriteCount = 20;
     public Sprite[] Layers = new Sprite[MaxSpriteCount];
+    [Export] public string TestLoadPath = "";
+
+    public override void _Ready()
+    {
+
+        GD.Print(TestLoadPath);
+        if(TestLoadPath != "")
+            MakeStackFromPath(TestLoadPath);
+    }
 
     /// <summary>
     /// Stack the sprites
@@ -23,6 +32,7 @@ public class SpriteStack : Node2D
         {
             // Loading Image
             var image_ = new Image();
+            GD.Print(image);
             image_.Load(image);
 
             // Making ImageTexture from image.
@@ -36,9 +46,9 @@ public class SpriteStack : Node2D
             sprite.Position -= new Vector2(0, offset);
             sprite.Name = offset.ToString();
 
-            Layers[Layers.Length] = sprite;
+            Layers[Layers.Length - 1] = sprite;
             this.AddChild(sprite);
-
+            GD.Print("SpriteStacker added: " + sprite.Name);
             // Increasing the offset for next layer.
             offset += 1;
         }
@@ -95,7 +105,7 @@ public class SpriteStack : Node2D
             else if ( !file.BeginsWith(".") && file.EndsWith(".png") ) // making sure its a png
                 files[files.Length] = file;
         }
-
+        GD.Print("SpriteStacker detected files: " + files.ToString());
         // Close the listing
         folder.ListDirEnd(); 
 
