@@ -4,23 +4,34 @@ using System.Collections.Generic;
 
 public class Player : KinematicBody2D
 {
-    // Contrainte
+    // Physics
     const float ACCELERATION = 35;
     const float DECELERATION = 10;
     const float MAXSPEED = 100;
     const float STOP_TRESHOLD = 10.1f;
-     
-	public Camera2D PlayerCamera;
+    
+    private Vector2 InputDirection = new Vector2();
+    private Vector2 Velocity = new Vector2();
+
+    // References
+    public Camera2D PlayerCamera;
     private Sprite SpriteNode;
     private Position2D HandPosition;
-    
-	private List<Node2D> InteractableObject = new List<Node2D>(99);
-	
-    // Direction de nos Inputs
-    private Vector2 InputDirection = new Vector2();
 
-    // Vitesse de notre joueur
-    private Vector2 Velocity = new Vector2();
+    private TextureProgress HealthBar;
+    private Particles2D HealthParticles;
+    public bool Hurting = false;
+
+    // States
+    private float MaxHealth = 100;
+    private float Health;
+    [Export] Color FullHealthTint = new Color("63c74d");
+    [Export] Color MidHealthTint = new Color("f77622");
+    [Export] Color LowHealthTint = new Color("e43b44");
+
+    public bool Alive = true;
+    // Logic stuff
+	private List<Node2D> InteractableObject = new List<Node2D>(99);
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -28,19 +39,36 @@ public class Player : KinematicBody2D
         SpriteNode = GetNode("Sprite") as Sprite;
         HandPosition = GetNode("HandPosition") as Position2D;
 		PlayerCamera = GetNode("Camera2D") as Camera2D;
+        HealthBar = GetNode("HealthBar") as TextureProgress;
+        HealthParticles = HealthBar.GetNode("Particles2D") as Particles2D;
+
+        Health = MaxHealth;
     }
 
+    // Called 60 times per second.
     public override void _PhysicsProcess(float delta)
     {
         GetInputDirection(); // Obtient la Direction des inputs
-        UpdateVelocity();
-        MoveAndSlide(Velocity);
-		GetInteractable();
-        if (Input.IsActionJustPressed("mouse1"))
-        {
-            SpriteNode.Centered = !SpriteNode.Centered;
-        }
+        UpdateVelocity(); // Calculate acceleration and other stuff.
+        MoveAndSlide(Velocity); // Move
 
+        UpdateParticles();
+
+        // Other
+        UpdateSprite(); // Adjust the Sprite of the player
+		GetInteractable(); // Check for interactable objects
+
+        Update(); // Calling _Draw()
+    }
+
+    // Called when Update() is called
+    public override void _Draw()
+    {
+        DrawLine(GetGlobalMousePosition() - this.GlobalPosition, HandPosition.Position, Color.ColorN("blue"));
+    }
+
+    private void UpdateSprite()
+    {
         if (GetGlobalMousePosition().x < this.GlobalPosition.x)
         {
             SpriteNode.FlipH = true;
@@ -51,17 +79,11 @@ public class Player : KinematicBody2D
             SpriteNode.FlipH = false;
             HandPosition.Position = new Vector2(6, -6);
         }
-
-        Update();
-        
     }
-
-    public override void _Draw()
+    private void UpdateParticles()
     {
-        DrawLine(GetGlobalMousePosition() - this.GlobalPosition, HandPosition.Position, Color.ColorN("blue"));
+        HealthParticles.Emitting = Hurting;
     }
-
-
     private void GetInputDirection()
     {
         if (Input.IsActionPressed("ui_left"))
@@ -110,11 +132,11 @@ public class Player : KinematicBody2D
         if (InteractableObject.Count > 0)
         {
             Node2D closest = InteractableObject[0];
-            var closestDistance = (closest.GlobalPosition - this.GlobalPosition).Length();
+            var closestDistance = (closest.GlobalPosition - this.GlobalPosition).Length(); //Distance du joueur
             for (int i = 0; i < InteractableObject.Count; i++)
             {
                 var currentDistance = (InteractableObject[i].GlobalPosition - this.GlobalPosition).Length();
-                if (currentDistance < closestDistance)
+                if (currentDistance < closestDistance) // Compare si il y en a un plus proche que le present
                     closest = InteractableObject[i] as Node2D;
             }
 
@@ -136,6 +158,33 @@ public class Player : KinematicBody2D
             (GetNode("Label") as Label).Text += " - Opened :" + (InteractableObject[0] as Chest).Opened.ToString();
         } 
 
+    }
+
+    public void HurtPlayer(float amount)
+    {
+        Health -= amount;
+        HealthBar.Value = Health;
+        Health = Mathf.Clamp(Health, 0, MaxHealth);
+
+        // Setting health bar Color
+        if (Health < 33)
+            HealthBar.SetTintProgress(LowHealthTint);
+        else if(Health < 66)
+            HealthBar.SetTintProgress(MidHealthTint);
+        else
+            HealthBar.SetTintProgress(FullHealthTint);
+
+        HealthParticles.Position = new Vector2(Health / 4, 3);
+
+        (HealthParticles.GetProcessMaterial() as ParticlesMaterial).Color = HealthBar.GetTintProgress();
+        if (Health <= 0)
+            Die();
+    }
+
+    private void Die()
+    {
+        // TODO: Death of player.
+        Alive = false;
     }
 	// Signals
 	private void _on_InteractionRange_area_entered(object area)
