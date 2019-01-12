@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chest4.png-c121074096869e4e7ecf9848d3d3fb98.stex"
+path="res://.import/icon.png-be38bcc53a5f19f28a8c043cf1cbb790.stex"
 
 [deps]
 
-source_file="res://Content/Art/Entities/Chest/Chest4.png"
-dest_files=[ "res://.import/Chest4.png-c121074096869e4e7ecf9848d3d3fb98.stex" ]
+source_file="res://docs/icon.png"
+dest_files=[ "res://.import/icon.png-be38bcc53a5f19f28a8c043cf1cbb790.stex" ]
 
 [params]
 
@@ -17,7 +17,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

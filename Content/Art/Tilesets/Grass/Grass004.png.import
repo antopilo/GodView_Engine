@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chest4.png-c121074096869e4e7ecf9848d3d3fb98.stex"
+path="res://.import/Grass004.png-7695e41dd25d47a695be652385daffb9.stex"
 
 [deps]
 
-source_file="res://Content/Art/Entities/Chest/Chest4.png"
-dest_files=[ "res://.import/Chest4.png-c121074096869e4e7ecf9848d3d3fb98.stex" ]
+source_file="res://Content/Art/Tilesets/Grass/Grass004.png"
+dest_files=[ "res://.import/Grass004.png-7695e41dd25d47a695be652385daffb9.stex" ]
 
 [params]
 

@@ -49,6 +49,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Content\Scripts\Entities\Chest\Chest.cs" />
+    <Compile Include="Content\Scripts\Entities\Spell\FireArea.cs" />
+    <Compile Include="Content\Scripts\Entities\Spell\HealArea.cs" />
     <Compile Include="Content\Scripts\Player.cs" />
     <Compile Include="Engine\Scripts\Nodes\WorldNode.cs" />
     <Compile Include="Engine\Scripts\Handlers\EditorHandler.cs" />

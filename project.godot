@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godview_Engine"
-run/main_scene="res://Engine/Scenes/Main.tscn"
+run/main_scene="res://Content/Scenes/DebugLevel.tscn"
 config/icon="res://Engine/Icons/icon.png"
 
 [display]
