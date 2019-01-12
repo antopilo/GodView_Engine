@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Content/Tilesets/GrassTestingTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Content/Scenes/Entities/Spells/HealAOE/HealArea.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Content/Scripts/Camera.cs" type="Script" id=6]
+[ext_resource path="res://Engine/Scripts/Switcher/EditorSwitcher.cs" type="Script" id=7]
 
 [node name="Root" type="Node2D"]
 
@@ -61,5 +63,8 @@ zoom = Vector2( 0.3, 0.3 )
 limit_left = 0
 limit_top = 0
 limit_smoothed = true
-smoothing_enabled = true
+script = ExtResource( 6 )
+
+[node name="EditorSwitcher" type="Node2D" parent="."]
+script = ExtResource( 7 )
 

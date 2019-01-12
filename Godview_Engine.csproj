@@ -49,6 +49,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Content\Scripts\Camera.cs" />
     <Compile Include="Content\Scripts\Entities\Chest\Chest.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\FireArea.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\HealArea.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Engine\Scripts\Nodes\WorldNode.cs" />
     <Compile Include="Engine\Scripts\Handlers\EditorHandler.cs" />
     <Compile Include="Engine\Scripts\Objects\SpriteStack.cs" />
+    <Compile Include="Engine\Scripts\Switcher\EditorSwitcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
