@@ -35,7 +35,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
@@ -44,7 +44,7 @@ animations = [ {
 "speed": 6.0
 } ]
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="ParticlesMaterial" id=4]
 
 emission_shape = 1
 emission_sphere_radius = 4.0
@@ -56,11 +56,11 @@ scale = 0.3
 scale_random = 1.0
 color = Color( 0, 0.584314, 0.913725, 1 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=5]
 
 radius = 8.0
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=6]
 
 flag_disable_z = true
 gravity = Vector3( 0, 98, 0 )
@@ -102,13 +102,13 @@ visible = false
 position = Vector2( 0, -1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="Water" type="AnimatedSprite" parent="HandPosition"]
 scale = Vector2( 0.375, 0.428571 )
-frames = SubResource( 5 )
-frame = 2
+frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="HandPosition/Water"]
@@ -117,12 +117,12 @@ amount = 5
 lifetime = 0.23
 fixed_fps = 12
 local_coords = false
-process_material = SubResource( 6 )
+process_material = SubResource( 4 )
 
 [node name="InteractionRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange"]
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = -62.0
@@ -157,7 +157,7 @@ rotation = -1.57079
 amount = 11
 randomness = 0.75
 local_coords = false
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 
 [node name="Camera" type="Camera2D" parent="."]
 current = true
@@ -165,6 +165,9 @@ zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
 limit_smoothed = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
 script = ExtResource( 21 )
 
 [connection signal="area_entered" from="InteractionRange" to="." method="_on_InteractionRange_area_entered"]

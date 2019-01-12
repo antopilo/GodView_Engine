@@ -3,7 +3,7 @@ using System;
 
 public class Camera : Camera2D
 {
-    const int CameraMaxRangeFromPlayer = 50;
+    const int CameraMaxRangeFromPlayer = 175;
 
     public bool Shaking = false;
 
@@ -13,6 +13,10 @@ public class Camera : Camera2D
     private float ZoomStep = 1;
     private float Amount;
     private RandomNumberGenerator Rng = new RandomNumberGenerator();
+
+    private float MaxZoom = 0.75f;
+    private float MinZoom = 0.5f;
+    private float ZoomModifier = 0.75f;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -35,22 +39,32 @@ public class Camera : Camera2D
             
             Offset += new Vector2(x, y);
         }
+        Zoom = new Vector2(ZoomModifier / 2, ZoomModifier / 2);
     }
     public override void _Input(InputEvent @event)
     {
         if (@event.IsActionPressed("ZoomIn"))
-            Zoom /= new Vector2(1.1f, 1.1f);
-        else if(@event.IsActionPressed("ZoomOut"))
-            Zoom *= new Vector2(1.1f, 1.1f);
+            ZoomModifier -= 0.01f;
+        else if (@event.IsActionPressed("ZoomOut"))
+            ZoomModifier += 0.01f;
+
+        if (ZoomModifier < MinZoom)
+            ZoomModifier = MinZoom;
+        if (ZoomModifier > MaxZoom)
+            ZoomModifier = MaxZoom;
+
+        
     }
 
 
     private void AimPeeking()
     {
         var Distance = GetGlobalMousePosition() - _Player.GlobalPosition;
-        Distance.x = Mathf.Clamp(Distance.x, -CameraMaxRangeFromPlayer, CameraMaxRangeFromPlayer);
+
+        Distance.x = Mathf.Clamp(Distance.x , -CameraMaxRangeFromPlayer, CameraMaxRangeFromPlayer);
         Distance.y = Mathf.Clamp(Distance.y, -CameraMaxRangeFromPlayer, CameraMaxRangeFromPlayer);
-        Offset = Distance;
+
+        Offset = Distance / 4;
     }
 
     /// <summary>
