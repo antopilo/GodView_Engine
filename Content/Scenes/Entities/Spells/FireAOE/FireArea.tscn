@@ -26,7 +26,7 @@ curve = SubResource( 5 )
 [sub_resource type="ParticlesMaterial" id=2]
 
 emission_shape = 1
-emission_sphere_radius = 4.59
+emission_sphere_radius = 15.26
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, -25, 0 )
@@ -44,6 +44,7 @@ hue_variation_random = 1.0
 
 [node name="FireArea" type="Node2D"]
 script = ExtResource( 1 )
+DamagePerSecond = 25.0
 
 [node name="HitZone" type="Area2D" parent="."]
 

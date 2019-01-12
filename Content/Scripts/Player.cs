@@ -17,6 +17,7 @@ public class Player : KinematicBody2D
     public Camera2D PlayerCamera;
     private Sprite SpriteNode;
     private Sprite OutlineSprite;
+    private Sprite ShadowSprite;
     private Position2D HandPosition;
 
     private TextureProgress HealthBar;
@@ -29,8 +30,8 @@ public class Player : KinematicBody2D
     [Export] Color FullHealthTint = new Color("63c74d");
     [Export] Color MidHealthTint = new Color("f77622");
     [Export] Color LowHealthTint = new Color("e43b44");
-
     public bool Alive = true;
+
     // Logic stuff
 	private List<Node2D> InteractableObject = new List<Node2D>(99);
 
@@ -39,6 +40,7 @@ public class Player : KinematicBody2D
     {
         SpriteNode = GetNode("Sprite") as Sprite;
         OutlineSprite = GetNode("Outline") as Sprite;
+        ShadowSprite = GetNode("Shadow") as Sprite;
         HandPosition = GetNode("HandPosition") as Position2D;
 		PlayerCamera = GetNode("Camera2D") as Camera2D;
         HealthBar = GetNode("HealthBar") as TextureProgress;
@@ -83,6 +85,7 @@ public class Player : KinematicBody2D
         }
 
         OutlineSprite.FlipH = SpriteNode.FlipH;
+        ShadowSprite.FlipH = SpriteNode.FlipH;
     }
     private void UpdateParticles()
     {
@@ -137,6 +140,7 @@ public class Player : KinematicBody2D
         {
             Node2D closest = InteractableObject[0];
             var closestDistance = (closest.GlobalPosition - this.GlobalPosition).Length(); //Distance du joueur
+
             for (int i = 0; i < InteractableObject.Count; i++)
             {
                 var currentDistance = (InteractableObject[i].GlobalPosition - this.GlobalPosition).Length();
@@ -150,18 +154,18 @@ public class Player : KinematicBody2D
             InteractableObject[0] = closest;
             InteractableObject[idx] = temp;
         }
+
 		if(Input.IsActionJustPressed("ui_interact") && InteractableObject != null)
 		{
-			if((InteractableObject[0] as Node2D).HasMethod("Interact"))
+			if( (InteractableObject[0] as Node2D).HasMethod("Interact") )
 			    (InteractableObject[0] as Chest).Interact();
-			
 		}
+
         (GetNode("Label") as Label).Text = InteractableObject.Count > 0 ? (InteractableObject[0] as Node2D).Name : "Nothing..";
         if (InteractableObject.Count > 0 && InteractableObject[0] is Chest)
         {
             (GetNode("Label") as Label).Text += " - Opened :" + (InteractableObject[0] as Chest).Opened.ToString();
         } 
-
     }
 
     public void HurtPlayer(float amount)
@@ -190,14 +194,16 @@ public class Player : KinematicBody2D
         // TODO: Death of player.
         Alive = false;
     }
-	// Signals
-	private void _on_InteractionRange_area_entered(object area)
-	{
+
+	#region Signal
+    private void _on_InteractionRange_area_entered(object area)
+    {
         InteractableObject.Insert(0, ((area as Area2D).GetParent() as Node2D));
-	}
-	
-	private void _on_InteractionRange_area_exited(object area)
-	{
-        InteractableObject.Remove((area as Area2D).GetParent() as Node2D);
     }
+
+    private void _on_InteractionRange_area_exited(object area)
+    {
+        InteractableObject.Remove((area as Area2D).GetParent() as Node2D);
+    } 
+    #endregion
 }
