@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Content/Scripts/Entities/Spell/HealArea.cs" type="Script" id=1]
+[ext_resource path="res://Content/Art/Spells/HealAOE/Area.png" type="Texture" id=2]
+[ext_resource path="res://Content/Art/Spells/Particles/Health1.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+radius = 24.0208
+
+[sub_resource type="Gradient" id=2]
+
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+
+gradient = SubResource( 2 )
+
+[sub_resource type="Curve" id=4]
+
+_data = [ Vector2( 0.0195092, 0.9752 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+
+emission_shape = 1
+emission_sphere_radius = 20.98
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, -2, 0 )
+angular_velocity = 0.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.1
+orbit_velocity_random = 1.0
+linear_accel = -5.0
+linear_accel_random = 0.46
+scale_random = 1.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.06
+hue_variation_random = 1.0
+
+[node name="HealArea" type="Node2D"]
+self_modulate = Color( 0.592157, 1, 0, 1 )
+script = ExtResource( 1 )
+HealPerSecond = 15.0
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="HitZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitZone"]
+shape = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 10
+lifetime = 2.0
+process_material = SubResource( 6 )
+texture = ExtResource( 3 )
+
+[connection signal="body_entered" from="HitZone" to="." method="_on_HitZone_body_entered"]
+[connection signal="body_exited" from="HitZone" to="." method="_on_HitZone_body_exited"]

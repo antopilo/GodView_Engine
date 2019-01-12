@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=5]
+
+code = "shader_type canvas_item;
+uniform float SunAngle = 2;
+
+void vertex() {
+	
+    if (VERTEX.y <= 0.2) {
+        VERTEX.x += SunAngle;
+		if(SunAngle < -15.0){
+			VERTEX.y -= SunAngle / 2.0;
+		}
+		
+    }
+}"
+
+[resource]
+
+shader = SubResource( 5 )
+shader_param/SunAngle = -15.0
+

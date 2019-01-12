@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Content/Scripts/Entities/Oil/Oil.cs" type="Script" id=1]
+[ext_resource path="res://Content/Art/Spells/Oil/oilArea.png" type="Texture" id=2]
+[ext_resource path="res://Content/Art/Spells/Particles/Flame1.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+radius = 24.0208
+
+[sub_resource type="Gradient" id=3]
+
+colors = PoolColorArray( 0.968627, 1, 0, 1, 1, 0.14902, 0.14902, 0.133333 )
+
+[sub_resource type="GradientTexture" id=4]
+
+gradient = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+
+_data = [ Vector2( 0.0195092, 0.9752 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+
+emission_shape = 1
+emission_sphere_radius = 15.26
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, -25, 0 )
+angular_velocity = 94.21
+angular_velocity_random = 1.0
+orbit_velocity = 0.1
+orbit_velocity_random = 1.0
+linear_accel = -13.09
+linear_accel_random = 0.46
+scale_random = 1.0
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 4 )
+hue_variation = 0.06
+hue_variation_random = 1.0
+
+[node name="OilArea" type="Node2D"]
+self_modulate = Color( 0.592157, 1, 0, 1 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="HitZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitZone"]
+shape = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+visible = false
+amount = 200
+lifetime = 2.0
+process_material = SubResource( 2 )
+texture = ExtResource( 3 )
+
+[connection signal="area_entered" from="HitZone" to="." method="_on_HitZone_area_entered"]
+[connection signal="area_exited" from="HitZone" to="." method="_on_HitZone_area_exited"]

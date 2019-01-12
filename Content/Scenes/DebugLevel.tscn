@@ -142,7 +142,7 @@ stretch_mode = 1
 position = Vector2( 49, 99 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 1 )
-frame = 9
+frame = 21
 playing = true
 
 [node name="Label" type="Label" parent="UI/Screen/SelectedSpell"]
