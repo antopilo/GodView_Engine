@@ -59,7 +59,6 @@ __meta__ = {
 
 [node name="CurrentLevel" type="Node2D" parent="."]
 script = ExtResource( 1 )
-SunAngle = 8.25
 
 [node name="Layers" type="Node2D" parent="CurrentLevel"]
 

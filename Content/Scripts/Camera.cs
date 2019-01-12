@@ -3,10 +3,14 @@ using System;
 
 public class Camera : Camera2D
 {
+    const int CameraMaxRangeFromPlayer = 50;
+
+    public bool Shaking = false;
+
+    private Timer _Timer;
+
     private Player _Player;
     private float ZoomStep = 1;
-    public bool Shaking = false;
-    private Timer _Timer;
     private float Amount;
     private RandomNumberGenerator Rng = new RandomNumberGenerator();
 
@@ -14,11 +18,13 @@ public class Camera : Camera2D
     public override void _Ready()
     {
         _Player = GetParent() as Player;
-        Shake(1, 5);
+        //Shake(1, 5);
     }
 
     public override void _PhysicsProcess(float delta)
     {
+        AimPeeking();
+
         if (Shaking)
         {
             Rng.Randomize(); // Randomizing seed
@@ -27,9 +33,8 @@ public class Camera : Camera2D
             Rng.Randomize(); // Randomizing seed again
             float y = Rng.RandfRange(-Amount, Amount);
             
-            Offset = new Vector2(x, y);
+            Offset += new Vector2(x, y);
         }
-        
     }
     public override void _Input(InputEvent @event)
     {
@@ -37,6 +42,15 @@ public class Camera : Camera2D
             Zoom /= new Vector2(1.1f, 1.1f);
         else if(@event.IsActionPressed("ZoomOut"))
             Zoom *= new Vector2(1.1f, 1.1f);
+    }
+
+
+    private void AimPeeking()
+    {
+        var Distance = GetGlobalMousePosition() - _Player.GlobalPosition;
+        Distance.x = Mathf.Clamp(Distance.x, -CameraMaxRangeFromPlayer, CameraMaxRangeFromPlayer);
+        Distance.y = Mathf.Clamp(Distance.y, -CameraMaxRangeFromPlayer, CameraMaxRangeFromPlayer);
+        Offset = Distance;
     }
 
     /// <summary>
@@ -76,7 +90,6 @@ public class Camera : Camera2D
         if (!Shaking)
             return;
 
-        _Timer.WaitTime = 0;
         _Timer.Stop();
         _Timer.QueueFree();
 
