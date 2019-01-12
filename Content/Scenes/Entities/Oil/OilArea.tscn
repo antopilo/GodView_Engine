@@ -6,28 +6,28 @@
 
 [sub_resource type="CircleShape2D" id=1]
 
-radius = 24.0208
+radius = 12.4673
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=2]
 
 colors = PoolColorArray( 0.968627, 1, 0, 1, 1, 0.14902, 0.14902, 0.133333 )
 
-[sub_resource type="GradientTexture" id=4]
+[sub_resource type="GradientTexture" id=3]
 
-gradient = SubResource( 3 )
+gradient = SubResource( 2 )
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=4]
 
 _data = [ Vector2( 0.0195092, 0.9752 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=6]
+[sub_resource type="CurveTexture" id=5]
 
-curve = SubResource( 5 )
+curve = SubResource( 4 )
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=6]
 
 emission_shape = 1
-emission_sphere_radius = 15.26
+emission_sphere_radius = 12.0
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, -25, 0 )
@@ -37,17 +37,19 @@ orbit_velocity = 0.1
 orbit_velocity_random = 1.0
 linear_accel = -13.09
 linear_accel_random = 0.46
+scale = 1.5
 scale_random = 1.0
-scale_curve = SubResource( 6 )
-color_ramp = SubResource( 4 )
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
 hue_variation = 0.06
 hue_variation_random = 1.0
 
 [node name="OilArea" type="Node2D"]
-self_modulate = Color( 0.592157, 1, 0, 1 )
 script = ExtResource( 1 )
+OilIgnitedColor = Color( 0.917647, 0.407843, 0, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.75, 0.75 )
 z_index = -1
 texture = ExtResource( 2 )
 
@@ -56,12 +58,27 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitZone"]
 shape = SubResource( 1 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
-visible = false
-amount = 200
+[node name="Flames" type="Particles2D" parent="."]
+emitting = false
+amount = 75
 lifetime = 2.0
-process_material = SubResource( 2 )
+local_coords = false
+process_material = SubResource( 6 )
 texture = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="Flames"]
+visible = false
+texture = ExtResource( 2 )
+texture_scale = 1.35
+color = Color( 0.996078, 1, 0.372549, 1 )
+
+[node name="Light2D2" type="Light2D" parent="Flames"]
+visible = false
+texture = ExtResource( 2 )
+texture_scale = 2.05
+color = Color( 0.996078, 1, 0.372549, 1 )
 
 [connection signal="area_entered" from="HitZone" to="." method="_on_HitZone_area_entered"]
 [connection signal="area_exited" from="HitZone" to="." method="_on_HitZone_area_exited"]
+[connection signal="body_entered" from="HitZone" to="." method="_on_HitZone_body_entered"]
+[connection signal="body_exited" from="HitZone" to="." method="_on_HitZone_body_exited"]

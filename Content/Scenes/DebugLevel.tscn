@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Content/Levels/Level.cs" type="Script" id=1]
 [ext_resource path="res://Content/Tilesets/GrassTestingTileset.tres" type="TileSet" id=2]
@@ -6,47 +6,48 @@
 [ext_resource path="res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Engine/Scripts/Switcher/EditorSwitcher.cs" type="Script" id=7]
-[ext_resource path="res://Content/Art/UI/SpellContainerFrame.png" type="Texture" id=8]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb1.png" type="Texture" id=9]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb2.png" type="Texture" id=10]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb3.png" type="Texture" id=11]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb4.png" type="Texture" id=12]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb5.png" type="Texture" id=13]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb6.png" type="Texture" id=14]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb7.png" type="Texture" id=15]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb8.png" type="Texture" id=16]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb9.png" type="Texture" id=17]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb10.png" type="Texture" id=18]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb11.png" type="Texture" id=19]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb12.png" type="Texture" id=20]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb13.png" type="Texture" id=21]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb14.png" type="Texture" id=22]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb15.png" type="Texture" id=23]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb16.png" type="Texture" id=24]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb17.png" type="Texture" id=25]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb18.png" type="Texture" id=26]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb19.png" type="Texture" id=27]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb20.png" type="Texture" id=28]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb21.png" type="Texture" id=29]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb22.png" type="Texture" id=30]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb23.png" type="Texture" id=31]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb24.png" type="Texture" id=32]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb25.png" type="Texture" id=33]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb26.png" type="Texture" id=34]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb27.png" type="Texture" id=35]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb28.png" type="Texture" id=36]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb29.png" type="Texture" id=37]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb30.png" type="Texture" id=38]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb31.png" type="Texture" id=39]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb32.png" type="Texture" id=40]
-[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb33.png" type="Texture" id=41]
-[ext_resource path="res://Content/Art/Font/PixelSquare.tres" type="DynamicFont" id=42]
+[ext_resource path="res://Content/Scenes/Entities/Oil/OilArea.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Engine/Scripts/Switcher/EditorSwitcher.cs" type="Script" id=8]
+[ext_resource path="res://Content/Art/UI/SpellContainerFrame.png" type="Texture" id=9]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb1.png" type="Texture" id=10]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb2.png" type="Texture" id=11]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb3.png" type="Texture" id=12]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb4.png" type="Texture" id=13]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb5.png" type="Texture" id=14]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb6.png" type="Texture" id=15]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb7.png" type="Texture" id=16]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb8.png" type="Texture" id=17]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb9.png" type="Texture" id=18]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb10.png" type="Texture" id=19]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb11.png" type="Texture" id=20]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb12.png" type="Texture" id=21]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb13.png" type="Texture" id=22]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb14.png" type="Texture" id=23]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb15.png" type="Texture" id=24]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb16.png" type="Texture" id=25]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb17.png" type="Texture" id=26]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb18.png" type="Texture" id=27]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb19.png" type="Texture" id=28]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb20.png" type="Texture" id=29]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb21.png" type="Texture" id=30]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb22.png" type="Texture" id=31]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb23.png" type="Texture" id=32]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb24.png" type="Texture" id=33]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb25.png" type="Texture" id=34]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb26.png" type="Texture" id=35]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb27.png" type="Texture" id=36]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb28.png" type="Texture" id=37]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb29.png" type="Texture" id=38]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb30.png" type="Texture" id=39]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb31.png" type="Texture" id=40]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb32.png" type="Texture" id=41]
+[ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb33.png" type="Texture" id=42]
+[ext_resource path="res://Content/Art/Font/PixelSquare.tres" type="DynamicFont" id=43]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "default",
 "speed": 15.0
@@ -78,10 +79,14 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 position = Vector2( 502, 240 )
 
 [node name="FireArea" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 4 )]
-position = Vector2( 454, 240 )
+position = Vector2( 442.038, 275.679 )
 
 [node name="Chest" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
 position = Vector2( 326, 208 )
+
+[node name="Chest8" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
+position = Vector2( 265.176, 219 )
+scale = Vector2( 5.4, 5.4 )
 
 [node name="Chest2" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
 position = Vector2( 342, 208 )
@@ -104,8 +109,129 @@ position = Vector2( 422, 208 )
 [node name="Player" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 6 )]
 position = Vector2( 406, 224 )
 
+[node name="OilArea" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 452.506, 289.323 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea2" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 468.442, 291.216 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea3" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 489.9, 294.53 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea4" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 510.569, 296.739 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea5" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 533.131, 300.21 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea6" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 524.927, 312.516 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea7" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 503.327, 310 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea8" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 510.569, 324.016 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea9" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 490.531, 315.338 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea10" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 493.055, 337.112 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea11" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 480.275, 328.907 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea12" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 476.331, 310.605 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea13" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 462.131, 303.347 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea14" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 525.084, 325.279 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea15" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 539.442, 314.392 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea16" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 534.709, 323.385 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea17" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 521.929, 289.778 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea18" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 507.571, 338.532 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
+[node name="OilArea19" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 7 )]
+position = Vector2( 521.14, 336.954 )
+scale = Vector2( 0.48001, 0.48001 )
+IgniteDelay = 0.25
+SizeReduction = Vector2( 0.1, 0.1 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
+
 [node name="EditorSwitcher" type="Node2D" parent="."]
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -114,6 +240,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 margin_bottom = 7.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="SelectedSpell" type="Control" parent="UI/Screen"]
 anchor_left = 0.5
@@ -131,7 +260,7 @@ anchor_bottom = 1.0
 margin_left = -50.0
 margin_top = -100.0
 margin_right = 50.0
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 expand = true
 stretch_mode = 1
 
@@ -139,7 +268,7 @@ stretch_mode = 1
 position = Vector2( 49, 99 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 1 )
-frame = 9
+frame = 20
 playing = true
 
 [node name="Label" type="Label" parent="UI/Screen/SelectedSpell"]
@@ -148,7 +277,7 @@ anchor_right = 0.5
 margin_left = -75.0
 margin_right = 75.0
 margin_bottom = 18.0
-custom_fonts/font = ExtResource( 42 )
+custom_fonts/font = ExtResource( 43 )
 custom_constants/shadow_offset_x = 3
 custom_constants/shadow_offset_y = 2
 custom_constants/shadow_as_outline = 2
