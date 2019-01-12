@@ -42,7 +42,7 @@ public class Player : KinematicBody2D
         OutlineSprite = GetNode("Outline") as Sprite;
         ShadowSprite = GetNode("Shadow") as Sprite;
         HandPosition = GetNode("HandPosition") as Position2D;
-		PlayerCamera = GetNode("Camera2D") as Camera2D;
+		PlayerCamera = GetNode("Camera") as Camera2D;
         HealthBar = GetNode("HealthBar") as TextureProgress;
         HealthParticles = HealthBar.GetNode("Particles2D") as Particles2D;
 
