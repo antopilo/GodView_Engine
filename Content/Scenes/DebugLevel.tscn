@@ -110,7 +110,6 @@ position = Vector2( 144, 48 )
 script = ExtResource( 7 )
 
 [node name="UI" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Screen" type="Control" parent="UI"]
 anchor_right = 1.0
@@ -142,7 +141,7 @@ stretch_mode = 1
 position = Vector2( 49, 99 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 1 )
-frame = 21
+frame = 30
 playing = true
 
 [node name="Label" type="Label" parent="UI/Screen/SelectedSpell"]
