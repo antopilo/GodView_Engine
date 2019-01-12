@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Content/Scripts/Player.cs" type="Script" id=1]
 [ext_resource path="res://Content/Shaders/Shadow.tres" type="Material" id=2]
@@ -17,10 +17,11 @@
 [ext_resource path="res://Content/Art/Spells/WaterHand/Water2.png" type="Texture" id=15]
 [ext_resource path="res://Content/Art/Spells/WaterHand/Water3.png" type="Texture" id=16]
 [ext_resource path="res://Content/Art/Spells/WaterHand/Water4.png" type="Texture" id=17]
-[ext_resource path="res://Content/Art/UI/HealthBarBehind.png" type="Texture" id=18]
-[ext_resource path="res://Content/Art/UI/HealthBarBG.png" type="Texture" id=19]
-[ext_resource path="res://Content/Art/UI/HealthBarProg.png" type="Texture" id=20]
-[ext_resource path="res://Content/Scripts/Camera.cs" type="Script" id=21]
+[ext_resource path="res://Content/Scripts/Spells/Spell.cs" type="Script" id=18]
+[ext_resource path="res://Content/Art/UI/HealthBarBehind.png" type="Texture" id=19]
+[ext_resource path="res://Content/Art/UI/HealthBarBG.png" type="Texture" id=20]
+[ext_resource path="res://Content/Art/UI/HealthBarProg.png" type="Texture" id=21]
+[ext_resource path="res://Content/Scripts/Camera.cs" type="Script" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,6 +51,7 @@ emission_shape = 1
 emission_sphere_radius = 4.0
 flag_disable_z = true
 gravity = Vector3( 0, 100, 0 )
+angular_velocity = 7.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.3
@@ -102,14 +104,15 @@ visible = false
 position = Vector2( 0, -1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="Water" type="AnimatedSprite" parent="HandPosition"]
 scale = Vector2( 0.375, 0.428571 )
 frames = SubResource( 3 )
-frame = 1
+frame = 3
 playing = true
+script = ExtResource( 18 )
 
 [node name="Particles2D" type="Particles2D" parent="HandPosition/Water"]
 position = Vector2( 0, 4.66667 )
@@ -141,9 +144,9 @@ margin_right = 13.0
 margin_bottom = -18.0
 value = 100.0
 rounded = true
-texture_under = ExtResource( 18 )
-texture_over = ExtResource( 19 )
-texture_progress = ExtResource( 20 )
+texture_under = ExtResource( 19 )
+texture_over = ExtResource( 20 )
+texture_progress = ExtResource( 21 )
 tint_progress = Color( 0.388235, 0.780392, 0.301961, 1 )
 nine_patch_stretch = true
 stretch_margin_left = 2
@@ -168,7 +171,7 @@ limit_smoothed = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 
 [connection signal="area_entered" from="InteractionRange" to="." method="_on_InteractionRange_area_entered"]
 [connection signal="area_exited" from="InteractionRange" to="." method="_on_InteractionRange_area_exited"]
