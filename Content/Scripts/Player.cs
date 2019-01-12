@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public class Player : KinematicBody2D
 {
@@ -13,7 +14,8 @@ public class Player : KinematicBody2D
     private Sprite SpriteNode;
     private Position2D HandPosition;
     
-
+	private List<Node2D> InteractableObject = new List<Node2D>(99);
+	
     // Direction de nos Inputs
     private Vector2 InputDirection = new Vector2();
 
@@ -25,7 +27,7 @@ public class Player : KinematicBody2D
     {
         SpriteNode = GetNode("Sprite") as Sprite;
         HandPosition = GetNode("HandPosition") as Position2D;
-		PlayerCamera = GetNode("Camera") as Camera2D;
+		PlayerCamera = GetNode("Camera2D") as Camera2D;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -33,7 +35,7 @@ public class Player : KinematicBody2D
         GetInputDirection(); // Obtient la Direction des inputs
         UpdateVelocity();
         MoveAndSlide(Velocity);
-
+		GetInteractable();
         if (Input.IsActionJustPressed("mouse1"))
         {
             SpriteNode.Centered = !SpriteNode.Centered;
@@ -102,14 +104,47 @@ public class Player : KinematicBody2D
             Velocity.y = 0;
     }
 	
+	private void GetInteractable()
+	{
+        // Ordering them
+        if (InteractableObject.Count > 0)
+        {
+            Node2D closest = InteractableObject[0];
+            var closestDistance = (closest.GlobalPosition - this.GlobalPosition).Length();
+            for (int i = 0; i < InteractableObject.Count; i++)
+            {
+                var currentDistance = (InteractableObject[i].GlobalPosition - this.GlobalPosition).Length();
+                if (currentDistance < closestDistance)
+                    closest = InteractableObject[i] as Node2D;
+            }
+
+            // Swaping the closest with the first of the list
+            var temp = InteractableObject[0];
+            var idx = InteractableObject.IndexOf(closest);
+            InteractableObject[0] = closest;
+            InteractableObject[idx] = temp;
+        }
+		if(Input.IsActionJustPressed("ui_interact") && InteractableObject != null)
+		{
+			if((InteractableObject[0] as Node2D).HasMethod("Interact"))
+			    (InteractableObject[0] as Chest).Interact();
+			
+		}
+        (GetNode("Label") as Label).Text = InteractableObject.Count > 0 ? (InteractableObject[0] as Node2D).Name : "Nothing..";
+        if (InteractableObject.Count > 0 && InteractableObject[0] is Chest)
+        {
+            (GetNode("Label") as Label).Text += " - Opened :" + (InteractableObject[0] as Chest).Opened.ToString();
+        } 
+
+    }
 	// Signals
 	private void _on_InteractionRange_area_entered(object area)
 	{
-	    // Replace with function body.
+        InteractableObject.Insert(0, ((area as Area2D).GetParent() as Node2D));
 	}
 	
 	private void _on_InteractionRange_area_exited(object area)
 	{
-	    // Replace with function body.
-	}
+        InteractableObject.Remove((area as Area2D).GetParent() as Node2D);
+    }
 }

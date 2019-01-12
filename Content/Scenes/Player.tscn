@@ -31,5 +31,15 @@ editor/display_folded = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange"]
 shape = SubResource( 2 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = -62.0
+margin_top = -48.0
+margin_right = 62.0
+margin_bottom = -14.0
+rect_min_size = Vector2( 124, 34 )
+text = "Chest"
+align = 1
+valign = 1
+
 [connection signal="area_entered" from="InteractionRange" to="." method="_on_InteractionRange_area_entered"]
 [connection signal="area_exited" from="InteractionRange" to="." method="_on_InteractionRange_area_exited"]

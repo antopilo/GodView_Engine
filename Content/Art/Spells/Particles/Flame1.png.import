@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chest4.png-c121074096869e4e7ecf9848d3d3fb98.stex"
+path="res://.import/Flame1.png-0bfa9aab26a79b2860c23969ec791c73.stex"
 
 [deps]
 
-source_file="res://Content/Art/Entities/Chest/Chest4.png"
-dest_files=[ "res://.import/Chest4.png-c121074096869e4e7ecf9848d3d3fb98.stex" ]
+source_file="res://Content/Art/Spells/Particles/Flame1.png"
+dest_files=[ "res://.import/Flame1.png-0bfa9aab26a79b2860c23969ec791c73.stex" ]
 
 [params]
 

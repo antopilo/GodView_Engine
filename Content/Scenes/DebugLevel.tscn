@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Content/Tilesets/GrassTestingTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Content/Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn" type="PackedScene" id=4]
 
 [node name="Root" type="Node2D"]
 
@@ -11,6 +12,7 @@
 [node name="Layers" type="Node2D" parent="CurrentLevel"]
 
 [node name="MainGround" type="Node2D" parent="CurrentLevel/Layers"]
+editor/display_folded = true
 
 [node name="Grass" type="TileMap" parent="CurrentLevel/Layers/MainGround"]
 tile_set = ExtResource( 1 )
@@ -23,6 +25,24 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 [node name="Chest" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
 position = Vector2( 64, 32 )
 
+[node name="Chest2" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 80, 32 )
+
+[node name="Chest3" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 96, 32 )
+
+[node name="Chest4" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 112, 32 )
+
+[node name="Chest5" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 128, 32 )
+
+[node name="Chest6" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 144, 32 )
+
+[node name="Chest7" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 2 )]
+position = Vector2( 160, 32 )
+
 [node name="Player" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 3 )]
 position = Vector2( 144, 48 )
 
@@ -33,4 +53,7 @@ limit_left = 0
 limit_top = 0
 limit_smoothed = true
 smoothing_enabled = true
+
+[node name="FireArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 192, 64 )
 
