@@ -18,7 +18,7 @@ public class Player : KinematicBody2D
     private Sprite SpriteNode;
     private Sprite OutlineSprite;
     private Sprite ShadowSprite;
-    private Position2D HandPosition;
+    public Position2D HandPosition;
 
     private TextureProgress HealthBar;
     private Particles2D HealthParticles;
