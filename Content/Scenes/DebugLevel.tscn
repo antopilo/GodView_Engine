@@ -75,34 +75,34 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 [node name="Entities" type="YSort" parent="CurrentLevel/Layers"]
 
 [node name="HealArea" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 3 )]
-position = Vector2( 240, 64 )
+position = Vector2( 502, 240 )
 
 [node name="FireArea" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 4 )]
-position = Vector2( 192, 64 )
+position = Vector2( 454, 240 )
 
 [node name="Chest" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 64, 32 )
+position = Vector2( 326, 208 )
 
 [node name="Chest2" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 80, 32 )
+position = Vector2( 342, 208 )
 
 [node name="Chest3" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 96, 32 )
+position = Vector2( 358, 208 )
 
 [node name="Chest4" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 112, 32 )
+position = Vector2( 374, 208 )
 
 [node name="Chest5" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 128, 32 )
+position = Vector2( 390, 208 )
 
 [node name="Chest6" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 144, 32 )
+position = Vector2( 406, 208 )
 
 [node name="Chest7" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 5 )]
-position = Vector2( 160, 32 )
+position = Vector2( 422, 208 )
 
 [node name="Player" parent="CurrentLevel/Layers/Entities" instance=ExtResource( 6 )]
-position = Vector2( 144, 48 )
+position = Vector2( 406, 224 )
 
 [node name="EditorSwitcher" type="Node2D" parent="."]
 script = ExtResource( 7 )
@@ -139,7 +139,7 @@ stretch_mode = 1
 position = Vector2( 49, 99 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 1 )
-frame = 7
+frame = 12
 playing = true
 
 [node name="Label" type="Label" parent="UI/Screen/SelectedSpell"]
