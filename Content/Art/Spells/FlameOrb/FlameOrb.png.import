@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FlameOrb.png-420fd7f8f4b3e25abfaa95ee57804dd8.stex"
+path="res://.import/FlameOrb.png-01286efa38054d30144ffe052a1d3b41.stex"
 
 [deps]
 
-source_file="res://Content/Art/Spells/FlameOrb.png"
-dest_files=[ "res://.import/FlameOrb.png-420fd7f8f4b3e25abfaa95ee57804dd8.stex" ]
+source_file="res://Content/Art/Spells/FlameOrb/FlameOrb.png"
+dest_files=[ "res://.import/FlameOrb.png-01286efa38054d30144ffe052a1d3b41.stex" ]
 
 [params]
 

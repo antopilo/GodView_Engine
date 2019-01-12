@@ -16,6 +16,7 @@ public class Player : KinematicBody2D
     // References
     public Camera2D PlayerCamera;
     private Sprite SpriteNode;
+    private Sprite OutlineSprite;
     private Position2D HandPosition;
 
     private TextureProgress HealthBar;
@@ -37,6 +38,7 @@ public class Player : KinematicBody2D
     public override void _Ready()
     {
         SpriteNode = GetNode("Sprite") as Sprite;
+        OutlineSprite = GetNode("Outline") as Sprite;
         HandPosition = GetNode("HandPosition") as Position2D;
 		PlayerCamera = GetNode("Camera2D") as Camera2D;
         HealthBar = GetNode("HealthBar") as TextureProgress;
@@ -79,6 +81,8 @@ public class Player : KinematicBody2D
             SpriteNode.FlipH = false;
             HandPosition.Position = new Vector2(6, -6);
         }
+
+        OutlineSprite.FlipH = SpriteNode.FlipH;
     }
     private void UpdateParticles()
     {

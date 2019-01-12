@@ -9,7 +9,7 @@ radius = 7.0
 
 [sub_resource type="Gradient" id=3]
 
-colors = PoolColorArray( 1, 0.46875, 0, 1, 1, 0.14902, 0.14902, 0.133333 )
+colors = PoolColorArray( 0.968627, 1, 0, 1, 1, 0.14902, 0.14902, 0.133333 )
 
 [sub_resource type="GradientTexture" id=4]
 
