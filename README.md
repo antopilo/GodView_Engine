@@ -5,7 +5,7 @@
 
 <h1 align="center">GodView Engine</h1>
 
-This is an engine made using the Godot engine. It is meant to be used for top down games. It is also currently under development by *@antopilo*, *@emerycp* and * @cadinsl *. It is fairly new still, but a lot more is planned. We won't support this engine, so if you plan to use this, you've been warned.
+This is an engine made using the Godot engine. It is meant to be used for top down games. It is also currently under development by *@antopilo*, *@emerycp* and *@cadinsl*. It is fairly new still, but a lot more is planned. We won't support this engine, so if you plan to use this, you've been warned.
 
 ## Installation
 GodView_Engine is a Godot project on its own. It is currently being developped on the 3.1 Version. To install, simply import the project.godot file in the Godot Launcher and the then opening the project with godot will get you started. There is also a C# Solution in the same folder, simply open it with your favorite IDE to start coding.
