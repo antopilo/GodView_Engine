@@ -36,7 +36,7 @@ script = ExtResource( 1 )
 editor/display_folded = true
 rotation = 1.57079
 frames = SubResource( 1 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="Sprite"]

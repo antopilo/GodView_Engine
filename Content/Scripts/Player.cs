@@ -62,6 +62,7 @@ public class Player : KinematicBody2D
         
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
+		
 
         Update(); // Calling _Draw()
     }
@@ -197,6 +198,8 @@ public class Player : KinematicBody2D
         // TODO: Death of player.
         Alive = false;
     }
+	
+	
 
 	#region Signal
     private void _on_InteractionRange_area_entered(object area)
@@ -208,5 +211,7 @@ public class Player : KinematicBody2D
     {
         InteractableObject.Remove((area as Area2D).GetParent() as Node2D);
     } 
+	
+	
     #endregion
 }

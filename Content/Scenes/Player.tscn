@@ -110,7 +110,6 @@ playing = true
 [node name="Water" type="AnimatedSprite" parent="HandPosition"]
 scale = Vector2( 0.375, 0.428571 )
 frames = SubResource( 3 )
-frame = 3
 playing = true
 script = ExtResource( 18 )
 
