@@ -1,11 +1,12 @@
 using Godot;
 using System;
 
-public class FireArea : Node2D
+public class FireArea : Entity
 {
     private bool PlayerPresent = false;
     [Export] float DamagePerSecond = 5;
     private Player _Player = null;
+
 
     public override void _PhysicsProcess(float delta)
     {

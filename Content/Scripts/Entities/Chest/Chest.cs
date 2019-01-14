@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Chest : Node2D
+public class Chest : Entity
 {
     [Export] public bool Interactable = true;
 	
@@ -18,6 +18,7 @@ public class Chest : Node2D
 	public override void _Process(float Delta)
 	{
 		_Sprite.Animation = Opened ? "Open" : "Close";
+        Update();
 	}
 
 	public void Interact()

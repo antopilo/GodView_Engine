@@ -14,8 +14,8 @@ public class SpriteStack : Node2D
     {
 
         GD.Print(TestLoadPath);
-        if(TestLoadPath != "")
-            MakeStackFromPath(TestLoadPath);
+        //if(TestLoadPath != "")
+            //MakeStackFromPath(TestLoadPath);
     }
 
     /// <summary>

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Spell : Node2D
+public class Spell : Entity
 {
     private Node2D entities;
 

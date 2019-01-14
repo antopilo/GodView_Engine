@@ -8,7 +8,7 @@ public class WorldNode : Control
     public override void _Process(float delta)
     {
         if (Grabbed)
-            this.RectGlobalPosition = GetGlobalMousePosition();
+            this.RectGlobalPosition = Editor.Camera.GetGlobalMousePosition();
     }
 
     private void MoveHandle_button_down()

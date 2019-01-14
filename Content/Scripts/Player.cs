@@ -15,23 +15,25 @@ public class Player : KinematicBody2D
 
     // References
     public Camera2D PlayerCamera;
+    public Position2D HandPosition;
+
     private Sprite SpriteNode;
     private Sprite OutlineSprite;
     private Sprite ShadowSprite;
-    public Position2D HandPosition;
 
+    public bool Hurting = false;
     private TextureProgress HealthBar;
     private Particles2D HealthParticles;
-    public bool Hurting = false;
 
     // States
-    private float MaxHealth = 100;
-    private float Health;
-    [Export] Color FullHealthTint = new Color("63c74d");
-    [Export] Color MidHealthTint = new Color("f77622");
-    [Export] Color LowHealthTint = new Color("e43b44");
     public bool Alive = true;
 
+    private float MaxHealth = 100;
+    private float Health;
+    [Export] private Color FullHealthTint = new Color("63c74d");
+    [Export] private Color MidHealthTint = new Color("f77622");
+    [Export] private Color LowHealthTint = new Color("e43b44");
+    
     // Logic stuff
 	private List<Node2D> InteractableObject = new List<Node2D>(99);
 
@@ -57,8 +59,7 @@ public class Player : KinematicBody2D
         MoveAndSlide(Velocity); // Move
 
         UpdateParticles();
-
-        // Other
+        
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
 
@@ -87,10 +88,12 @@ public class Player : KinematicBody2D
         OutlineSprite.FlipH = SpriteNode.FlipH;
         ShadowSprite.FlipH = SpriteNode.FlipH;
     }
+
     private void UpdateParticles()
     {
         HealthParticles.Emitting = Hurting;
     }
+
     private void GetInputDirection()
     {
         if (Input.IsActionPressed("ui_left"))

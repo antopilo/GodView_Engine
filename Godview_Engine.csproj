@@ -52,15 +52,18 @@
     <Compile Include="Content\Levels\Level.cs" />
     <Compile Include="Content\Scripts\Camera.cs" />
     <Compile Include="Content\Scripts\Entities\Chest\Chest.cs" />
+    <Compile Include="Content\Scripts\Entities\Entity.cs" />
     <Compile Include="Content\Scripts\Entities\Oil\Oil.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\FireArea.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\HealArea.cs" />
     <Compile Include="Content\Scripts\Player.cs" />
     <Compile Include="Content\Scripts\Spells\Projectile\WaterBall.cs" />
     <Compile Include="Content\Scripts\Spells\Spell.cs" />
+    <Compile Include="Engine\Scripts\Camera\EditorCamera.cs" />
     <Compile Include="Engine\Scripts\Nodes\WorldNode.cs" />
     <Compile Include="Engine\Scripts\Handlers\EditorHandler.cs" />
     <Compile Include="Engine\Scripts\Objects\SpriteStack.cs" />
+    <Compile Include="Engine\Scripts\Singletons\Editor.cs" />
     <Compile Include="Engine\Scripts\Switcher\EditorSwitcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

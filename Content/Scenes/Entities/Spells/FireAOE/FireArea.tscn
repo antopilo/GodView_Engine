@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Content/Scripts/Entities/Spell/FireArea.cs" type="Script" id=1]
 [ext_resource path="res://Content/Art/Spells/Particles/Flame1.png" type="Texture" id=2]
-[ext_resource path="res://Content/Art/Spells/Oil/oilArea.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -48,24 +47,18 @@ script = ExtResource( 1 )
 DamagePerSecond = 25.0
 
 [node name="HitZone" type="Area2D" parent="."]
+position = Vector2( 0, -7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitZone"]
 shape = SubResource( 1 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
-amount = 100
+position = Vector2( 0, -7 )
+amount = 50
 lifetime = 2.0
+fixed_fps = 15
 process_material = SubResource( 6 )
 texture = ExtResource( 2 )
-
-[node name="Light2D" type="Light2D" parent="Particles2D"]
-texture = ExtResource( 3 )
-color = Color( 1, 0.584314, 0, 1 )
-
-[node name="Light2D2" type="Light2D" parent="Particles2D"]
-texture = ExtResource( 3 )
-texture_scale = 1.7
-color = Color( 1, 0.584314, 0, 1 )
 
 [connection signal="body_entered" from="HitZone" to="." method="_on_HitZone_body_entered"]
 [connection signal="body_exited" from="HitZone" to="." method="_on_HitZone_body_exited"]

@@ -1,26 +1,36 @@
 using Godot;
 using System.Collections.Generic;
 
-public class Oil : Node2D
+public class Oil : Entity
 {
     private bool PlayerPresent = false;
     private bool Ignited = false;
     private bool Triggered = false;
     [Export] float DamagePerSecond = 5;
-    [Export] float IgniteDelay = 0.5f;
+    [Export] float IgniteDelay = 0.2f;
+
     [Export] Vector2 SizeReduction = new Vector2(1.00001f, 1.00001f);
     [Export] Color OilIgnitedColor = new Color(255,255,255);
     private Player _Player = null;
     private Timer _Timer;
     private List<Node2D> Colliding = new List<Node2D>();
+    RandomNumberGenerator rbg = new RandomNumberGenerator();
 
     public override void _Ready()
     {
+        
+        rbg.Randomize();
+        
         foreach (var areas in (GetNode("HitZone") as Area2D).GetOverlappingAreas())
         {
             Colliding.Add((areas as Area2D).GetParent() as Node2D);
         }
+    }
 
+    public void RandomSize()
+    {
+        float rng = rbg.RandfRange(0.5f, 1.5f);
+        this.Scale = new Vector2(rng, rng);
     }
     public override void _PhysicsProcess(float delta)
     {
@@ -48,23 +58,17 @@ public class Oil : Node2D
 
     private void CheckFlame()
     {
-        if (Triggered == true)
-            return;
-        if (!Triggered)
+        foreach (Node2D area in Colliding)
         {
-            foreach (Node2D area in Colliding)
+            if (area is Oil && (area as Oil).Ignited)
             {
-                if (area is Oil && (area as Oil).Ignited)
-                {
-                    StartIgnite();
-                }
-                else if (area is FireArea)
-                {
-                    StartIgnite();
-                }
+                StartIgnite();
+            }
+            else if (area is FireArea)
+            {
+                StartIgnite();
             }
         }
-        
     }
 
     private void StartIgnite()
@@ -76,7 +80,7 @@ public class Oil : Node2D
         if (IgniteDelay <= 0 && !Ignited && !Triggered)
         {
             //Ignite();
-            Triggered = true;
+            //Triggered = true;
             return;
         }
         if (!Ignited && !Triggered)
