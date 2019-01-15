@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Content/Scripts/Entities/Entity.cs" type="Script" id=1]
+[ext_resource path="res://Content/Shaders/Shadow.tres" type="Material" id=2]
+[ext_resource path="res://Content/Art/Entities/Trees/Tree01.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+radius = 4.0
+
+[node name="Tree" type="Node2D"]
+editor/display_folded = true
+position = Vector2( 492, 220 )
+script = ExtResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 0.435294 )
+material = ExtResource( 2 )
+position = Vector2( 0, -29 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -26 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, -26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, 24 )
+shape = SubResource( 1 )
+
