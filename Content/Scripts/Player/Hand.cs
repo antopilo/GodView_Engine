@@ -3,7 +3,6 @@ using System;
 
 public class Hand : Position2D
 {
-    private Spell[] AllSpell;
     private Spell[] SpellPool;
 
     // Called when the node is loaded.
@@ -25,9 +24,10 @@ public class Hand : Position2D
     override public void _Process(float delta)
     {
         if(Input.IsActionJustPressed("Switch"))
-        {
             SwapSpell();
-        }
+
+        (Game.FirstSpellSlot.GetNode("AnimatedSprite") as AnimatedSprite).Animation = SpellPool[0].Name;
+        (Game.SecondSpellSlot.GetNode("AnimatedSprite") as AnimatedSprite).Animation = SpellPool[1].Name;
     }
 
     // Unlock a spell.

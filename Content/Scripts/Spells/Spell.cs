@@ -25,7 +25,7 @@ public class Spell : Entity
         if( !Unlocked || !Equipped)
             return;
 
-        Visible = Selected;
+        Visible = Equipped;
 
         if (Input.IsActionJustPressed("Click"))
            Shoot();
@@ -42,5 +42,4 @@ public class Spell : Entity
 
         Entities.AddChild(Ball);
     }
-
 }
