@@ -36,7 +36,7 @@
 [ext_resource path="res://Content/Art/Spells/FlameOrb/FlameOrb33.png" type="Texture" id=34]
 [ext_resource path="res://Content/Art/Font/PixelSquare.tres" type="DynamicFont" id=35]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
@@ -77,11 +77,55 @@ stretch_mode = 1
 [node name="AnimatedSprite" type="AnimatedSprite" parent="SelectedSpell"]
 position = Vector2( 49, 99 )
 scale = Vector2( 6, 6 )
-frames = SubResource( 2 )
-frame = 6
+frames = SubResource( 1 )
+frame = 12
 playing = true
 
 [node name="Label" type="Label" parent="SelectedSpell"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -75.0
+margin_right = 75.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 35 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 2
+text = "Current Spell"
+align = 1
+valign = 1
+
+[node name="SecondSpell" type="Control" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 75.0
+margin_top = 16.0
+margin_right = 175.0
+margin_bottom = 166.0
+rect_min_size = Vector2( 100, 150 )
+rect_scale = Vector2( 0.68, 0.68 )
+
+[node name="BG" type="TextureRect" parent="SecondSpell"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -50.0
+margin_top = -100.0
+margin_right = 50.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SecondSpell"]
+position = Vector2( 49, 99 )
+scale = Vector2( 6, 6 )
+frames = SubResource( 1 )
+frame = 12
+playing = true
+
+[node name="Label" type="Label" parent="SecondSpell"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -75.0

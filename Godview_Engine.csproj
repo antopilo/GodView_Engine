@@ -57,6 +57,8 @@
     <Compile Include="Content\Scripts\Entities\Spell\FireArea.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\HealArea.cs" />
     <Compile Include="Content\Scripts\Player.cs" />
+    <Compile Include="Content\Scripts\Player\Hand.cs" />
+    <Compile Include="Content\Scripts\Singletons\Game.cs" />
     <Compile Include="Content\Scripts\Spells\Projectile\WaterBall.cs" />
     <Compile Include="Content\Scripts\Spells\Spell.cs" />
     <Compile Include="Engine\Scripts\Camera\EditorCamera.cs" />

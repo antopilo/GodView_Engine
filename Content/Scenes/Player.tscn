@@ -1,29 +1,32 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Content/Scripts/Player.cs" type="Script" id=1]
 [ext_resource path="res://Content/Shaders/Shadow.tres" type="Material" id=2]
 [ext_resource path="res://Content/Art/Player.png" type="Texture" id=3]
 [ext_resource path="res://Content/Art/PlayerOutline.png" type="Texture" id=4]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame1.png" type="Texture" id=5]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame2.png" type="Texture" id=6]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame3.png" type="Texture" id=7]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame4.png" type="Texture" id=8]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame5.png" type="Texture" id=9]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame6.png" type="Texture" id=10]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame7.png" type="Texture" id=11]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame8.png" type="Texture" id=12]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame9.png" type="Texture" id=13]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water1.png" type="Texture" id=14]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water2.png" type="Texture" id=15]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water3.png" type="Texture" id=16]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water4.png" type="Texture" id=17]
-[ext_resource path="res://Content/Scripts/Spells/Spell.cs" type="Script" id=18]
-[ext_resource path="res://Content/Art/UI/HealthBarBehind.png" type="Texture" id=19]
-[ext_resource path="res://Content/Art/UI/HealthBarBG.png" type="Texture" id=20]
-[ext_resource path="res://Content/Art/UI/HealthBarProg.png" type="Texture" id=21]
-[ext_resource path="res://Content/Scripts/Camera.cs" type="Script" id=22]
-[ext_resource path="res://Content/Shaders/Vignette.tres" type="Material" id=23]
-[ext_resource path="res://Content/Shaders/vignette.png" type="Texture" id=24]
+[ext_resource path="res://Content/Scripts/Player/Hand.cs" type="Script" id=5]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame1.png" type="Texture" id=6]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame2.png" type="Texture" id=7]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame3.png" type="Texture" id=8]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame4.png" type="Texture" id=9]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame5.png" type="Texture" id=10]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame6.png" type="Texture" id=11]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame7.png" type="Texture" id=12]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame8.png" type="Texture" id=13]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame9.png" type="Texture" id=14]
+[ext_resource path="res://Content/Scripts/Spells/Spell.cs" type="Script" id=15]
+[ext_resource path="res://Content/Scenes/Entities/Projectile/Fireball.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water1.png" type="Texture" id=17]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water2.png" type="Texture" id=18]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water3.png" type="Texture" id=19]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water4.png" type="Texture" id=20]
+[ext_resource path="res://Content/Scenes/Entities/Projectile/Waterball.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Content/Art/UI/HealthBarBehind.png" type="Texture" id=22]
+[ext_resource path="res://Content/Art/UI/HealthBarBG.png" type="Texture" id=23]
+[ext_resource path="res://Content/Art/UI/HealthBarProg.png" type="Texture" id=24]
+[ext_resource path="res://Content/Scripts/Camera.cs" type="Script" id=25]
+[ext_resource path="res://Content/Shaders/Vignette.tres" type="Material" id=26]
+[ext_resource path="res://Content/Shaders/vignette.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -32,19 +35,10 @@ extents = Vector2( 4, 2 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
-} ]
-
-[sub_resource type="SpriteFrames" id=3]
-
-animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "default",
-"speed": 6.0
 } ]
 
 [sub_resource type="ParticlesMaterial" id=4]
@@ -59,6 +53,15 @@ orbit_velocity_random = 0.0
 scale = 0.3
 scale_random = 1.0
 color = Color( 0, 0.584314, 0.913725, 1 )
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
 
 [sub_resource type="CircleShape2D" id=5]
 
@@ -98,24 +101,37 @@ texture = ExtResource( 3 )
 position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
-[node name="HandPosition" type="Position2D" parent="."]
+[node name="Hand" type="Position2D" parent="."]
 position = Vector2( 6, -6 )
+script = ExtResource( 5 )
 
-[node name="Fire" type="AnimatedSprite" parent="HandPosition"]
-visible = false
+[node name="Fire" type="AnimatedSprite" parent="Hand"]
 position = Vector2( 0, -1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 frame = 8
 playing = true
+script = ExtResource( 15 )
+Projectile = ExtResource( 16 )
 
-[node name="Water" type="AnimatedSprite" parent="HandPosition"]
+[node name="Particles2D2" type="Particles2D" parent="Hand/Fire"]
+position = Vector2( 0, 6 )
+scale = Vector2( 0.75, 0.857142 )
+amount = 5
+lifetime = 0.23
+fixed_fps = 12
+local_coords = false
+process_material = SubResource( 4 )
+
+[node name="Water" type="AnimatedSprite" parent="Hand"]
 scale = Vector2( 0.375, 0.428571 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
-script = ExtResource( 18 )
+script = ExtResource( 15 )
+Projectile = ExtResource( 21 )
 
-[node name="Particles2D" type="Particles2D" parent="HandPosition/Water"]
+[node name="Particles2D" type="Particles2D" parent="Hand/Water"]
 position = Vector2( 0, 4.66667 )
 amount = 5
 lifetime = 0.23
@@ -145,9 +161,9 @@ margin_right = 13.0
 margin_bottom = -18.0
 value = 100.0
 rounded = true
-texture_under = ExtResource( 19 )
-texture_over = ExtResource( 20 )
-texture_progress = ExtResource( 21 )
+texture_under = ExtResource( 22 )
+texture_over = ExtResource( 23 )
+texture_progress = ExtResource( 24 )
 tint_progress = Color( 0.388235, 0.780392, 0.301961, 1 )
 nine_patch_stretch = true
 stretch_margin_left = 2
@@ -173,10 +189,10 @@ limit_smoothed = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
-script = ExtResource( 22 )
+script = ExtResource( 25 )
 
 [node name="TextureRect" type="TextureRect" parent="Camera"]
-material = ExtResource( 23 )
+material = ExtResource( 26 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -186,7 +202,7 @@ margin_top = -225.0
 margin_right = 450.0
 margin_bottom = 225.0
 rect_min_size = Vector2( 900, 450 )
-texture = ExtResource( 24 )
+texture = ExtResource( 27 )
 expand = true
 
 [connection signal="area_entered" from="InteractionRange" to="." method="_on_InteractionRange_area_entered"]

@@ -43,7 +43,7 @@ public class Player : KinematicBody2D
         SpriteNode = GetNode("Sprite") as Sprite;
         OutlineSprite = GetNode("Outline") as Sprite;
         ShadowSprite = GetNode("Shadow") as Sprite;
-        HandPosition = GetNode("HandPosition") as Position2D;
+        HandPosition = GetNode("Hand") as Position2D;
 		PlayerCamera = GetNode("Camera") as Camera2D;
         HealthBar = GetNode("HealthBar") as TextureProgress;
         HealthParticles = HealthBar.GetNode("Particles2D") as Particles2D;
@@ -62,15 +62,6 @@ public class Player : KinematicBody2D
         
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
-		 
-
-        Update(); // Calling _Draw()
-    }
-
-    // Called when Update() is called
-    public override void _Draw()
-    {
-        DrawLine(GetGlobalMousePosition() - this.GlobalPosition, HandPosition.Position, Color.ColorN("blue"));
     }
 
     private void UpdateSprite()

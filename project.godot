@@ -22,6 +22,7 @@ config/icon="res://Engine/Icons/icon.png"
 [autoload]
 
 EditorRefs="*res://Engine/Scripts/Singletons/Editor.cs"
+GameRefs="*res://Content/Scripts/Singletons/Game.cs"
 
 [display]
 
