@@ -158,7 +158,7 @@ public class Player : KinematicBody2D
             InteractableObject[idx] = temp;
         }
 
-		if(Input.IsActionJustPressed("ui_interact") && InteractableObject != null)
+		if(Input.IsActionJustPressed("ui_interact") && InteractableObject.Count > 0)
 		{
 			if( (InteractableObject[0] as Node2D).HasMethod("Interact") )
 			    (InteractableObject[0] as Chest).Interact();

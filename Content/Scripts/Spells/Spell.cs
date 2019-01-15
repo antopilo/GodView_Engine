@@ -8,8 +8,8 @@ public class Spell : Entity
     private bool Unlocked = false;
     private Player _Player;
     private string path = "";
-
     private PackedScene Projectile;
+    private Vector2 position = new Vector2();
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -17,7 +17,6 @@ public class Spell : Entity
         Projectile = ResourceLoader.Load("res://Content/Scenes/Entities/Projectile/Waterball.tscn") as PackedScene;
         entities = GetNode("../../../") as Node2D;
         _Player = GetNode("../..") as Player;
-
     }
 
     public override void _PhysicsProcess(float delta)
@@ -30,7 +29,7 @@ public class Spell : Entity
 
     public void Shoot()
     {
-        var Distance = (this.GlobalPosition - GetGlobalMousePosition()).Normalized();
+        var Distance = (this.GlobalPosition - GetGlobalMousePosition() ).Normalized();
         var Angle = Distance.Angle();
         var Ball = ((PackedScene)Projectile).Instance();
         //GD.Print("Distance is " + Distance.ToString() + " - Angle is " + Angle.ToString() + "Ball is: " + Ball.ToString());

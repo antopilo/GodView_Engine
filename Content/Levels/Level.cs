@@ -5,6 +5,8 @@ public class Level : Node2D
 {
     [Export] float DegreePerSecond = 1;
 
+    [Export] 
+
     private float SunAngle = 0;
     private ShaderMaterial ShadowMaterial;
 

@@ -12,6 +12,7 @@ public class Chest : Entity
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        base._Ready();
         _Sprite = GetNode("Sprite") as AnimatedSprite;
     }
 	

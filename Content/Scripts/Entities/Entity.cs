@@ -13,6 +13,34 @@ public class Entity : Node2D
         get { return new Vector2(Width, Height); }
     }
 
+    public override void _Ready()
+    {
+        
+
+        if (this.HasNode("Shadow"))
+        {
+            GetSize();
+            var shadow = GetNode("Shadow") as Sprite;
+            (shadow.Material as ShaderMaterial).SetShaderParam("Height", Width);
+            (shadow.Material as ShaderMaterial).SetShaderParam("Width", Height);
+            GD.Print("Detected size of " + this.Name + " is X:" + Width + " Y:" + Height);
+        }
+    }
+
+    private void GetSize()
+    {
+        if (this.HasNode("Sprite"))
+        {
+            if (GetNode("Sprite") is AnimatedSprite)
+                return;
+
+            Sprite sprite = GetNode("Sprite") as Sprite;
+            Height = sprite.Texture.GetHeight() * sprite.Scale.y;
+            Width = sprite.Texture.GetWidth() * sprite.Scale.x;
+
+            GD.Print("detected height : " + Height + " Detected Width: " + Width);
+        }
+    }
     public override void _Draw()
     {
         if (!Selected)

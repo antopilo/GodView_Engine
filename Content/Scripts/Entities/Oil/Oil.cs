@@ -18,7 +18,7 @@ public class Oil : Entity
 
     public override void _Ready()
     {
-        
+        base._Ready();
         rbg.Randomize();
         
         foreach (var areas in (GetNode("HitZone") as Area2D).GetOverlappingAreas())

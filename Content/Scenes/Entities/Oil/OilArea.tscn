@@ -46,7 +46,8 @@ hue_variation_random = 1.0
 
 [node name="OilArea" type="Node2D"]
 script = ExtResource( 1 )
-OilIgnitedColor = Color( 0.917647, 0.407843, 0, 1 )
+SizeReduction = Vector2( 0.5, 0.5 )
+OilIgnitedColor = Color( 1, 1, 1, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -12 )

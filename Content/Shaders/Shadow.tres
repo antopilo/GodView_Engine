@@ -3,18 +3,22 @@
 [sub_resource type="Shader" id=1]
 
 code = "shader_type canvas_item;
-uniform float SunAngle = 1;
+
+uniform float SunAngle = 0;
+uniform float Height = 16;
+uniform float Width = 16;
 
 void vertex() {
-	
-    if (VERTEX.y <= 0.2) {
-        VERTEX.x += cos(SunAngle) * 12.0;
-		VERTEX.y += sin(SunAngle) * 10.0 + 12.0;
-    }
+	if (VERTEX.y <= 0.0) {
+		VERTEX.x -= cos(SunAngle ) * Height;
+		VERTEX.y -= sin(SunAngle ) * (Height) ;
+	}
 }"
 
 [resource]
 
 shader = SubResource( 1 )
-shader_param/SunAngle = 8.0
+shader_param/SunAngle = 5.0
+shader_param/Height = 16.0
+shader_param/Width = 16.0
 
