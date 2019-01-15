@@ -62,7 +62,7 @@ public class Player : KinematicBody2D
         
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
-		
+		 
 
         Update(); // Calling _Draw()
     }
@@ -130,7 +130,7 @@ public class Player : KinematicBody2D
         if (InputDirection.y == 0)
             Velocity.y -= DECELERATION * Mathf.Sign(Velocity.y);
 
-        // Zero snaping
+        // Zero snapping
         if (Mathf.Abs(Velocity.x) < STOP_TRESHOLD && InputDirection.x == 0)
             Velocity.x = 0;
         if (Mathf.Abs(Velocity.y) < STOP_TRESHOLD && InputDirection.y == 0)
@@ -142,8 +142,8 @@ public class Player : KinematicBody2D
         // Ordering them
         if (InteractableObject.Count > 0)
         {
-            Node2D closest = InteractableObject[0];
-            var closestDistance = (closest.GlobalPosition - this.GlobalPosition).Length(); //Distance du joueur
+            var closest = InteractableObject[0];
+            var closestDistance = (closest.GlobalPosition - GlobalPosition).Length(); //Distance du joueur
 
             for (int i = 0; i < InteractableObject.Count; i++)
             {
@@ -155,6 +155,7 @@ public class Player : KinematicBody2D
             // Swaping the closest with the first of the list
             var temp = InteractableObject[0];
             var idx = InteractableObject.IndexOf(closest);
+
             InteractableObject[0] = closest;
             InteractableObject[idx] = temp;
         }
@@ -174,8 +175,7 @@ public class Player : KinematicBody2D
 
     public void HurtPlayer(float amount)
     {
-        Health -= amount;
-        HealthBar.Value = Health;
+        HealthBar.Value = Health -= amount;
         Health = Mathf.Clamp(Health, 0, MaxHealth);
 
         // Setting health bar Color

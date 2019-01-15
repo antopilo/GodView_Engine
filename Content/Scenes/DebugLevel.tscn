@@ -172,8 +172,8 @@ stretch_mode = 1
 [node name="AnimatedSprite" type="AnimatedSprite" parent="UI/Screen/SelectedSpell"]
 position = Vector2( 49, 99 )
 scale = Vector2( 6, 6 )
-frames = SubResource( 1 )
-frame = 18
+frames = SubResource( 2 )
+frame = 6
 playing = true
 
 [node name="Label" type="Label" parent="UI/Screen/SelectedSpell"]

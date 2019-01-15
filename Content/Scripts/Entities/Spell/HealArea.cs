@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class HealArea : Node2D
+public class HealArea : Entity
 {
     private bool PlayerPresent = false;
     [Export] float HealPerSecond = 5;
@@ -11,9 +11,10 @@ public class HealArea : Node2D
     {
         if (_Player == null)
             return;
+
         if (PlayerPresent)
         {
-            _Player.HurtPlayer(HealPerSecond / 60 * -1);
+            _Player.HurtPlayer( HealPerSecond / 60 * -1);
         }
     }
 
@@ -34,6 +35,3 @@ public class HealArea : Node2D
         }
     }
 }
-
-
-

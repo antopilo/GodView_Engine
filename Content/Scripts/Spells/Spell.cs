@@ -9,23 +9,28 @@ public class Spell : Entity
     private Player _Player;
     private string path = "";
     private PackedScene Projectile;
-	
-	private PackedScene Fireball;
+
+    private PackedScene[] SpellPool;
+    private PackedScene Fireball;
 	private PackedScene Waterball;
 	
-	private int index = 0;
+	private int index = 1;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         Waterball = ResourceLoader.Load("res://Content/Scenes/Entities/Projectile/Waterball.tscn") as PackedScene;
         Fireball = ResourceLoader.Load("res://Content/Scenes/Entities/Projectile/Fireball.tscn") as PackedScene;
-		
 		entities = GetNode("../../../") as Node2D;
         _Player = GetNode("../..") as Player;
 		
 		projectile();
 
+        // Current equipped spell;
+        SpellPool = new PackedScene[1];
+
+        SpellPool[0] = Fireball;
+        SpellPool[1] = Waterball;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -63,15 +68,21 @@ public class Spell : Entity
 		}
 	}
 	
-	//the index must be random to choose the spell instead of just alternating like it is now
-	public void updateIndex()
-	{
-		index++;
-		if(index == 2)
-		{
-			index = 0;
-		}
+	// Rng the current selected spell.
+	public void updateIndex(){
+        RandomNumberGenerator rng = new RandomNumberGenerator();
+        index = rng.RandiRange(0, 1);
 	}
-	
-	
+
+    // Change an equipped spell for a new one.
+    public void ChangeSpell(int idx, PackedScene spellScene){
+        SpellPool[idx] = spellScene;
+    }
+
+    // Swaps the two current spells
+    public void SwapSpell(){
+        PackedScene temp = SpellPool[0];
+        SpellPool[0] = SpellPool[1];
+        SpellPool[1] = temp;
+    }
 }

@@ -15,11 +15,10 @@ public class Entity : Node2D
 
     public override void _Ready()
     {
-        
-
         if (this.HasNode("Shadow"))
         {
-            GetSize();
+            GetSize(); // Get the size of the Sprite.
+
             var shadow = GetNode("Shadow") as Sprite;
             (shadow.Material as ShaderMaterial).SetShaderParam("Height", Width);
             (shadow.Material as ShaderMaterial).SetShaderParam("Width", Height);

@@ -18,8 +18,8 @@ public class Chest : Entity
 	
 	public override void _Process(float Delta)
 	{
-		_Sprite.Animation = Opened ? "Open" : "Close";
-        Update();
+        base._Process(Delta);
+        _Sprite.Animation = Opened ? "Open" : "Close";
 	}
 
 	public void Interact()
