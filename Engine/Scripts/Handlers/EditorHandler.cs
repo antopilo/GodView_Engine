@@ -118,6 +118,7 @@ public class EditorHandler : Node2D
         {
             FireArea fireArea = SelectedEnt.Duplicate() as FireArea;
             fireArea.GlobalPosition = position;
+            fireArea.Burning = true;
             fireArea.Name = "FireArea";
             fireArea.Selected = false;
             Editor.Entities.AddChild(fireArea);
@@ -184,6 +185,7 @@ public class EditorHandler : Node2D
             case 1:
                 FireArea fireArea = FireArea.Instance() as FireArea;
                 Editor.Entities.AddChild(fireArea);
+                fireArea.Burning = false;
                 SelectedEnt = fireArea;
                 PlacingEnt = true;
                 break;

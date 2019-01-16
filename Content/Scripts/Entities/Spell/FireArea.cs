@@ -21,7 +21,8 @@ public class FireArea : Entity
     public override void _PhysicsProcess(float delta)
     {
         Flames.Emitting = Burning;
-        
+        if(Selected)
+            Flames.Emitting = true;
 
         if (_Player == null)
             return;

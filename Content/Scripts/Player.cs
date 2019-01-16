@@ -196,12 +196,16 @@ public class Player : KinematicBody2D
 	#region Signal
     private void _on_InteractionRange_area_entered(object area)
     {
-        InteractableObject.Insert(0, ((area as Area2D).GetParent() as Node2D));
+        var parent = (area as Area2D).GetParent() as Node2D;
+        if(parent.IsInGroup("Interact"))
+            InteractableObject.Insert(0, ((area as Area2D).GetParent() as Node2D));
     }
 
     private void _on_InteractionRange_area_exited(object area)
     {
-        InteractableObject.Remove((area as Area2D).GetParent() as Node2D);
+        var parent = (area as Area2D).GetParent() as Node2D;
+        if(parent.IsInGroup("Interact"))
+            InteractableObject.Remove((area as Area2D).GetParent() as Node2D);
     } 
 	
 	

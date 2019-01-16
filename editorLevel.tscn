@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Content/Levels/Level.cs" type="Script" id=1]
 [ext_resource path="res://Content/Shaders/Vignette.tres" type="Material" id=2]
 [ext_resource path="res://Content/Tilesets/GrassTestingTileset.tres" type="TileSet" id=3]
 [ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Content/Scripts/Entities/Chest/Chest.cs" type="Script" id=5]
-[ext_resource path="res://Content/Scenes/Entities/Oil/OilArea.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Content/Scripts/Entities/Oil/Oil.cs" type="Script" id=7]
+[ext_resource path="res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Content/Scripts/Entities/Spell/FireArea.cs" type="Script" id=7]
+[ext_resource path="res://Content/Scenes/Entities/Oil/OilArea.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Content/Scripts/Entities/Oil/Oil.cs" type="Script" id=9]
 
 [sub_resource type="CSharpScript" id=1]
 
@@ -31,149 +33,5230 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 [node name="Spawn" type="Position2D" parent="Layers/Entities"]
 position = Vector2( 414, 251 )
 
-[node name="ChestTest" type="Node2D" parent="Layers/Entities" instance=ExtResource( 4 )]
-position = Vector2( 333.381, 179.746 )
+[node name="ChestTest" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 332.477, 176.989 )
 script = ExtResource( 5 )
 
-[node name="@ChestTest@17" type="Node2D" parent="Layers/Entities" instance=ExtResource( 4 )]
-position = Vector2( 360.767, 179.482 )
+[node name="@ChestTest@166" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 360.363, 176.375 )
 scale = Vector2( 1.6, 1.6 )
 script = ExtResource( 5 )
 
-[node name="@ChestTest@18" type="Node2D" parent="Layers/Entities" instance=ExtResource( 4 )]
-position = Vector2( 396.054, 179.746 )
-scale = Vector2( 2.35, 2.35 )
+[node name="@ChestTest@167" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 290.341, 205.858 )
+scale = Vector2( 2.2, 2.2 )
 script = ExtResource( 5 )
 
-[node name="FireArea" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 396.054, 194.229 )
-scale = Vector2( 1.83559, 1.83559 )
-script = ExtResource( 7 )
+[node name="@ChestTest@168" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 452.977, 198.369 )
+scale = Vector2( 2.2, 2.2 )
+script = ExtResource( 5 )
 
-[node name="@FireArea@19" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 360.504, 189.226 )
-scale = Vector2( 1.23435, 1.23435 )
-script = ExtResource( 7 )
+[node name="@ChestTest@169" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 494.344, 195.262 )
+scale = Vector2( 2.2, 2.2 )
+script = ExtResource( 5 )
 
-[node name="@FireArea@20" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 332.854, 188.699 )
-scale = Vector2( 1.1331, 1.1331 )
-script = ExtResource( 7 )
+[node name="@ChestTest@170" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 617.793, 132.966 )
+scale = Vector2( 2.2, 2.2 )
+script = ExtResource( 5 )
 
-[node name="@FireArea@21" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 346.284, 205.289 )
-scale = Vector2( 1.20562, 1.20562 )
-script = ExtResource( 7 )
+[node name="@ChestTest@171" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 663.738, 131.658 )
+scale = Vector2( 2.2, 2.2 )
+script = ExtResource( 5 )
 
-[node name="@FireArea@22" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 378.147, 202.919 )
-scale = Vector2( 1.01114, 1.01114 )
-script = ExtResource( 7 )
+[node name="@ChestTest@55" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 570.203, 381.527 )
+scale = Vector2( 3.25, 3.25 )
+script = ExtResource( 5 )
 
-[node name="@FireArea@23" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 368.931, 210.029 )
-scale = Vector2( 1.31063, 1.31063 )
+[node name="@FireArea@10" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 335.611, 238.275 )
 script = ExtResource( 7 )
 
 [node name="@FireArea@24" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 376.304, 201.339 )
-scale = Vector2( 0.509258, 0.509258 )
+position = Vector2( 401.886, 255.8 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@25" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+[node name="@ChestTest@124" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1185.92, 186.181 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@125" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 889.473, 210.382 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@126" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 803.563, 273.302 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@127" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1097.59, 310.812 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@128" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 668.043, 273.302 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@129" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 807.193, 279.352 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@130" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 559.143, 349.532 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@131" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 761.213, 395.512 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@132" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 671.673, 410.032 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@133" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 998.373, 453.592 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@134" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 784.203, 445.122 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@135" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 706.103, 343.592 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@136" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 718.203, 331.492 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@137" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 801.803, 266.592 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@138" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 709.403, 272.092 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@139" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 602.703, 283.092 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@140" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 524.603, 379.892 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@141" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 608.203, 462.392 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@142" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 802.903, 515.192 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@143" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 971.203, 538.292 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@144" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1123, 582.292 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@145" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 860.103, 515.192 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@146" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1007.5, 512.992 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@147" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 967.903, 500.892 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@148" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 657.438, 557.298 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@149" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 647.175, 556.831 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@150" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 582.797, 584.355 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@151" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 612.654, 584.355 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@152" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 551.541, 540.503 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@153" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 518.419, 507.381 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@154" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 502.558, 502.25 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@155" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 491.828, 507.381 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@156" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 512.355, 502.716 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@157" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 787.814, 862.626 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@158" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 563.809, 709.359 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@159" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 573.24, 688.137 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@160" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1014.18, 716.433 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@161" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 758.327, 931.498 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@162" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 686.174, 1015.04 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@163" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 579.844, 1030.23 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@164" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 651.997, 1003.65 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@165" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1092.51, 1193.53 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@166" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 727.947, 1163.15 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@167" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1081.11, 1125.17 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@168" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -665.736, 931.498 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@169" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -616.369, 897.321 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@170" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -434.089, 1098.59 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@171" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -80.9209, 813.776 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@172" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 6.42163, 525.166 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@173" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -210.036, 475.798 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@174" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -635.356, 620.103 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@175" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -623.964, 650.483 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@176" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -346.746, 642.888 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@177" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -342.948, 654.281 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@178" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -532.824, 711.243 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@179" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -464.469, 756.813 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@180" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -418.899, 817.573 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@181" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -563.204, 840.358 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@182" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -456.874, 901.118 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@183" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -715.104, 897.321 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@184" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -350.543, 1003.65 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@185" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -285.986, 999.853 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@186" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -369.531, 992.258 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@187" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -297.379, 980.866 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@188" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -601.179, 977.068 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@189" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -8.76831, 851.751 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@190" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -31.5535, 817.573 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@191" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -130.288, 753.016 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@192" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 82.3716, 650.483 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@193" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -213.833, 589.723 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@194" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -232.821, 802.383 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@195" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -240.416, 882.131 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@196" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 29.2065, 889.726 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@197" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 295.032, 673.268 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@198" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 450.729, 692.256 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@199" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 321.614, 536.558 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@200" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 317.817, 551.748 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@201" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 192.499, 540.356 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@202" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 257.057, 528.963 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@203" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -80.9209, 612.508 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@204" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -293.581, 665.673 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@205" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -8.76831, 715.041 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@206" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -88.5159, 692.256 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@207" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 25.4092, 741.623 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@208" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 105.157, 741.623 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@209" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 287.437, 734.028 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@210" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 310.222, 760.611 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@211" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 374.779, 764.408 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@212" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 192.499, 790.991 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@213" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 181.107, 821.371 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@214" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 200.094, 847.953 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@215" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 370.982, 840.358 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@216" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 488.704, 825.168 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@217" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 382.374, 840.358 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@218" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 78.5742, 897.321 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@219" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 70.979, 908.713 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@220" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 143.132, 935.296 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@221" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -77.1235, 927.701 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@222" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -122.693, 840.358 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@223" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -251.809, 863.143 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@224" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -335.354, 912.511 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@225" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -335.354, 954.283 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@226" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -502.444, 973.271 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@227" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -441.683, 1007.45 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@228" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -456.874, 1003.65 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@229" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -521.431, 1034.03 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@230" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -597.381, 1060.61 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@231" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -646.749, 1102.39 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@232" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -608.774, 1109.98 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@233" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -430.291, 1098.59 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@234" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -536.621, 1117.58 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@235" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -380.923, 1079.6 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@236" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -498.646, 1072.01 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@237" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -221.428, 1030.23 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@238" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -304.974, 996.056 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@239" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -175.858, 950.486 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@240" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -232.821, 901.118 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@241" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -153.073, 923.903 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@242" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -31.5535, 942.891 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@243" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 29.2065, 961.878 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@244" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -54.3384, 984.663 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@245" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -46.7434, 1011.25 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@246" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -248.011, 1007.45 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@247" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -194.846, 1072.01 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@248" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -210.036, 1083.4 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@249" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -274.594, 1083.4 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@250" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -191.048, 1060.61 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@251" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -426.494, 1053.02 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@252" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -289.783, 1098.59 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@253" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -96.1108, 1053.02 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@254" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -130.288, 1087.2 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@255" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 6.42163, 1068.21 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@256" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 33.0042, 1075.8 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@257" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 245.664, 1064.41 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@258" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 257.057, 1049.22 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@259" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 181.107, 1026.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@260" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 51.9917, 977.068 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@261" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 146.929, 901.118 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@262" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 260.854, 866.941 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@263" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 97.5615, 866.941 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@264" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 298.829, 851.751 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@265" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 412.754, 866.941 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@266" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 389.969, 893.523 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@267" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 450.729, 923.903 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@268" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 374.779, 954.283 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@269" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 355.792, 969.473 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@270" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 355.792, 1003.65 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@271" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 348.197, 1022.64 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@272" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 507.692, 1037.83 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@273" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 465.919, 961.878 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@274" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 389.969, 950.486 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@275" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 538.072, 897.321 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@276" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 572.249, 874.536 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@277" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 663.389, 851.751 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@278" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 689.972, 772.003 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@279" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 663.389, 699.851 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@280" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 670.984, 669.471 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@281" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 807.694, 669.471 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@282" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 898.834, 711.243 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@283" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 857.062, 749.218 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@284" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1054.53, 741.623 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@285" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 951.999, 753.016 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@286" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1179.85, 741.623 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@287" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1282.38, 745.421 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@288" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1077.32, 809.978 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@289" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 944.404, 847.953 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@290" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 864.657, 863.143 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@291" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 849.467, 874.536 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@292" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 910.227, 840.358 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@293" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 940.607, 790.991 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@294" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 857.062, 794.788 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@295" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 925.417, 718.838 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@296" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 986.177, 597.318 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@297" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 811.492, 616.306 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@298" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 560.857, 658.078 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@299" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 591.237, 635.293 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@300" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 386.172, 589.723 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@301" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 291.234, 589.723 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@302" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1.17334, 608.711 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@303" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -92.3135, 544.153 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@304" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 44.3967, 559.343 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@305" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -115.098, 639.091 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@306" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -312.568, 707.446 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@307" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -339.151, 783.396 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@308" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -468.266, 813.776 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@309" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -42.9458, 889.726 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@310" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -27.7559, 882.131 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@311" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -126.491, 1003.65 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@312" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -415.101, 1068.21 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@313" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -248.011, 1113.78 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@314" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -122.693, 1090.99 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@315" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -263.201, 1125.17 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@316" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -80.9209, 1151.75 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@317" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -27.7559, 1166.94 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@318" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -342.948, 1208.72 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@319" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -365.734, 1227.7 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@320" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -278.391, 1250.49 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@321" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 143.132, 1235.3 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@322" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 363.387, 1239.1 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@323" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 538.072, 1223.91 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@324" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 446.932, 1136.56 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@325" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 435.539, 1087.2 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@326" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 321.614, 1106.18 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@327" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 891.239, 1026.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@328" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 743.137, 1079.6 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@329" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 750.732, 1106.18 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@330" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 667.187, 1083.4 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@331" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 568.452, 1121.37 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@332" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 17.8142, 1189.73 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@333" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 321.614, 1147.96 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@334" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 348.197, 1189.73 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@335" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 310.222, 1254.29 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@336" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 200.094, 1284.67 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@337" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 17.8142, 1296.06 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@338" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -65.731, 1250.49 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@339" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -96.1108, 1235.3 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@340" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -111.301, 1163.15 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@341" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -88.5159, 1163.15 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@342" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -23.9585, 1144.16 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@343" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 363.387, 1155.55 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@344" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1172.25, 992.258 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@345" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1088.71, 969.473 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@346" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1115.29, 931.498 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@347" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 914.024, 863.143 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@348" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 838.074, 977.068 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@349" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1020.35, 996.056 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@350" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 963.392, 1030.23 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@351" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 872.252, 1151.75 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@352" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 841.872, 1178.34 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@353" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 917.822, 1159.35 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@354" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1012.76, 1117.58 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@355" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 830.479, 1079.6 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@356" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 765.922, 1041.63 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@357" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1005.16, 931.498 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@358" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1130.48, 844.156 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@359" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1084.91, 813.776 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@360" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1350.74, 627.698 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@361" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1134.28, 620.103 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@362" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1111.49, 642.888 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@363" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1388.71, 528.963 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@364" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1233.01, 536.558 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@365" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 891.239, 449.216 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@366" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1187.44, 369.468 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@367" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1111.49, 308.708 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@368" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1039.34, 312.506 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@369" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 773.517, 335.291 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@370" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 857.062, 335.291 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@371" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 872.252, 228.961 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@372" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 727.947, 160.606 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@373" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 298.829, 61.8705 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@374" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 306.424, 61.8705 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@375" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -96.1108, 126.428 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@376" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 33.0042, 134.023 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@377" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 124.144, 126.428 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@378" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 48.1941, 92.2505 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@379" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -107.503, 130.226 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@380" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -31.5535, 179.593 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@381" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -88.5159, 175.796 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@382" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -42.9458, 206.176 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@383" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -498.646, 206.176 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@384" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -434.089, 213.771 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@385" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -274.594, 198.581 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@386" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -191.048, 217.568 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@387" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -77.1235, 247.948 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@388" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -282.188, 323.898 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@389" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -764.471, 350.481 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@390" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -749.281, 365.671 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@391" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -574.596, 392.253 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@392" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -426.494, 384.658 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@393" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -331.556, 358.076 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@394" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -149.276, 297.316 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@395" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 181.107, 331.493 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@396" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 184.904, 380.861 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@397" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -50.541, 475.798 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@398" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -585.989, 506.178 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@399" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -627.761, 525.166 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@400" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -669.534, 513.773 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@401" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -430.291, 437.823 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@402" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -369.531, 585.926 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@403" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -73.3259, 836.561 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@404" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -141.681, 1189.73 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@405" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -8.76831, 1280.87 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@406" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 184.904, 1315.05 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@407" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 925.417, 1334.03 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@408" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 329.209, 1341.63 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@409" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 872.252, 1466.95 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@410" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 773.517, 1546.69 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@411" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 648.199, 1455.55 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@412" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 640.604, 1292.26 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@413" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 724.149, 1269.48 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@414" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 177.309, 1402.39 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@415" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 416.552, 1421.38 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@416" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 329.209, 1417.58 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@417" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 530.477, 1573.28 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@418" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 944.404, 1539.1 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@419" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 955.797, 1622.64 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@420" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1776.06, 1546.69 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@421" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1324.15, 1466.95 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@422" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1578.59, 1349.22 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@423" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1601.37, 1273.27 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@424" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1593.78, 1258.08 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@425" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1665.93, 996.056 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@426" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1681.12, 1034.03 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@427" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1688.71, 1034.03 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@428" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1965.93, 980.866 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@429" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2019.1, 627.698 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@430" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1977.32, 612.508 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@431" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1608.97, 547.951 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@432" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1449.47, 863.143 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@433" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1848.21, 1098.59 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@434" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1882.39, 612.508 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@435" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1757.07, 434.026 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@436" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1677.32, 358.076 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@437" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1783.65, 320.101 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@438" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1707.7, 228.961 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@439" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1779.85, 153.01 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@440" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1874.79, 160.606 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@441" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1476.05, 126.428 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@442" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2869.74, 92.2505 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@443" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2171, -105.219 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@444" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1677.32, -139.397 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@445" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1593.78, -162.182 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@446" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1635.55, -177.372 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@447" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1521.62, -241.93 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@448" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1305.17, -314.082 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@449" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1495.04, -371.045 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@450" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1073.52, -507.755 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@451" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 800.099, -538.135 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@452" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 295.032, -412.817 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@453" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -145.479, -401.425 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@454" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -415.101, -333.07 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@455" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -555.609, -230.537 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@456" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -491.051, -135.599 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@457" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -544.216, -101.422 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@458" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -548.014, 61.8705 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@459" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -422.696, 153.01 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@460" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -513.836, 171.998 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@461" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -107.503, 20.098 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@462" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -61.9333, -52.0546 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@463" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 374.779, -169.777 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@464" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 184.904, -241.93 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@465" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 173.512, -272.31 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@466" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 963.392, -295.095 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@467" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 545.667, -310.285 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@468" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 731.744, -340.665 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@469" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 636.807, -412.817 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@470" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 253.259, -500.16 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@471" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 295.032, -492.565 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@472" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -27.7559, -496.362 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@473" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -179.656, -412.817 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@474" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -202.441, -428.007 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@475" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -327.759, -424.21 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@476" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -585.989, -477.375 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@477" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -840.421, -500.16 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@478" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -999.916, -503.957 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@479" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -958.144, 270.733 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@480" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -84.7185, 118.833 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@481" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -69.5283, -188.765 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@482" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 450.729, -97.6245 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@483" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 177.309, -150.79 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@484" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -191.048, -44.4595 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@485" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -282.188, -165.979 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@486" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -422.696, -158.385 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@487" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -103.706, -355.855 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@488" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -418.899, 73.2631 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@489" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -354.341, -48.257 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@490" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -168.263, -74.8395 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@491" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -745.484, -257.12 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@492" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -654.344, -568.515 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@493" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -920.169, 31.4905 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@494" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -627.761, -120.41 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@495" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 914.024, -276.107 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@496" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 898.834, -314.082 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@497" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1039.34, -71.042 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@498" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 598.832, -177.372 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@499" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 663.389, -120.41 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@500" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1031.75, -21.6746 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@501" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1176.05, 160.606 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@502" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1221.62, 107.441 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@503" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 993.772, -21.6746 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@504" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1179.85, -249.525 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@505" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 951.999, -317.88 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@506" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 830.479, -188.765 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@507" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 705.162, -59.6495 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@508" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 112.752, -245.727 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@509" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 431.742, -371.045 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@510" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 572.249, -564.717 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@511" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 587.439, -538.135 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@512" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 481.109, -428.007 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@513" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 302.627, -431.805 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@514" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 264.652, -515.35 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@515" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 184.904, -617.882 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@516" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 238.069, -439.4 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@517" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 230.474, -378.64 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@518" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -361.936, -579.907 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@519" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -388.519, -629.275 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@520" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -548.014, -549.527 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@521" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -475.861, -492.565 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@522" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -373.328, -503.957 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@523" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -996.119, -450.792 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@524" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1167.01, -355.855 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@525" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -973.334, -302.69 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@526" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1117.64, -264.715 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@527" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -988.524, -238.132 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@528" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1075.87, -192.562 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@529" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1094.85, -139.397 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@530" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1087.26, -63.447 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@531" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -973.334, -52.0546 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@532" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1144.22, 1.11047 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@533" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -897.384, 65.668 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@534" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1026.5, 137.821 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@535" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1463.21, 194.783 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@536" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1550.55, 194.783 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@537" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1337.89, 156.808 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@538" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1584.73, -29.2695 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@539" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1261.94, -59.6495 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@540" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1182.2, -124.207 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@541" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1721.44, -291.297 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@542" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1789.8, -344.462 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@543" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1554.35, -215.347 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@544" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1398.65, -128.005 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@545" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1554.35, -105.219 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@546" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1444.22, 39.0856 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@547" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1539.16, 61.8705 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@548" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1653.09, 183.391 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@549" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1554.35, 282.126 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@550" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1672.07, 323.898 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@551" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1288.53, 392.253 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@552" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1110.04, 373.266 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@553" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1174.6, 335.291 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@554" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1307.51, 346.683 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@555" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1417.64, 502.381 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@556" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1398.65, 620.103 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@557" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1284.73, 718.838 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@558" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1129.03, 893.523 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@559" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1155.61, 1037.83 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@560" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1296.12, 1075.8 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@561" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1204.98, 1037.83 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@562" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1003.71, 1041.63 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@563" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -969.536, 946.688 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@564" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1167.01, 920.106 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@565" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1159.41, 779.598 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@566" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -904.979, 696.053 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@567" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -992.321, 551.748 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@568" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1022.7, 688.458 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@569" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -965.739, 806.181 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@570" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1208.78, 578.331 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@571" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -984.726, 475.798 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@572" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1235.36, 430.228 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@573" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -988.524, 699.851 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@574" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1178.4, 764.408 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@575" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -844.219, 521.368 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@576" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -958.144, 206.176 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@577" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1197.39, 73.2631 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@578" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -658.141, 103.643 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@579" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -737.889, 183.391 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@580" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -935.359, -298.892 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@581" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -578.394, -416.615 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@582" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -844.219, -109.017 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@583" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -642.951, 92.2505 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@584" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -726.496, 361.873 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@585" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -779.661, 164.403 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@586" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -836.624, 1053.02 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@587" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -829.029, 1117.58 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@588" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -779.661, 1364.41 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@589" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -806.244, 1349.22 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@590" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -806.244, 1170.74 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@591" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -855.611, 1182.13 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@592" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1345.49, 1280.87 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@593" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -585.989, 1326.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@594" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -669.534, 1394.79 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@595" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -965.739, 1288.46 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@596" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -582.191, 1288.46 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@597" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -285.986, 1387.2 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@598" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -278.391, 1391 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@599" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -377.126, 1440.36 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@600" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -422.696, 1497.33 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@601" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -301.176, 1580.87 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@602" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -210.036, 1596.06 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@603" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 188.702, 1675.81 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@604" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 188.702, 1588.47 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@605" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 762.124, 1394.79 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@606" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 834.277, 1425.17 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@607" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1388.71, 1474.54 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@608" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1738.08, 1444.16 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@609" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1802.64, 1398.59 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@610" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1870.99, 1330.24 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@611" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1943.15, 1227.7 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@612" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1965.93, 1117.58 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@613" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1927.96, 1098.59 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@614" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1772.26, 988.461 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@615" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1506.43, 1094.79 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@616" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1468.46, 1235.3 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@617" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1479.85, 1155.55 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@618" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1555.8, 920.106 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@619" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1479.85, 772.003 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@620" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1593.78, 601.116 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@621" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1639.35, -2.68701 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@622" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2098.84, -333.07 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@623" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2231.76, -473.577 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@624" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2011.5, -393.83 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@625" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1840.61, -82.4346 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@626" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1620.36, 111.238 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@627" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1608.97, -14.0795 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@628" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1335.55, -93.827 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@629" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1441.88, -112.815 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@630" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1749.47, -101.422 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@631" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1943.15, -2.68701 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@632" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2003.91, 103.643 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@633" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2022.89, 149.213 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@634" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2038.08, 179.593 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@635" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2155.81, 301.113 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@636" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2322.9, 479.596 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@637" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2941.89, 380.861 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@638" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2748.22, 639.091 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@639" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3625.44, 874.536 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@640" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2843.15, 1026.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@641" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2805.18, 821.371 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@642" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2508.97, 551.748 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@643" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2376.06, 897.321 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@644" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2835.56, 1151.75 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@645" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3283.67, 726.433 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@646" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3272.27, 384.658 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@647" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3052.02, 304.911 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@648" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2653.28, -29.2695 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@649" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2691.25, -78.637 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@650" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3067.21, -105.219 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@651" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2789.99, -397.627 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@652" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3412.78, -606.49 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@653" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 3071, -765.985 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@654" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2569.73, -720.415 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@655" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2953.28, -868.517 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@656" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2463.4, -815.352 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@657" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2600.11, -822.947 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@658" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 173.512, -1259.66 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@659" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 629.212, -1278.65 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@660" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 727.947, -1267.25 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@661" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1248.2, -1126.75 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@662" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1206.43, -811.555 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@663" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1138.08, -803.96 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@664" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 864.657, -739.402 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@665" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 860.859, -735.605 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@666" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1301.37, -1225.48 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@667" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -540.419, -260.917 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@668" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 295.032, -302.69 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@669" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 272.247, -371.045 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@670" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 226.677, -446.995 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@671" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -88.5159, -606.49 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@672" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -141.681, -652.06 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@673" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -111.301, -887.505 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@674" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -153.073, -841.935 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@675" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -270.796, -769.782 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@676" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -369.531, -735.605 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@677" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -536.621, -712.82 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@678" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -582.191, -712.82 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@679" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -623.964, -724.212 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@680" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -635.356, -724.212 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@681" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -973.334, -746.997 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@682" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -977.131, -746.997 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@683" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -984.726, -746.997 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@684" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -996.119, -746.997 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@685" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1087.26, -754.592 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@686" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1102.45, -754.592 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@687" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1151.82, -754.592 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@688" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1349.29, -735.605 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@689" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1542.96, -705.225 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@690" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1618.91, -701.427 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@691" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1618.91, -701.427 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@692" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1618.91, -701.427 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@693" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1615.11, -686.237 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@694" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1645.49, -344.462 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@695" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1691.06, -257.12 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@696" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1770.81, -131.802 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@697" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1854.35, 122.63 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@698" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1877.14, 149.213 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@699" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1888.53, 183.391 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@700" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1907.52, 301.113 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@701" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1945.49, 396.051 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@702" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1991.06, 532.761 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@703" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -2021.44, 783.396 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@704" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -2067.01, 923.903 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@705" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -2074.61, 950.486 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@706" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -2074.61, 950.486 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@707" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -2074.61, 980.866 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@708" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1915.11, 1326.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@709" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1816.38, 1615.05 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@710" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1812.58, 1634.04 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@711" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1634.1, 1622.64 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@712" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1615.11, 1618.85 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@713" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1637.9, 1512.52 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@714" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1694.86, 1307.45 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@715" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1729.04, 1155.55 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@716" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1721.44, 969.473 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@717" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1675.87, 984.663 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@718" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1493.59, 1178.34 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@719" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1372.07, 1341.63 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@720" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1273.34, 1474.54 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@721" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1064.47, 1432.77 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@722" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -1053.08, 1432.77 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@723" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -756.876, 1542.9 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@724" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -620.166, 1558.09 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@725" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -426.494, 1508.72 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@726" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -407.506, 1489.73 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@727" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -282.188, 1451.76 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@728" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -236.618, 1459.35 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@729" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -134.086, 1558.09 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@730" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( -99.9084, 1599.86 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@731" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 257.057, 1622.64 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@732" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 257.057, 1622.64 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@733" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 329.209, 1626.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@734" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 465.919, 1645.43 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@735" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 606.427, 1637.83 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@736" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 967.189, 1634.04 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@737" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1126.68, 1615.05 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@738" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1122.89, 1611.25 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@739" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 800.099, 1360.62 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@740" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 701.364, 1246.69 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@741" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 819.087, 1223.91 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@742" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1707.7, 1212.51 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@743" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1559.6, 1163.15 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@744" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1096.3, 635.293 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@745" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1198.84, 490.988 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@746" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1297.57, 441.621 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@747" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1388.71, 498.583 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@748" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1646.94, 809.978 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@749" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1814.03, 901.118 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@750" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1992.51, 813.776 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@751" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2060.87, 825.168 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@752" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2072.26, 882.131 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@753" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2133.02, 1026.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@754" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2239.35, 1231.5 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@755" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2262.14, 1364.41 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@756" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2277.33, 1413.78 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@757" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2577.33, 1626.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@758" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2581.13, 1607.45 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@759" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2584.92, 1451.76 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@760" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2611.51, 1223.91 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@761" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2611.51, 1223.91 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@762" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2622.9, 1223.91 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@763" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2846.95, 1406.19 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@764" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2846.95, 1239.1 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@765" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2957.08, 1125.17 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@766" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2919.1, 1113.78 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@767" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2865.94, 1026.44 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@768" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2801.38, 942.891 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@769" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2695.05, 711.243 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@770" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2638.09, 323.898 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@771" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2641.89, 323.898 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@772" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2641.89, 323.898 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@773" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2539.35, 266.936 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@774" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2516.57, 255.543 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@775" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2512.77, 221.366 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@776" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2425.43, 1.11047 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@777" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2421.63, -48.257 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@778" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2425.43, -93.827 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@779" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2376.06, -257.12 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@780" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2360.87, -287.5 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@781" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2360.87, -287.5 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@782" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2303.91, -336.867 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@783" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2243.15, -450.792 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@784" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2220.36, -503.957 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@785" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2189.98, -560.92 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@786" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2121.63, -621.68 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@787" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2095.05, -652.06 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@788" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2079.86, -678.642 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@789" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2079.86, -678.642 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@790" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 2022.89, -724.212 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@791" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1886.18, -895.1 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@792" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1897.58, -891.302 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@793" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1901.37, -891.302 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@794" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1787.45, -807.757 )
+script = ExtResource( 5 )
+
+[node name="@ChestTest@795" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 4 )]
+position = Vector2( 1779.85, -803.96 )
+script = ExtResource( 5 )
+
+[node name="FireArea" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
 editor/display_folded = true
-position = Vector2( 394.737, 218.719 )
-scale = Vector2( 1.25503, 1.25503 )
+position = Vector2( 286.77, -407.421 )
+scale = Vector2( 1.08559, 1.08559 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@796" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 392.335, -393.156 )
+scale = Vector2( 1.08836, 1.08836 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@797" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 201.176, -353.212 )
+scale = Vector2( 1.24791, 1.24791 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@798" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 229.707, -381.743 )
+scale = Vector2( 0.802497, 0.802497 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@799" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 195.47, -387.449 )
+scale = Vector2( 1.06573, 1.06573 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@800" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 149.82, -336.093 )
+scale = Vector2( 1.41397, 1.41397 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@801" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 49.9609, -327.534 )
+scale = Vector2( 0.577503, 0.577503 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@802" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 61.3734, -324.681 )
+scale = Vector2( 0.927547, 0.927547 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@803" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -41.3389, -284.737 )
+scale = Vector2( 1.39791, 1.39791 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@804" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -47.0452, -213.409 )
+scale = Vector2( 0.770327, 0.770327 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@805" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -218.232, -156.347 )
+scale = Vector2( 1.06983, 1.06983 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@806" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -366.594, -47.9282 )
+scale = Vector2( 1.23467, 1.23467 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@807" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -283.854, 0.574829 )
+scale = Vector2( 0.992614, 0.992614 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@808" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -426.51, 83.3153 )
+scale = Vector2( 0.876943, 0.876943 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@809" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -623.375, 225.971 )
+scale = Vector2( 0.630285, 0.630285 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@810" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -631.934, 228.824 )
+scale = Vector2( 1.30919, 1.30919 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@811" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -537.781, -478.749 )
+scale = Vector2( 0.845948, 0.845948 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@812" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -860.184, -318.974 )
+scale = Vector2( 1.37053, 1.37053 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@813" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1031.37, -364.624 )
+scale = Vector2( 0.850608, 0.850608 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@814" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -671.878, -324.681 )
+scale = Vector2( 1.19649, 1.19649 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@815" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -928.659, -82.1656 )
+scale = Vector2( 0.966317, 0.966317 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@816" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -820.24, -59.3407 )
+scale = Vector2( 0.5587, 0.5587 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@817" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -708.969, -47.9282 )
+scale = Vector2( 0.91779, 0.91779 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@818" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -800.268, 180.321 )
+scale = Vector2( 0.762077, 0.762077 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@819" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -757.472, 371.48 )
+scale = Vector2( 0.639451, 0.639451 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@820" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -982.868, 479.899 )
+scale = Vector2( 1.34126, 1.34126 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@821" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1011.4, 128.965 )
+scale = Vector2( 1.31522, 1.31522 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@822" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -848.771, 203.146 )
+scale = Vector2( 1.25287, 1.25287 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@823" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1068.46, 354.362 )
+scale = Vector2( 0.873339, 0.873339 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@824" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -583.431, 257.355 )
+scale = Vector2( 0.774597, 0.774597 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@825" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -649.053, 371.48 )
+scale = Vector2( 0.889976, 0.889976 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@826" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -400.832, 505.577 )
+scale = Vector2( 0.663049, 0.663049 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@827" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -198.26, 645.38 )
+scale = Vector2( 0.541056, 0.541056 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@828" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -29.9264, 865.07 )
+scale = Vector2( 0.893902, 0.893902 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@830" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -452.188, 1164.65 )
+scale = Vector2( 1.23531, 1.23531 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@831" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -129.786, 1281.63 )
+scale = Vector2( 0.681328, 0.681328 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@833" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -771.737, 893.601 )
+scale = Vector2( 0.988484, 0.988484 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@834" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -888.715, 793.742 )
+scale = Vector2( 1.1711, 1.1711 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@835" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -674.731, 636.82 )
+scale = Vector2( 0.957039, 0.957039 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@836" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -771.737, 551.227 )
+scale = Vector2( 0.873929, 0.873929 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@837" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -999.987, 919.279 )
+scale = Vector2( 0.914327, 0.914327 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@838" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -988.574, 1019.14 )
+scale = Vector2( 0.83086, 0.83086 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@839" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -432.216, 1161.79 )
+scale = Vector2( 1.42783, 1.42783 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@840" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 480.782, 1136.12 )
+scale = Vector2( 0.811674, 0.811674 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@841" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 937.281, 964.929 )
+scale = Vector2( 0.958284, 0.958284 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@842" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 991.49, 836.539 )
+scale = Vector2( 0.844613, 0.844613 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@843" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 700.472, 736.679 )
+scale = Vector2( 0.524512, 0.524512 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@844" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -44.192, 574.052 )
+scale = Vector2( 1.21186, 1.21186 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@845" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1048.55, 656.792 )
+scale = Vector2( 0.941996, 0.941996 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@846" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 529.285, 976.342 )
+scale = Vector2( 1.12212, 1.12212 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@847" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1365.25, 1170.35 )
+scale = Vector2( 1.41181, 1.41181 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@848" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1102.76, 1278.77 )
+scale = Vector2( 1.19132, 1.19132 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@849" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1316.75, 1270.21 )
+scale = Vector2( 0.674217, 0.674217 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@850" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1074.23, 1161.79 )
+scale = Vector2( 0.985479, 0.985479 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@851" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1156.97, 1007.73 )
+scale = Vector2( 1.25603, 1.25603 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@852" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1513.61, 999.167 )
+scale = Vector2( 0.948239, 0.948239 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@853" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1467.96, 913.573 )
+scale = Vector2( 1.45148, 1.45148 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@854" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1234.01, 633.967 )
+scale = Vector2( 0.73674, 0.73674 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@855" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1490.79, 642.527 )
+scale = Vector2( 1.11245, 1.11245 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@856" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1545, 508.43 )
+scale = Vector2( 0.889169, 0.889169 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@857" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1422.31, 482.752 )
+scale = Vector2( 0.713634, 0.713634 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@858" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1302.48, 425.69 )
+scale = Vector2( 0.683441, 0.683441 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@859" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1216.89, 354.362 )
+scale = Vector2( 0.857384, 0.857384 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@860" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1513.61, 283.034 )
+scale = Vector2( 0.753481, 0.753481 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@861" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1162.68, 228.824 )
+scale = Vector2( 1.12097, 1.12097 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@862" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1162.68, 171.762 )
+scale = Vector2( 0.726512, 0.726512 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@863" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1228.3, 69.0497 )
+scale = Vector2( 1.19908, 1.19908 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@864" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1062.82, -19.397 )
+scale = Vector2( 0.613863, 0.613863 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@865" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1182.65, -99.2843 )
+scale = Vector2( 0.783408, 0.783408 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@866" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1784.66, -179.172 )
+scale = Vector2( 0.501181, 0.501181 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@867" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1927.31, -356.065 )
+scale = Vector2( 0.813357, 0.813357 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@868" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1796.07, -427.393 )
+scale = Vector2( 1.31511, 1.31511 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@869" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1661.97, -535.812 )
+scale = Vector2( 1.24439, 1.24439 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@870" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1168.38, -661.349 )
+scale = Vector2( 1.45505, 1.45505 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@871" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1388.07, -641.377 )
+scale = Vector2( 1.19461, 1.19461 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@872" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 734.709, -718.411 )
+scale = Vector2( 0.530872, 0.530872 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@873" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 272.504, -732.677 )
+scale = Vector2( 1.15953, 1.15953 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@874" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -21.3671, -709.852 )
+scale = Vector2( 1.27604, 1.27604 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@875" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -412.244, -532.958 )
+scale = Vector2( 0.850062, 0.850062 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@876" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -323.798, -435.952 )
+scale = Vector2( 1.38623, 1.38623 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@877" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 118.436, -501.574 )
+scale = Vector2( 1.49963, 1.49963 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@878" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 911.603, -572.902 )
+scale = Vector2( 0.706984, 0.706984 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@879" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1410.9, -481.602 )
+scale = Vector2( 1.07338, 1.07338 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@880" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 355.245, -358.918 )
+scale = Vector2( 0.927455, 0.927455 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@881" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1017.17, -244.793 )
+scale = Vector2( 1.36983, 1.36983 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@882" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 181.204, -244.793 )
+scale = Vector2( 0.631935, 0.631935 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@883" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 449.397, -182.025 )
+scale = Vector2( 0.915936, 0.915936 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@884" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 420.866, -224.822 )
+scale = Vector2( 0.812307, 0.812307 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@885" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 229.707, -224.822 )
+scale = Vector2( 1.48352, 1.48352 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@886" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 246.826, -187.731 )
+scale = Vector2( 1.1853, 1.1853 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@887" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 854.541, -327.534 )
+scale = Vector2( 1.13234, 1.13234 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@888" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1156.97, -438.805 )
+scale = Vector2( 0.61456, 0.61456 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@889" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 640.557, -527.252 )
+scale = Vector2( 0.933867, 0.933867 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@890" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 634.85, -629.964 )
+scale = Vector2( 0.74372, 0.74372 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@891" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 546.404, -781.18 )
+scale = Vector2( 1.43077, 1.43077 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@892" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 181.204, -875.333 )
+scale = Vector2( 0.665075, 0.665075 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@893" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -343.77, -903.864 )
+scale = Vector2( 1.49122, 1.49122 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@894" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -600.55, -758.355 )
+scale = Vector2( 0.880105, 0.880105 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@895" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -720.381, -715.558 )
+scale = Vector2( 1.28027, 1.28027 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@896" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -877.303, -632.818 )
+scale = Vector2( 0.784045, 0.784045 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@897" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1042.78, -501.574 )
+scale = Vector2( 1.2103, 1.2103 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@898" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1136.94, -401.715 )
+scale = Vector2( 0.609977, 0.609977 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@899" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1213.97, -290.443 )
+scale = Vector2( 1.25255, 1.25255 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@900" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1268.18, -184.878 )
+scale = Vector2( 1.19959, 1.19959 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@901" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1285.3, -85.0187 )
+scale = Vector2( 1.26718, 1.26718 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@902" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -1296.71, 46.2247 )
+scale = Vector2( 1.24327, 1.24327 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@903" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -988.574, 400.011 )
+scale = Vector2( 0.814207, 0.814207 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@904" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1031.43, 833.686 )
+scale = Vector2( 0.658961, 0.658961 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@905" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 2266.83, 1030.55 )
+scale = Vector2( 0.685943, 0.685943 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@906" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 2629.18, 1016.29 )
+scale = Vector2( 0.717988, 0.717988 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@907" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1861.69, 445.661 )
+scale = Vector2( 1.44538, 1.44538 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@908" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 1930.17, 616.849 )
+scale = Vector2( 0.560759, 0.560759 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@909" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 908.75, 750.945 )
+scale = Vector2( 1.27657, 1.27657 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@910" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 506.46, 873.629 )
+scale = Vector2( 1.13031, 1.13031 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@911" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -534.928, 873.629 )
+scale = Vector2( 1.46557, 1.46557 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@912" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -323.798, 69.0497 )
+scale = Vector2( 0.745182, 0.745182 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@913" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 172.645, -378.89 )
+scale = Vector2( 0.506985, 0.506985 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@914" type="Node2D" parent="Layers/Entities" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( 612.025, -270.471 )
+scale = Vector2( 1.1351, 1.1351 )
+script = ExtResource( 9 )
+
+[node name="@FireArea@916" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1704.77, 140.378 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@26" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 373.67, 201.602 )
-scale = Vector2( 1.13663, 1.13663 )
+[node name="@FireArea@917" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2021.47, -56.4875 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@27" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 378.41, 205.816 )
-scale = Vector2( 0.576148, 0.576148 )
+[node name="@FireArea@918" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2189.8, -162.053 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@28" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 394.474, 222.932 )
-scale = Vector2( 1.02594, 1.02594 )
+[node name="@FireArea@919" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2386.67, 191.734 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@29" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 359.977, 233.729 )
-scale = Vector2( 1.32955, 1.32955 )
+[node name="@FireArea@920" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2186.95, 288.74 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@30" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 352.077, 219.772 )
-scale = Vector2( 0.520105, 0.520105 )
+[node name="@FireArea@921" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2169.83, 722.414 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@31" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 370.774, 230.305 )
-scale = Vector2( 0.581761, 0.581761 )
+[node name="@FireArea@922" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1844.57, 984.901 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@32" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 346.811, 209.766 )
-scale = Vector2( 0.670736, 0.670736 )
+[node name="@FireArea@923" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2286.81, 631.114 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@33" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 373.407, 218.192 )
-scale = Vector2( 1.09109, 1.09109 )
+[node name="@FireArea@924" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2181.24, -173.465 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@34" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 382.097, 220.562 )
-scale = Vector2( 0.610997, 0.610997 )
+[node name="@FireArea@925" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1579.23, -321.828 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@35" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 359.187, 216.085 )
-scale = Vector2( 0.82105, 0.82105 )
+[node name="@FireArea@926" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 840.275, -570.049 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@36" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 365.771, 222.669 )
-scale = Vector2( 0.79461, 0.79461 )
+[node name="@FireArea@927" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1.39526, -644.23 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@37" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 387.364, 238.469 )
-scale = Vector2( 0.811882, 0.811882 )
+[node name="@FireArea@928" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -643.347, -544.371 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@38" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 375.514, 240.312 )
-scale = Vector2( 1.25595, 1.25595 )
+[node name="@FireArea@929" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -435.069, -193.437 )
 script = ExtResource( 7 )
 
-[node name="@FireArea@39" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 368.141, 255.848 )
-scale = Vector2( 1.30816, 1.30816 )
+[node name="@FireArea@930" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -723.234, 177.468 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@931" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -991.427, 536.961 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@932" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -942.924, 750.945 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@933" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -674.731, 973.488 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@934" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1077.02, 1193.18 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@935" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -223.938, 1270.21 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@937" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 423.72, 1352.95 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@938" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 905.897, 1370.07 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@939" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 994.343, 1196.03 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@940" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -29.9263, 1053.38 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@941" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -363.741, 916.426 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@942" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -132.639, 785.182 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@943" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -423.657, 591.17 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@944" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -617.669, 676.764 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@945" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -395.125, 1007.73 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@947" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -748.912, 1161.79 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@948" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 503.607, 1056.23 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@949" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 788.919, 682.47 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@950" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 24.283, 448.515 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@951" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -252.47, 174.615 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@952" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -41.3387, -176.319 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@953" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 911.603, -304.709 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@954" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1342.42, -116.403 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@955" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 897.337, 140.378 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@956" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1487.93, -267.618 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@957" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1079.94, -504.427 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@958" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1251.12, -572.902 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@959" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -346.622, -527.252 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@960" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 12.8705, -453.071 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@961" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 269.651, -475.896 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@962" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 569.229, -441.659 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@963" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -86.9886, -364.624 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@964" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -460.747, -142.081 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@965" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -794.562, 89.0215 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@966" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -837.359, -259.059 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@967" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -663.319, -570.049 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@968" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -880.156, 186.028 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@969" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -694.703, 400.011 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@970" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -737.5, 713.854 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@971" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 15.7236, 885.042 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@972" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -378.007, 1030.55 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@973" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -611.963, 1047.67 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@974" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -991.427, 1087.61 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@975" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1253.91, 1030.55 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@976" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1442.22, 1081.91 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@977" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1276.74, 1193.18 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@978" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -834.506, 1338.69 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@979" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -169.729, 1332.98 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@980" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 243.973, 1367.22 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@981" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 589.201, 1372.93 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@982" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1747.57, 1364.37 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@983" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1941.58, 1253.09 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@984" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1447.99, 1056.23 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@985" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1271.1, 905.014 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@986" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1542.14, 753.798 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@987" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1736.15, 465.633 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@988" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1439.43, 274.474 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@989" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1343.2, -130.74 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@990" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1069.68, -321.734 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@991" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 876.327, -401.905 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@992" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 682.975, -437.274 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@993" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 574.509, -432.558 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@994" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 470.76, -590.541 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@995" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 135.931, -578.751 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@996" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -274.352, -467.927 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@997" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 216.101, -427.842 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@998" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 621.668, -368.893 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@999" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 48.6866, -34.0646 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1000" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -182.392, 296.048 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1001" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -203.614, 545.991 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1002" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -33.8416, -123.667 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1003" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1338.48, -578.751 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1004" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2038.8, -217.985 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1005" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1777.06, 364.429 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1006" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1925.61, 548.349 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1007" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1977.49, 897.325 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1008" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1833.65, 904.399 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1009" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 2081.24, 152.213 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1010" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1557.77, -133.098 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1011" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1984.56, -562.245 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1012" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1482.32, -727.302 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1013" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 1340.84, -668.353 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1014" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 381.157, -581.109 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1015" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -189.466, -559.887 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1016" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1071.33, -154.198 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1017" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1399.31, 311.864 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1018" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1509.78, 912.56 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1019" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1640.97, 287.698 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1020" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1223.24, -779.054 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1021" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -1606.44, 598.403 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1022" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( -757.185, 1506.35 )
+script = ExtResource( 7 )
+
+[node name="@FireArea@1023" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
+position = Vector2( 630.629, 1433.85 )
 script = ExtResource( 7 )
 

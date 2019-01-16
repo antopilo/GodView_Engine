@@ -30,7 +30,9 @@ extents = Vector2( 9, 4 )
 
 extents = Vector2( 6.99999, 2.02886 )
 
-[node name="Chest" type="Node2D"]
+[node name="Chest" type="Node2D" groups=[
+"Interact",
+]]
 script = ExtResource( 1 )
 
 [node name="Shadow" type="Sprite" parent="."]
