@@ -1,20 +1,21 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Content/Scripts/Spells/Projectile/WaterBall.cs" type="Script" id=1]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame1.png" type="Texture" id=2]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame2.png" type="Texture" id=3]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame3.png" type="Texture" id=4]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame4.png" type="Texture" id=5]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame5.png" type="Texture" id=6]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame6.png" type="Texture" id=7]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame7.png" type="Texture" id=8]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame8.png" type="Texture" id=9]
-[ext_resource path="res://Content/Art/Spells/FlameHand/Flame9.png" type="Texture" id=10]
+[ext_resource path="res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame1.png" type="Texture" id=3]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame2.png" type="Texture" id=4]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame3.png" type="Texture" id=5]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame4.png" type="Texture" id=6]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame5.png" type="Texture" id=7]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame6.png" type="Texture" id=8]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame7.png" type="Texture" id=9]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame8.png" type="Texture" id=10]
+[ext_resource path="res://Content/Art/Spells/FlameHand/Flame9.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "default",
 "speed": 8.0
@@ -33,15 +34,18 @@ color = Color( 0.968627, 0.462745, 0.133333, 1 )
 
 [sub_resource type="CircleShape2D" id=3]
 
-radius = 5.6831
+radius = 5.0
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="FireBall" type="Node2D"]
 script = ExtResource( 1 )
+DieDistance = 160.0
+Impact = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+editor/display_folded = true
 rotation = -1.5708
 frames = SubResource( 1 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="AnimatedSprite"]
@@ -49,7 +53,10 @@ rotation = 1.57079
 amount = 23
 process_material = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
-disabled = true
+[node name="Area2D" type="Area2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

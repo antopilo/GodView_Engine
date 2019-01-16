@@ -1,15 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Content/Scripts/Spells/Projectile/WaterBall.cs" type="Script" id=1]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water1.png" type="Texture" id=2]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water2.png" type="Texture" id=3]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water3.png" type="Texture" id=4]
-[ext_resource path="res://Content/Art/Spells/WaterHand/Water4.png" type="Texture" id=5]
+[ext_resource path="res://Content/Scenes/Entities/Spells/WaterAOE/WaterArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water1.png" type="Texture" id=3]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water2.png" type="Texture" id=4]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water3.png" type="Texture" id=5]
+[ext_resource path="res://Content/Art/Spells/WaterHand/Water4.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -28,22 +29,27 @@ color = Color( 0, 0.592157, 0.807843, 1 )
 
 [sub_resource type="CircleShape2D" id=3]
 
+radius = 6.08276
 
-[node name="WaterProjectile" type="KinematicBody2D"]
+[node name="WaterProjectile" type="Node2D"]
 script = ExtResource( 1 )
+DieDistance = 64.0
+Impact = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 editor/display_folded = true
 rotation = 1.57079
 frames = SubResource( 1 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="Sprite"]
 local_coords = false
 process_material = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
-disabled = true
+[node name="Area2D" type="Area2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

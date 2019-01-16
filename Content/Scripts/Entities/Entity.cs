@@ -20,9 +20,11 @@ public class Entity : Node2D
             GetSize(); // Get the size of the Sprite.
 
             var shadow = GetNode("Shadow") as Sprite;
+            if(shadow.Material == null)
+                return;
             (shadow.Material as ShaderMaterial).SetShaderParam("Height", Width);
             (shadow.Material as ShaderMaterial).SetShaderParam("Width", Height);
-            GD.Print("Detected size of " + this.Name + " is X:" + Width + " Y:" + Height);
+            //GD.Print("Detected size of " + this.Name + " is X:" + Width + " Y:" + Height);
         }
     }
 

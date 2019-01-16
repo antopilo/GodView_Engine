@@ -51,11 +51,13 @@
   <ItemGroup>
     <Compile Include="Content\Levels\Level.cs" />
     <Compile Include="Content\Scripts\Camera.cs" />
+    <Compile Include="Content\Scripts\Debugging\FPScounter.cs" />
     <Compile Include="Content\Scripts\Entities\Chest\Chest.cs" />
     <Compile Include="Content\Scripts\Entities\Entity.cs" />
     <Compile Include="Content\Scripts\Entities\Oil\Oil.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\FireArea.cs" />
     <Compile Include="Content\Scripts\Entities\Spell\HealArea.cs" />
+    <Compile Include="Content\Scripts\Entities\Spell\WaterArea.cs" />
     <Compile Include="Content\Scripts\Player.cs" />
     <Compile Include="Content\Scripts\Player\Hand.cs" />
     <Compile Include="Content\Scripts\Singletons\Game.cs" />

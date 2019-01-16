@@ -30,6 +30,7 @@ public class Player : KinematicBody2D
 
     private float MaxHealth = 100;
     private float Health;
+
     [Export] private Color FullHealthTint = new Color("63c74d");
     [Export] private Color MidHealthTint = new Color("f77622");
     [Export] private Color LowHealthTint = new Color("e43b44");

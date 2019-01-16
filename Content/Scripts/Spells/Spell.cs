@@ -3,16 +3,15 @@ using System;
 
 public class Spell : Entity
 {
-    private Hand _Hand;
-    private Node2D Entities;
-
     public bool Unlocked = false;
     public bool Equipped = false;
 
+    private Hand _Hand;
+    private Node2D Entities;
     private Player _Player;
+    
     [Export] private PackedScene Projectile;
 
-    // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
 		Entities = GetNode("../../../") as Node2D;
@@ -24,8 +23,6 @@ public class Spell : Entity
     {
         if( !Unlocked || !Equipped)
             return;
-
-        Visible = Equipped;
 
         if (Input.IsActionJustPressed("Click"))
            Shoot();

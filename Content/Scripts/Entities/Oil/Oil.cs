@@ -6,15 +6,16 @@ public class Oil : Entity
     private bool PlayerPresent = false;
     private bool Ignited = false;
     private bool Triggered = false;
-    [Export] float DamagePerSecond = 5;
-    [Export] float IgniteDelay = 0.2f;
 
-    [Export] Vector2 SizeReduction = new Vector2(1.00001f, 1.00001f);
-    [Export] Color OilIgnitedColor = new Color(255,255,255);
+    [Export] private float DamagePerSecond = 5;
+    [Export] private float IgniteDelay = 0.2f;
+    [Export] private Vector2 SizeReduction = new Vector2(1.00001f, 1.00001f);
+    [Export] private Color OilIgnitedColor = new Color(255,255,255);
+
     private Player _Player = null;
     private Timer _Timer;
     private List<Node2D> Colliding = new List<Node2D>();
-    RandomNumberGenerator rbg = new RandomNumberGenerator();
+    private RandomNumberGenerator rbg = new RandomNumberGenerator();
 
     public override void _Ready()
     {
@@ -40,6 +41,7 @@ public class Oil : Entity
             (this as CanvasItem).Modulate = OilIgnitedColor;
             this.Scale -= SizeReduction * delta / 2;
             (GetNode("Sprite") as CanvasItem).Modulate = new Color(1,1,1, (GetNode("Sprite") as CanvasItem).Modulate.a - SizeReduction.x * delta);
+
             if ((GetNode("Sprite") as CanvasItem).Modulate.a <= 0 )
                 this.QueueFree();
             if (PlayerPresent && _Player != null)
@@ -56,42 +58,35 @@ public class Oil : Entity
 
     }
 
+    // Check if there is any flame around.
     private void CheckFlame()
     {
         foreach (Node2D area in Colliding)
         {
             if (area is Oil && (area as Oil).Ignited)
-            {
                 StartIgnite();
-            }
-            else if (area is FireArea)
-            {
+            else if (area is FireArea && (area as FireArea).Burning)
                 StartIgnite();
-            }
         }
     }
 
+    // Start the Ignitting process.
     private void StartIgnite()
     {
-        if (Triggered)
+        if (Triggered || IgniteDelay <= 0 && (!Ignited && !Triggered) )
             return;
 
-
-        if (IgniteDelay <= 0 && !Ignited && !Triggered)
-        {
-            //Ignite();
-            //Triggered = true;
-            return;
-        }
         if (!Ignited && !Triggered)
         {
             Triggered = true;
 
+            // Making the timer.
             var Timer = new Timer();
             Timer.WaitTime = IgniteDelay;
             _Timer = Timer;
             AddChild(Timer);
             Timer.Connect("timeout", this, "Ignite");
+
             Timer.Start();
         }
     }
@@ -102,8 +97,6 @@ public class Oil : Entity
         _Timer.QueueFree();
         Ignited = true;
     }
-
-    // Signals
 
     //Area Entering
     private void _on_HitZone_area_entered(object area)

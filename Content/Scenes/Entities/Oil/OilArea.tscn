@@ -31,7 +31,6 @@ emission_sphere_radius = 12.0
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, -25, 0 )
-angular_velocity = 94.21
 angular_velocity_random = 1.0
 orbit_velocity = 0.1
 orbit_velocity_random = 1.0
@@ -45,6 +44,7 @@ hue_variation = 0.06
 hue_variation_random = 1.0
 
 [node name="OilArea" type="Node2D"]
+editor/display_folded = true
 script = ExtResource( 1 )
 SizeReduction = Vector2( 0.5, 0.5 )
 OilIgnitedColor = Color( 1, 1, 1, 1 )

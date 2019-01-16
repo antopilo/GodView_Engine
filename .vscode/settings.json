@@ -1,3 +1,5 @@
 {
-    "window.autoDetectHighContrast": false
+    "window.autoDetectHighContrast": false,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "expand"
 }
