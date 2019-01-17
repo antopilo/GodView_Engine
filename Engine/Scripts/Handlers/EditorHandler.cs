@@ -75,10 +75,10 @@ public class EditorHandler : Node2D
             MovingEnt = PlacingEnt = false;
         }
         // EditorMode est un controle dans project settings
-        if (@event.IsActionPressed("RightClick") && !MovingEnt) 
+        if (@event.IsActionPressed("RightClick")) 
         {
-            PlacingEnt = false;
-            InEditorMenu = true;
+            if(MovingEnt)
+                PlaceEntity();
             ClearSelected();
             EditorMenu.PopupCenteredMinsize();
             EditorMenu.RectGlobalPosition = GetGlobalMousePosition();
@@ -90,9 +90,7 @@ public class EditorHandler : Node2D
                 MovingEnt = true;  
         }
         else if(MovingEnt && !PlacingEnt && @event.IsActionPressed("Click") && !InEditorMenu )
-        {
             PlaceEntity();
-        }
 
         // Placing entities
         if (PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt && !InEditorMenu) 
@@ -113,7 +111,7 @@ public class EditorHandler : Node2D
         }
         
         // Canceling
-        if (PlacingEnt && @event.IsActionPressed("ui_cancel"))
+        if (PlacingEnt || MovingEnt && @event.IsActionPressed("ui_cancel"))
             ClearSelected();
 
         
@@ -123,17 +121,12 @@ public class EditorHandler : Node2D
 
     public override void _Process(float delta)
     {
-        if(PlacingEnt)  (
-            GetNode("Action") as Label).Text = "Placing : " + SelectedEnt.Name;
-        else if(MovingEnt) 
-            (GetNode("Action") as Label).Text = "Moving : ";
-        else (
-            GetNode("Action") as Label).Text = "Idling";
+        if(PlacingEnt) (GetNode("Action") as Label).Text = "Placing";
+        else if(MovingEnt)  (GetNode("Action") as Label).Text = "Moving";
+        else (GetNode("Action") as Label).Text = "Idling";
 
         if (PlacingEnt || MovingEnt)
         {
-            if (SelectedEnt == null)
-                return;
             TargetPosition = Editor.Camera.GetGlobalMousePosition() + new Vector2(4,4);
             if(Snapping)
             {
@@ -152,21 +145,11 @@ public class EditorHandler : Node2D
     private void MakeMenu()
     {
         EditorMenu.AddItem("Add new Entity", 0);
-        EditorMenu.AddSeparator();
-        EditorMenu.AddItem("Test");
-        EditorMenu.AddItem("Test");
-        EditorMenu.AddItem("Test");
-        EditorMenu.AddItem("Test");
     }
 
 
     private void PlaceEntity()
     {
-        if(SelectedEnt == null){
-            PlacingEnt = false;
-            MovingEnt = false;
-            return;
-        }
         // Duplicating & Settings propreties for the new Entity
         var position = SelectedEnt.GlobalPosition;
         var Child = SelectedEnt.Duplicate() as Entity;
@@ -181,25 +164,19 @@ public class EditorHandler : Node2D
         Editor.Entities.AddChild(Child);
 
         // If is only moving an entity. Then Unselect.
-        if(MovingEnt) 
-        {
-            MovingEnt = PlacingEnt = false;
-            SelectedEnt.QueueFree();
-            return;
-        }
-
-        // Ajusting visual stuff.
-        ScaleBarBar.Value =  SelectedEnt.Scale.x;
+        if(MovingEnt)
+            ClearSelected();
+        else // Ajusting visual stuff.
+            ScaleBarBar.Value =  SelectedEnt.Scale.x;
+        
     }
 
     // Not sure if useful. really.
     private void ClearSelected()
     {
-        InEditorMenu = false;
-        
-        PlacingEnt = false;
-
-        if(SelectedEnt != null)
+        // Set everything to falseé
+        InEditorMenu = MovingEnt = PlacingEnt = false;
+        if(SelectedEnt != null) 
             SelectedEnt.QueueFree();
         SelectedEnt = null;
         

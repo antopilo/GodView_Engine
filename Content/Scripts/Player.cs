@@ -63,8 +63,6 @@ public class Player : KinematicBody2D
         
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
-
-        GD.Print(this.GlobalPosition);
     }
 
     private void UpdateSprite()
@@ -91,6 +89,7 @@ public class Player : KinematicBody2D
 
     private void GetInputDirection()
     {
+        // Horizontal Inputs.
         if (Input.IsActionPressed("ui_left"))
             InputDirection.x = -1;
         else if (Input.IsActionPressed("ui_right"))
@@ -98,12 +97,14 @@ public class Player : KinematicBody2D
         else
             InputDirection.x = 0;
 
-        if (Input.IsActionPressed("ui_up"))
+        // Vertical Inputs.
+        if (Input.IsActionPressed("ui_up")) 
             InputDirection.y = -1;
-        else if (Input.IsActionPressed("ui_down"))
+        else if (Input.IsActionPressed("ui_down")) 
             InputDirection.y = 1;
-        else
+        else 
             InputDirection.y = 0;
+            
     }
 
     private void UpdateVelocity()
@@ -138,7 +139,6 @@ public class Player : KinematicBody2D
         {
             var closest = InteractableObject[0];
             var closestDistance = (closest.GlobalPosition - GlobalPosition).Length(); //Distance du joueur
-
             for (int i = 0; i < InteractableObject.Count; i++)
             {
                 var currentDistance = (InteractableObject[i].GlobalPosition - this.GlobalPosition).Length();
@@ -149,7 +149,6 @@ public class Player : KinematicBody2D
             // Swaping the closest with the first of the list
             var temp = InteractableObject[0];
             var idx = InteractableObject.IndexOf(closest);
-
             InteractableObject[0] = closest;
             InteractableObject[idx] = temp;
         }

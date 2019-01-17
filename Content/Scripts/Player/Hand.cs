@@ -3,9 +3,8 @@ using System;
 
 public class Hand : Position2D
 {
-    public Spell[] SpellPool;
-
-    public Spell[] AllSpell;
+    public Spell[] SpellPool; // Iventory of spells
+    public Spell[] AllSpell; // List of all the spells
 
     // Called when the node is loaded.
     public override void _Ready()
