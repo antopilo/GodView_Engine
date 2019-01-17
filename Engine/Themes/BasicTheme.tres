@@ -13,13 +13,13 @@
 [ext_resource path="res://Engine/Styles/SliderNormal.tres" type="StyleBox" id=11]
 [ext_resource path="res://Engine/Styles/ScrollBGNormal.tres" type="StyleBox" id=12]
 
-[sub_resource type="ImageTexture" id=2]
+[sub_resource type="ImageTexture" id=1]
 
 flags = 0
 flags = 0
 size = Vector2( 16, 16 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin_left = 2.0
 content_margin_right = 0.0
@@ -27,6 +27,12 @@ content_margin_top = 0.0
 content_margin_bottom = 0.0
 bg_color = Color( 0.147059, 0.173529, 0.232353, 1 )
 border_width_left = 2
+
+[sub_resource type="ImageTexture" id=3]
+
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=4]
 
@@ -38,13 +44,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=6]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=7]
 
@@ -200,13 +206,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=33]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=34]
 
@@ -308,13 +314,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 16 )
 
 [sub_resource type="ImageTexture" id=51]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 16 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=52]
 
@@ -338,13 +344,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=56]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=57]
 
@@ -410,13 +416,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 32, 128 )
 
 [sub_resource type="ImageTexture" id=68]
 
 flags = 0
 flags = 0
-size = Vector2( 32, 128 )
+size = Vector2( 16, 128 )
 
 [sub_resource type="ImageTexture" id=69]
 
@@ -434,7 +440,7 @@ size = Vector2( 16, 128 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 128 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=72]
 
@@ -590,13 +596,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=98]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 64 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=99]
 
@@ -650,13 +656,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=108]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=109]
 
@@ -686,13 +692,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 24 )
 
 [sub_resource type="ImageTexture" id=114]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 24 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=115]
 
@@ -902,13 +908,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 12, 12 )
 
 [sub_resource type="ImageTexture" id=150]
 
 flags = 0
 flags = 0
-size = Vector2( 12, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=151]
 
@@ -932,7 +938,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 12, 12 )
 
 [sub_resource type="ImageTexture" id=155]
 
@@ -962,7 +968,7 @@ size = Vector2( 12, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 12, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=160]
 
@@ -1010,25 +1016,25 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=168]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 64 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=169]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=170]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=171]
 
@@ -1082,13 +1088,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=180]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=181]
 
@@ -1100,7 +1106,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 10, 10 )
 
 [sub_resource type="ImageTexture" id=183]
 
@@ -1112,7 +1118,7 @@ size = Vector2( 10, 10 )
 
 flags = 0
 flags = 0
-size = Vector2( 10, 10 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=185]
 
@@ -1142,31 +1148,31 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=190]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=191]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=192]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 32, 32 )
 
 [sub_resource type="ImageTexture" id=193]
 
 flags = 0
 flags = 0
-size = Vector2( 32, 32 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=194]
 
@@ -1182,39 +1188,39 @@ size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=196]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=197]
 
-size = Vector2( 64, 64 )
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=198]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=199]
 
-size = Vector2( 64, 64 )
-
-[sub_resource type="ImageTexture" id=200]
-
 flags = 0
 flags = 0
 size = Vector2( 16, 16 )
 
-[sub_resource type="ImageTexture" id=201]
+[sub_resource type="ImageTexture" id=200]
 
 size = Vector2( 64, 64 )
+
+[sub_resource type="ImageTexture" id=201]
+
+flags = 0
+flags = 0
+size = Vector2( 32, 32 )
 
 [sub_resource type="ImageTexture" id=202]
 
 flags = 0
 flags = 0
-size = Vector2( 32, 32 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=203]
 
@@ -1226,13 +1232,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 32, 32 )
 
 [sub_resource type="ImageTexture" id=205]
 
 flags = 0
 flags = 0
-size = Vector2( 32, 32 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=206]
 
@@ -1260,31 +1266,31 @@ size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=210]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
-
-[sub_resource type="ImageTexture" id=211]
-
 size = Vector2( 64, 64 )
 
-[sub_resource type="ImageTexture" id=212]
+[sub_resource type="ImageTexture" id=211]
 
 flags = 0
 flags = 0
 size = Vector2( 32, 32 )
 
-[sub_resource type="ImageTexture" id=213]
+[sub_resource type="ImageTexture" id=212]
 
 flags = 0
 flags = 0
 size = Vector2( 16, 16 )
 
-[sub_resource type="ImageTexture" id=214]
+[sub_resource type="ImageTexture" id=213]
 
 flags = 0
 flags = 0
 size = Vector2( 8, 16 )
+
+[sub_resource type="ImageTexture" id=214]
+
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=215]
 
@@ -1312,9 +1318,7 @@ size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=219]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 128, 128 )
 
 [sub_resource type="ImageTexture" id=220]
 
@@ -1358,7 +1362,9 @@ size = Vector2( 128, 128 )
 
 [sub_resource type="ImageTexture" id=230]
 
-size = Vector2( 128, 128 )
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=231]
 
@@ -1454,49 +1460,49 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 14, 14 )
 
 [sub_resource type="ImageTexture" id=247]
 
 flags = 0
 flags = 0
-size = Vector2( 14, 14 )
+size = Vector2( 14, 8 )
 
 [sub_resource type="ImageTexture" id=248]
 
 flags = 0
 flags = 0
-size = Vector2( 14, 8 )
+size = Vector2( 10, 10 )
 
 [sub_resource type="ImageTexture" id=249]
 
 flags = 0
 flags = 0
-size = Vector2( 10, 10 )
+size = Vector2( 4, 16 )
 
 [sub_resource type="ImageTexture" id=250]
 
 flags = 0
 flags = 0
-size = Vector2( 4, 16 )
+size = Vector2( 8, 64 )
 
 [sub_resource type="ImageTexture" id=251]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 64 )
+size = Vector2( 6, 16 )
 
 [sub_resource type="ImageTexture" id=252]
 
 flags = 0
 flags = 0
-size = Vector2( 6, 16 )
+size = Vector2( 12, 12 )
 
 [sub_resource type="ImageTexture" id=253]
 
 flags = 0
 flags = 0
-size = Vector2( 12, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=254]
 
@@ -1538,7 +1544,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 12, 12 )
 
 [sub_resource type="ImageTexture" id=261]
 
@@ -1562,7 +1568,7 @@ size = Vector2( 12, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 12, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=265]
 
@@ -1580,19 +1586,19 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=268]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=269]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 42, 26 )
 
 [sub_resource type="ImageTexture" id=270]
 
@@ -1604,7 +1610,7 @@ size = Vector2( 42, 26 )
 
 flags = 0
 flags = 0
-size = Vector2( 42, 26 )
+size = Vector2( 12, 12 )
 
 [sub_resource type="ImageTexture" id=272]
 
@@ -1622,7 +1628,7 @@ size = Vector2( 12, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 12, 12 )
+size = Vector2( 14, 14 )
 
 [sub_resource type="ImageTexture" id=275]
 
@@ -1634,37 +1640,37 @@ size = Vector2( 14, 14 )
 
 flags = 0
 flags = 0
-size = Vector2( 14, 14 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=277]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 4 )
 
 [sub_resource type="ImageTexture" id=278]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 4 )
+size = Vector2( 64, 34 )
 
 [sub_resource type="ImageTexture" id=279]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 34 )
+size = Vector2( 34, 64 )
 
 [sub_resource type="ImageTexture" id=280]
 
 flags = 0
 flags = 0
-size = Vector2( 34, 64 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=281]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 64 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=282]
 
@@ -1682,19 +1688,19 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=285]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 64, 8 )
 
 [sub_resource type="ImageTexture" id=286]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=287]
 
@@ -1826,7 +1832,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 8 )
 
 [sub_resource type="ImageTexture" id=309]
 
@@ -1856,7 +1862,7 @@ size = Vector2( 16, 8 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=314]
 
@@ -1898,7 +1904,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=321]
 
@@ -1952,7 +1958,7 @@ size = Vector2( 8, 8 )
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=330]
 
@@ -1976,7 +1982,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=334]
 
@@ -2000,7 +2006,7 @@ size = Vector2( 8, 8 )
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=338]
 
@@ -2096,13 +2102,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 187, 69 )
 
 [sub_resource type="ImageTexture" id=354]
 
 flags = 0
 flags = 0
-size = Vector2( 187, 69 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=355]
 
@@ -2240,13 +2246,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=378]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=379]
 
@@ -2372,13 +2378,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=400]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=401]
 
@@ -2396,13 +2402,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=404]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=405]
 
@@ -2630,13 +2636,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=443]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=444]
 
@@ -2666,13 +2672,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=449]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 64 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=450]
 
@@ -2714,7 +2720,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=457]
 
@@ -2756,7 +2762,7 @@ size = Vector2( 16, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=464]
 
@@ -2888,7 +2894,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=486]
 
@@ -2900,7 +2906,7 @@ size = Vector2( 16, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=488]
 
@@ -2930,13 +2936,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=493]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=494]
 
@@ -2966,13 +2972,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 14, 14 )
 
 [sub_resource type="ImageTexture" id=499]
 
 flags = 0
 flags = 0
-size = Vector2( 14, 14 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=500]
 
@@ -3086,13 +3092,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 17, 17 )
 
 [sub_resource type="ImageTexture" id=519]
 
 flags = 0
 flags = 0
-size = Vector2( 17, 17 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=520]
 
@@ -3308,13 +3314,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=556]
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=557]
 
@@ -3398,13 +3404,13 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 64, 64 )
 
 [sub_resource type="ImageTexture" id=571]
 
 flags = 0
 flags = 0
-size = Vector2( 64, 64 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=572]
 
@@ -3494,7 +3500,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=587]
 
@@ -3506,7 +3512,7 @@ size = Vector2( 8, 8 )
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 16, 8 )
 
 [sub_resource type="ImageTexture" id=589]
 
@@ -3530,7 +3536,7 @@ size = Vector2( 16, 8 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 8 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=593]
 
@@ -3542,7 +3548,7 @@ size = Vector2( 16, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=595]
 
@@ -3552,9 +3558,9 @@ size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=596]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
+flags = 4
+flags = 4
+size = Vector2( 20, 20 )
 
 [sub_resource type="ImageTexture" id=597]
 
@@ -3564,9 +3570,9 @@ size = Vector2( 20, 20 )
 
 [sub_resource type="ImageTexture" id=598]
 
-flags = 4
-flags = 4
-size = Vector2( 20, 20 )
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=599]
 
@@ -3576,9 +3582,9 @@ size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=600]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
+flags = 4
+flags = 4
+size = Vector2( 20, 20 )
 
 [sub_resource type="ImageTexture" id=601]
 
@@ -3588,9 +3594,9 @@ size = Vector2( 20, 20 )
 
 [sub_resource type="ImageTexture" id=602]
 
-flags = 4
-flags = 4
-size = Vector2( 20, 20 )
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=603]
 
@@ -3600,9 +3606,9 @@ size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=604]
 
-flags = 0
-flags = 0
-size = Vector2( 16, 16 )
+flags = 4
+flags = 4
+size = Vector2( 20, 20 )
 
 [sub_resource type="ImageTexture" id=605]
 
@@ -3612,9 +3618,9 @@ size = Vector2( 20, 20 )
 
 [sub_resource type="ImageTexture" id=606]
 
-flags = 4
-flags = 4
-size = Vector2( 20, 20 )
+flags = 0
+flags = 0
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=607]
 
@@ -3698,7 +3704,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=621]
 
@@ -3716,7 +3722,7 @@ size = Vector2( 16, 12 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 12 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=624]
 
@@ -3800,25 +3806,25 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 10, 10 )
 
 [sub_resource type="ImageTexture" id=638]
 
 flags = 0
 flags = 0
-size = Vector2( 10, 10 )
+size = Vector2( 48, 16 )
 
 [sub_resource type="ImageTexture" id=639]
 
 flags = 0
 flags = 0
-size = Vector2( 48, 16 )
+size = Vector2( 8, 8 )
 
 [sub_resource type="ImageTexture" id=640]
 
 flags = 0
 flags = 0
-size = Vector2( 8, 8 )
+size = Vector2( 16, 16 )
 
 [sub_resource type="ImageTexture" id=641]
 
@@ -3872,7 +3878,7 @@ size = Vector2( 16, 16 )
 
 flags = 0
 flags = 0
-size = Vector2( 16, 16 )
+size = Vector2( 16, 12 )
 
 [sub_resource type="ImageTexture" id=650]
 
@@ -3886,13 +3892,7 @@ flags = 0
 flags = 0
 size = Vector2( 16, 12 )
 
-[sub_resource type="ImageTexture" id=652]
-
-flags = 0
-flags = 0
-size = Vector2( 16, 12 )
-
-[sub_resource type="StyleBoxFlat" id=653]
+[sub_resource type="StyleBoxFlat" id=652]
 
 content_margin_left = 8.0
 content_margin_right = 8.0
@@ -3908,7 +3908,7 @@ expand_margin_top = 24.0
 shadow_color = Color( 0, 0, 0, 0.3 )
 shadow_size = 4
 
-[sub_resource type="StyleBoxFlat" id=654]
+[sub_resource type="StyleBoxFlat" id=653]
 
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -3916,7 +3916,7 @@ content_margin_top = 4.0
 content_margin_bottom = 4.0
 bg_color = Color( 0.122549, 0.144608, 0.193627, 1 )
 
-[sub_resource type="StyleBoxFlat" id=655]
+[sub_resource type="StyleBoxFlat" id=654]
 
 content_margin_left = 5.0
 content_margin_right = 5.0
@@ -3930,7 +3930,7 @@ border_width_bottom = 1
 border_color = Color( 0.0980392, 0.115686, 0.154902, 1 )
 expand_margin_top = -33.0
 
-[sub_resource type="StyleBoxFlat" id=656]
+[sub_resource type="StyleBoxFlat" id=655]
 
 content_margin_left = 2.0
 content_margin_right = 2.0
@@ -3943,7 +3943,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0.0980392, 0.115686, 0.154902, 1 )
 
-[sub_resource type="StyleBoxFlat" id=657]
+[sub_resource type="StyleBoxFlat" id=656]
 
 content_margin_left = 5.0
 content_margin_right = 5.0
@@ -3955,7 +3955,7 @@ border_width_top = 1
 border_width_right = 1
 border_color = Color( 0.0980392, 0.115686, 0.154902, 1 )
 
-[sub_resource type="StyleBoxFlat" id=658]
+[sub_resource type="StyleBoxFlat" id=657]
 
 content_margin_left = 10.0
 content_margin_right = 10.0
@@ -3968,7 +3968,7 @@ border_width_right = 1
 border_color = Color( 0.122549, 0.144608, 0.193627, 1 )
 expand_margin_bottom = 1.0
 
-[sub_resource type="StyleBoxFlat" id=659]
+[sub_resource type="StyleBoxFlat" id=658]
 
 content_margin_left = 10.0
 content_margin_right = 10.0
@@ -3981,7 +3981,7 @@ border_width_right = 1
 border_color = Color( 0.0980392, 0.115686, 0.154902, 1 )
 expand_margin_bottom = 1.0
 
-[sub_resource type="StyleBoxFlat" id=660]
+[sub_resource type="StyleBoxFlat" id=659]
 
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -3995,7 +3995,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0.497549, 0.519608, 0.568627, 1 )
 
-[sub_resource type="StyleBoxFlat" id=661]
+[sub_resource type="StyleBoxFlat" id=660]
 
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -4004,7 +4004,7 @@ content_margin_bottom = 4.0
 bg_color = Color( 0.196078, 0.231373, 0.309804, 0.5 )
 border_color = Color( 0.196078, 0.231373, 0.309804, 1 )
 
-[sub_resource type="StyleBoxFlat" id=662]
+[sub_resource type="StyleBoxFlat" id=661]
 
 content_margin_left = 6.0
 content_margin_right = 6.0
@@ -4015,7 +4015,7 @@ draw_center = false
 border_width_bottom = 1
 border_color = Color( 0.411765, 0.611765, 0.909804, 1 )
 
-[sub_resource type="StyleBoxFlat" id=663]
+[sub_resource type="StyleBoxFlat" id=662]
 
 content_margin_left = 6.0
 content_margin_right = 6.0
@@ -4025,28 +4025,28 @@ bg_color = Color( 0.147059, 0.173529, 0.232353, 1 )
 draw_center = false
 border_color = Color( 0.122549, 0.144608, 0.193627, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=664]
+[sub_resource type="StyleBoxEmpty" id=663]
 
 content_margin_left = 8.0
 content_margin_right = 8.0
 content_margin_top = 8.0
 content_margin_bottom = 8.0
 
-[sub_resource type="StyleBoxEmpty" id=665]
+[sub_resource type="StyleBoxEmpty" id=664]
 
 content_margin_left = 0.0
 content_margin_right = 0.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 
-[sub_resource type="StyleBoxEmpty" id=666]
+[sub_resource type="StyleBoxEmpty" id=665]
 
 content_margin_left = 4.0
 content_margin_right = 4.0
 content_margin_top = 0.0
 content_margin_bottom = 4.0
 
-[sub_resource type="StyleBoxFlat" id=667]
+[sub_resource type="StyleBoxFlat" id=666]
 
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -4059,7 +4059,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0.0980392, 0.115686, 0.154902, 1 )
 
-[sub_resource type="StyleBoxFlat" id=668]
+[sub_resource type="StyleBoxFlat" id=667]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4075,7 +4075,7 @@ border_color = Color( 1, 0.87, 0.4, 1 )
 shadow_color = Color( 1, 0.87, 0.4, 0.1 )
 shadow_size = 8
 
-[sub_resource type="StyleBoxFlat" id=669]
+[sub_resource type="StyleBoxFlat" id=668]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4088,7 +4088,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 0.9 )
 
-[sub_resource type="StyleBoxFlat" id=670]
+[sub_resource type="StyleBoxFlat" id=669]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4101,7 +4101,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 0.9 )
 
-[sub_resource type="StyleBoxFlat" id=671]
+[sub_resource type="StyleBoxFlat" id=670]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4114,7 +4114,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 0.9 )
 
-[sub_resource type="StyleBoxFlat" id=672]
+[sub_resource type="StyleBoxFlat" id=671]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4130,7 +4130,7 @@ border_color = Color( 1, 0.47, 0.42, 1 )
 shadow_color = Color( 1, 0.47, 0.42, 0.2 )
 shadow_size = 8
 
-[sub_resource type="StyleBoxFlat" id=673]
+[sub_resource type="StyleBoxFlat" id=672]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4145,7 +4145,7 @@ border_color = Color( 0.411765, 0.611765, 0.909804, 0.9 )
 shadow_color = Color( 0, 0, 0, 0.3 )
 shadow_size = 8
 
-[sub_resource type="StyleBoxFlat" id=674]
+[sub_resource type="StyleBoxFlat" id=673]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4158,7 +4158,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 0.9 )
 
-[sub_resource type="StyleBoxFlat" id=675]
+[sub_resource type="StyleBoxFlat" id=674]
 
 content_margin_left = 28.0
 content_margin_right = 28.0
@@ -4173,14 +4173,14 @@ border_color = Color( 0.411765, 0.611765, 0.909804, 0.9 )
 shadow_color = Color( 0, 0, 0, 0.3 )
 shadow_size = 8
 
-[sub_resource type="ImageTexture" id=676]
+[sub_resource type="ImageTexture" id=675]
 
 
-[sub_resource type="StyleBoxLine" id=677]
+[sub_resource type="StyleBoxLine" id=676]
 
 thickness = 2
 
-[sub_resource type="StyleBoxFlat" id=678]
+[sub_resource type="StyleBoxFlat" id=677]
 
 content_margin_left = 4.0
 content_margin_right = 4.0
@@ -4194,6 +4194,15 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 0.2 )
 
+[sub_resource type="StyleBoxFlat" id=678]
+
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 1, 1, 1, 0.2 )
+border_color = Color( 0.196078, 0.231373, 0.309804, 1 )
+
 [sub_resource type="StyleBoxFlat" id=679]
 
 content_margin_left = 4.0
@@ -4203,32 +4212,23 @@ content_margin_bottom = 4.0
 bg_color = Color( 1, 1, 1, 0.2 )
 border_color = Color( 0.196078, 0.231373, 0.309804, 1 )
 
-[sub_resource type="StyleBoxFlat" id=680]
+[sub_resource type="StyleBoxLine" id=680]
 
-content_margin_left = 4.0
-content_margin_right = 4.0
-content_margin_top = 4.0
-content_margin_bottom = 4.0
-bg_color = Color( 1, 1, 1, 0.2 )
-border_color = Color( 0.196078, 0.231373, 0.309804, 1 )
+grow_begin = 7.0
+thickness = 2
 
 [sub_resource type="StyleBoxLine" id=681]
 
-grow_begin = 7.0
+grow_end = 7.0
 thickness = 2
 
 [sub_resource type="StyleBoxLine" id=682]
 
-grow_end = 7.0
-thickness = 2
-
-[sub_resource type="StyleBoxLine" id=683]
-
 grow_begin = 7.0
 grow_end = 7.0
 thickness = 2
 
-[sub_resource type="StyleBoxFlat" id=684]
+[sub_resource type="StyleBoxFlat" id=683]
 
 content_margin_left = 15.0
 content_margin_right = 15.0
@@ -4248,10 +4248,10 @@ expand_margin_bottom = 2.0
 shadow_size = 2
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id=685]
+[sub_resource type="StyleBoxEmpty" id=684]
 
 
-[sub_resource type="StyleBoxFlat" id=686]
+[sub_resource type="StyleBoxFlat" id=685]
 
 content_margin_left = 10.0
 content_margin_right = 10.0
@@ -4266,7 +4266,7 @@ corner_detail = 1
 expand_margin_top = 1.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=686]
 
 content_margin_left = 6.0
 content_margin_right = 6.0
@@ -4445,7 +4445,7 @@ ColorPickerButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
 ColorPickerButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
 ColorPickerButton/constants/hseparation = 2
 ColorPickerButton/fonts/font = null
-ColorPickerButton/icons/bg = SubResource( 2 )
+ColorPickerButton/icons/bg = SubResource( 1 )
 ColorPickerButton/styles/disabled = null
 ColorPickerButton/styles/focus = null
 ColorPickerButton/styles/hover = null
@@ -4476,7 +4476,7 @@ Editor/constants/dark_theme = 1
 Editor/constants/inspector_margin = 8
 Editor/constants/scale = 1
 Editor/constants/thumb_size = 64
-Editor/styles/sub_inspector_bg = SubResource( 3 )
+Editor/styles/sub_inspector_bg = SubResource( 2 )
 EditorAbout/styles/panel = null
 EditorFonts/fonts/bold = null
 EditorFonts/fonts/doc = null
@@ -4488,672 +4488,672 @@ EditorFonts/fonts/source = null
 EditorFonts/fonts/status_source = null
 EditorFonts/fonts/title = null
 EditorHelp/colors/headline_color = Color( 1, 1, 1, 1 )
-EditorIcons/icons/2D = SubResource( 4 )
-EditorIcons/icons/3D = SubResource( 5 )
-EditorIcons/icons/AABB = SubResource( 6 )
-EditorIcons/icons/ARVRAnchor = SubResource( 7 )
-EditorIcons/icons/ARVRCamera = SubResource( 8 )
-EditorIcons/icons/ARVRController = SubResource( 9 )
-EditorIcons/icons/ARVROrigin = SubResource( 10 )
-EditorIcons/icons/AcceptDialog = SubResource( 11 )
-EditorIcons/icons/ActionCopy = SubResource( 12 )
-EditorIcons/icons/ActionCut = SubResource( 13 )
-EditorIcons/icons/ActionPaste = SubResource( 14 )
-EditorIcons/icons/Add = SubResource( 15 )
-EditorIcons/icons/AddAtlasTile = SubResource( 16 )
-EditorIcons/icons/AddAutotile = SubResource( 17 )
-EditorIcons/icons/AddSingleTile = SubResource( 18 )
-EditorIcons/icons/AddSplit = SubResource( 19 )
-EditorIcons/icons/Anchor = SubResource( 20 )
-EditorIcons/icons/AnimatedSprite = SubResource( 21 )
-EditorIcons/icons/AnimatedSprite3D = SubResource( 22 )
-EditorIcons/icons/AnimatedTexture = SubResource( 23 )
-EditorIcons/icons/Animation = SubResource( 24 )
-EditorIcons/icons/AnimationFilter = SubResource( 25 )
-EditorIcons/icons/AnimationPlayer = SubResource( 26 )
-EditorIcons/icons/AnimationTrackGroup = SubResource( 27 )
-EditorIcons/icons/AnimationTrackList = SubResource( 28 )
-EditorIcons/icons/AnimationTree = SubResource( 29 )
-EditorIcons/icons/AnimationTreePlayer = SubResource( 30 )
-EditorIcons/icons/Area = SubResource( 31 )
-EditorIcons/icons/Area2D = SubResource( 32 )
-EditorIcons/icons/Array = SubResource( 33 )
-EditorIcons/icons/ArrayMesh = SubResource( 34 )
-EditorIcons/icons/ArrowLeft = SubResource( 35 )
-EditorIcons/icons/ArrowRight = SubResource( 36 )
-EditorIcons/icons/ArrowUp = SubResource( 37 )
-EditorIcons/icons/AssetLib = SubResource( 38 )
-EditorIcons/icons/AtlasTexture = SubResource( 39 )
-EditorIcons/icons/AudioBusBypass = SubResource( 40 )
-EditorIcons/icons/AudioBusLayout = SubResource( 41 )
-EditorIcons/icons/AudioBusMute = SubResource( 42 )
-EditorIcons/icons/AudioBusSolo = SubResource( 43 )
-EditorIcons/icons/AudioStreamPlayer = SubResource( 44 )
-EditorIcons/icons/AudioStreamPlayer2D = SubResource( 45 )
-EditorIcons/icons/AudioStreamPlayer3D = SubResource( 46 )
-EditorIcons/icons/AudioStreamSample = SubResource( 47 )
-EditorIcons/icons/AutoEnd = SubResource( 48 )
-EditorIcons/icons/AutoPlay = SubResource( 49 )
-EditorIcons/icons/AutoTriangle = SubResource( 50 )
-EditorIcons/icons/Back = SubResource( 51 )
-EditorIcons/icons/BackBufferCopy = SubResource( 52 )
-EditorIcons/icons/Bake = SubResource( 53 )
-EditorIcons/icons/BakedLightmap = SubResource( 54 )
-EditorIcons/icons/BakedLightmapData = SubResource( 55 )
-EditorIcons/icons/Basis = SubResource( 56 )
-EditorIcons/icons/BezierHandlesBalanced = SubResource( 57 )
-EditorIcons/icons/BezierHandlesFree = SubResource( 58 )
-EditorIcons/icons/BezierHandlesMirror = SubResource( 59 )
-EditorIcons/icons/BitMap = SubResource( 60 )
-EditorIcons/icons/BitmapFont = SubResource( 61 )
-EditorIcons/icons/Blend = SubResource( 62 )
-EditorIcons/icons/Bone = SubResource( 63 )
-EditorIcons/icons/Bone2D = SubResource( 64 )
-EditorIcons/icons/BoneAttachment = SubResource( 65 )
-EditorIcons/icons/BoneTrack = SubResource( 66 )
-EditorIcons/icons/BoxShape = SubResource( 67 )
-EditorIcons/icons/BusVuDb = SubResource( 68 )
-EditorIcons/icons/BusVuEmpty = SubResource( 69 )
-EditorIcons/icons/BusVuFrozen = SubResource( 70 )
-EditorIcons/icons/BusVuFull = SubResource( 71 )
-EditorIcons/icons/Button = SubResource( 72 )
-EditorIcons/icons/ButtonGroup = SubResource( 73 )
-EditorIcons/icons/CPUParticles = SubResource( 74 )
-EditorIcons/icons/CPUParticles2D = SubResource( 75 )
-EditorIcons/icons/CSGBox = SubResource( 76 )
-EditorIcons/icons/CSGCapsule = SubResource( 77 )
-EditorIcons/icons/CSGCombiner = SubResource( 78 )
-EditorIcons/icons/CSGCylinder = SubResource( 79 )
-EditorIcons/icons/CSGMesh = SubResource( 80 )
-EditorIcons/icons/CSGPolygon = SubResource( 81 )
-EditorIcons/icons/CSGSphere = SubResource( 82 )
-EditorIcons/icons/CSGTorus = SubResource( 83 )
-EditorIcons/icons/Camera = SubResource( 84 )
-EditorIcons/icons/Camera2D = SubResource( 85 )
-EditorIcons/icons/CanvasItem = SubResource( 86 )
-EditorIcons/icons/CanvasItemMaterial = SubResource( 87 )
-EditorIcons/icons/CanvasItemShader = SubResource( 88 )
-EditorIcons/icons/CanvasItemShaderGraph = SubResource( 89 )
-EditorIcons/icons/CanvasLayer = SubResource( 90 )
-EditorIcons/icons/CanvasModulate = SubResource( 91 )
-EditorIcons/icons/CapsuleMesh = SubResource( 92 )
-EditorIcons/icons/CapsuleShape = SubResource( 93 )
-EditorIcons/icons/CapsuleShape2D = SubResource( 94 )
-EditorIcons/icons/CenterContainer = SubResource( 95 )
-EditorIcons/icons/CheckBox = SubResource( 96 )
-EditorIcons/icons/CheckButton = SubResource( 97 )
-EditorIcons/icons/Checkerboard = SubResource( 98 )
-EditorIcons/icons/CircleShape2D = SubResource( 99 )
-EditorIcons/icons/ClassList = SubResource( 100 )
-EditorIcons/icons/Clear = SubResource( 101 )
-EditorIcons/icons/Close = SubResource( 102 )
-EditorIcons/icons/Collapse = SubResource( 103 )
-EditorIcons/icons/CollisionPolygon = SubResource( 104 )
-EditorIcons/icons/CollisionPolygon2D = SubResource( 105 )
-EditorIcons/icons/CollisionShape = SubResource( 106 )
-EditorIcons/icons/CollisionShape2D = SubResource( 107 )
-EditorIcons/icons/Color = SubResource( 108 )
-EditorIcons/icons/ColorPick = SubResource( 109 )
-EditorIcons/icons/ColorPicker = SubResource( 110 )
-EditorIcons/icons/ColorPickerButton = SubResource( 111 )
-EditorIcons/icons/ColorRamp = SubResource( 112 )
-EditorIcons/icons/ColorRect = SubResource( 113 )
-EditorIcons/icons/ColorTrackVu = SubResource( 114 )
-EditorIcons/icons/ConcavePolygonShape = SubResource( 115 )
-EditorIcons/icons/ConcavePolygonShape2D = SubResource( 116 )
-EditorIcons/icons/ConeTwistJoint = SubResource( 117 )
-EditorIcons/icons/ConfirmationDialog = SubResource( 118 )
-EditorIcons/icons/Container = SubResource( 119 )
-EditorIcons/icons/Control = SubResource( 120 )
-EditorIcons/icons/ControlAlignBottomCenter = SubResource( 121 )
-EditorIcons/icons/ControlAlignBottomLeft = SubResource( 122 )
-EditorIcons/icons/ControlAlignBottomRight = SubResource( 123 )
-EditorIcons/icons/ControlAlignBottomWide = SubResource( 124 )
-EditorIcons/icons/ControlAlignCenter = SubResource( 125 )
-EditorIcons/icons/ControlAlignCenterLeft = SubResource( 126 )
-EditorIcons/icons/ControlAlignCenterRight = SubResource( 127 )
-EditorIcons/icons/ControlAlignLeftCenter = SubResource( 128 )
-EditorIcons/icons/ControlAlignLeftWide = SubResource( 129 )
-EditorIcons/icons/ControlAlignRightCenter = SubResource( 130 )
-EditorIcons/icons/ControlAlignRightWide = SubResource( 131 )
-EditorIcons/icons/ControlAlignTopCenter = SubResource( 132 )
-EditorIcons/icons/ControlAlignTopLeft = SubResource( 133 )
-EditorIcons/icons/ControlAlignTopRight = SubResource( 134 )
-EditorIcons/icons/ControlAlignTopWide = SubResource( 135 )
-EditorIcons/icons/ControlAlignWide = SubResource( 136 )
-EditorIcons/icons/ControlHcenterWide = SubResource( 137 )
-EditorIcons/icons/ControlLayout = SubResource( 138 )
-EditorIcons/icons/ControlVcenterWide = SubResource( 139 )
-EditorIcons/icons/ConvexPolygonShape = SubResource( 140 )
-EditorIcons/icons/ConvexPolygonShape2D = SubResource( 141 )
-EditorIcons/icons/CopyNodePath = SubResource( 142 )
-EditorIcons/icons/CreateNewSceneFrom = SubResource( 143 )
-EditorIcons/icons/CubeMap = SubResource( 144 )
-EditorIcons/icons/CubeMesh = SubResource( 145 )
-EditorIcons/icons/Curve = SubResource( 146 )
-EditorIcons/icons/Curve2D = SubResource( 147 )
-EditorIcons/icons/Curve3D = SubResource( 148 )
-EditorIcons/icons/CurveClose = SubResource( 149 )
-EditorIcons/icons/CurveConstant = SubResource( 150 )
-EditorIcons/icons/CurveCreate = SubResource( 151 )
-EditorIcons/icons/CurveCurve = SubResource( 152 )
-EditorIcons/icons/CurveDelete = SubResource( 153 )
-EditorIcons/icons/CurveEdit = SubResource( 154 )
-EditorIcons/icons/CurveIn = SubResource( 155 )
-EditorIcons/icons/CurveInOut = SubResource( 156 )
-EditorIcons/icons/CurveLinear = SubResource( 157 )
-EditorIcons/icons/CurveOut = SubResource( 158 )
-EditorIcons/icons/CurveOutIn = SubResource( 159 )
-EditorIcons/icons/CurveTexture = SubResource( 160 )
-EditorIcons/icons/CylinderMesh = SubResource( 161 )
-EditorIcons/icons/CylinderShape = SubResource( 162 )
-EditorIcons/icons/DampedSpringJoint2D = SubResource( 163 )
-EditorIcons/icons/Debug = SubResource( 164 )
-EditorIcons/icons/DebugContinue = SubResource( 165 )
-EditorIcons/icons/DebugNext = SubResource( 166 )
-EditorIcons/icons/DebugStep = SubResource( 167 )
-EditorIcons/icons/DefaultProjectIcon = SubResource( 168 )
-EditorIcons/icons/DeleteSplit = SubResource( 169 )
-EditorIcons/icons/Dictionary = SubResource( 170 )
-EditorIcons/icons/DirectionalLight = SubResource( 171 )
-EditorIcons/icons/DistractionFree = SubResource( 172 )
-EditorIcons/icons/Duplicate = SubResource( 173 )
-EditorIcons/icons/DynamicFont = SubResource( 174 )
-EditorIcons/icons/DynamicFontData = SubResource( 175 )
-EditorIcons/icons/Edit = SubResource( 176 )
-EditorIcons/icons/EditBezier = SubResource( 177 )
-EditorIcons/icons/EditKey = SubResource( 178 )
-EditorIcons/icons/EditPivot = SubResource( 179 )
-EditorIcons/icons/EditResource = SubResource( 180 )
-EditorIcons/icons/Editor3DHandle = SubResource( 181 )
-EditorIcons/icons/EditorControlAnchor = SubResource( 182 )
-EditorIcons/icons/EditorHandle = SubResource( 183 )
-EditorIcons/icons/EditorHandleAdd = SubResource( 184 )
-EditorIcons/icons/EditorPivot = SubResource( 185 )
-EditorIcons/icons/EditorPlugin = SubResource( 186 )
-EditorIcons/icons/EditorPosition = SubResource( 187 )
-EditorIcons/icons/EditorPositionPrevious = SubResource( 188 )
-EditorIcons/icons/EditorPositionUnselected = SubResource( 189 )
-EditorIcons/icons/Enum = SubResource( 190 )
-EditorIcons/icons/Environment = SubResource( 191 )
-EditorIcons/icons/Error = SubResource( 192 )
-EditorIcons/icons/ErrorSign = SubResource( 193 )
-EditorIcons/icons/ExpandBottomDock = SubResource( 194 )
-EditorIcons/icons/Favorites = SubResource( 195 )
-EditorIcons/icons/File = SubResource( 196 )
-EditorIcons/icons/FileBigThumb = SubResource( 197 )
-EditorIcons/icons/FileBroken = SubResource( 198 )
-EditorIcons/icons/FileBrokenBigThumb = SubResource( 199 )
-EditorIcons/icons/FileDead = SubResource( 200 )
-EditorIcons/icons/FileDeadBigThumb = SubResource( 201 )
-EditorIcons/icons/FileDeadMediumThumb = SubResource( 202 )
-EditorIcons/icons/FileDialog = SubResource( 203 )
-EditorIcons/icons/FileList = SubResource( 204 )
-EditorIcons/icons/FileMediumThumb = SubResource( 205 )
-EditorIcons/icons/FileThumbnail = SubResource( 206 )
-EditorIcons/icons/Filesystem = SubResource( 207 )
-EditorIcons/icons/FixedMaterial = SubResource( 208 )
-EditorIcons/icons/FixedSpatialMaterial = SubResource( 209 )
-EditorIcons/icons/Folder = SubResource( 210 )
-EditorIcons/icons/FolderBigThumb = SubResource( 211 )
-EditorIcons/icons/FolderMediumThumb = SubResource( 212 )
-EditorIcons/icons/Font = SubResource( 213 )
-EditorIcons/icons/Forward = SubResource( 214 )
-EditorIcons/icons/GDNativeLibrary = SubResource( 215 )
-EditorIcons/icons/GDScript = SubResource( 216 )
-EditorIcons/icons/GIProbe = SubResource( 217 )
-EditorIcons/icons/GIProbeData = SubResource( 218 )
-EditorIcons/icons/Generic6DOFJoint = SubResource( 219 )
-EditorIcons/icons/GizmoBakedLightmap = SubResource( 220 )
-EditorIcons/icons/GizmoCamera = SubResource( 221 )
-EditorIcons/icons/GizmoDirectionalLight = SubResource( 222 )
-EditorIcons/icons/GizmoGIProbe = SubResource( 223 )
-EditorIcons/icons/GizmoLight = SubResource( 224 )
-EditorIcons/icons/GizmoListener = SubResource( 225 )
-EditorIcons/icons/GizmoParticles = SubResource( 226 )
-EditorIcons/icons/GizmoReflectionProbe = SubResource( 227 )
-EditorIcons/icons/GizmoSpatialSamplePlayer = SubResource( 228 )
-EditorIcons/icons/GizmoSpatialStreamPlayer = SubResource( 229 )
-EditorIcons/icons/GizmoSpotLight = SubResource( 230 )
-EditorIcons/icons/Godot = SubResource( 231 )
-EditorIcons/icons/GodotDocs = SubResource( 232 )
-EditorIcons/icons/Gradient = SubResource( 233 )
-EditorIcons/icons/GradientTexture = SubResource( 234 )
-EditorIcons/icons/GraphEdit = SubResource( 235 )
-EditorIcons/icons/GraphNode = SubResource( 236 )
-EditorIcons/icons/Grid = SubResource( 237 )
-EditorIcons/icons/GridContainer = SubResource( 238 )
-EditorIcons/icons/GridMap = SubResource( 239 )
-EditorIcons/icons/GrooveJoint2D = SubResource( 240 )
-EditorIcons/icons/Group = SubResource( 241 )
-EditorIcons/icons/GroupViewport = SubResource( 242 )
-EditorIcons/icons/Groups = SubResource( 243 )
-EditorIcons/icons/GuiChecked = SubResource( 244 )
-EditorIcons/icons/GuiClose = SubResource( 245 )
-EditorIcons/icons/GuiCloseCustomizable = SubResource( 246 )
-EditorIcons/icons/GuiDropdown = SubResource( 247 )
-EditorIcons/icons/GuiEllipsis = SubResource( 248 )
-EditorIcons/icons/GuiGraphNodePort = SubResource( 249 )
-EditorIcons/icons/GuiHTick = SubResource( 250 )
-EditorIcons/icons/GuiHsplitter = SubResource( 251 )
-EditorIcons/icons/GuiMiniCheckerboard = SubResource( 2 )
-EditorIcons/icons/GuiMiniTabMenu = SubResource( 252 )
-EditorIcons/icons/GuiOptionArrow = SubResource( 253 )
-EditorIcons/icons/GuiProgressBar = SubResource( 254 )
-EditorIcons/icons/GuiProgressFill = SubResource( 255 )
-EditorIcons/icons/GuiRadioChecked = SubResource( 256 )
-EditorIcons/icons/GuiRadioUnchecked = SubResource( 257 )
-EditorIcons/icons/GuiResizer = SubResource( 258 )
-EditorIcons/icons/GuiScrollArrowLeft = SubResource( 259 )
-EditorIcons/icons/GuiScrollArrowRight = SubResource( 260 )
-EditorIcons/icons/GuiScrollBg = SubResource( 261 )
-EditorIcons/icons/GuiScrollGrabber = SubResource( 262 )
-EditorIcons/icons/GuiScrollGrabberHl = SubResource( 263 )
-EditorIcons/icons/GuiScrollGrabberPressed = SubResource( 264 )
-EditorIcons/icons/GuiSliderGrabber = SubResource( 265 )
-EditorIcons/icons/GuiSliderGrabberHl = SubResource( 266 )
-EditorIcons/icons/GuiSpinboxUpdown = SubResource( 267 )
-EditorIcons/icons/GuiTab = SubResource( 268 )
-EditorIcons/icons/GuiTabMenu = SubResource( 269 )
-EditorIcons/icons/GuiToggleOff = SubResource( 270 )
-EditorIcons/icons/GuiToggleOn = SubResource( 271 )
-EditorIcons/icons/GuiTreeArrowDown = SubResource( 272 )
-EditorIcons/icons/GuiTreeArrowRight = SubResource( 273 )
-EditorIcons/icons/GuiTreeArrowUp = SubResource( 274 )
-EditorIcons/icons/GuiTreeOption = SubResource( 275 )
-EditorIcons/icons/GuiTreeUpdown = SubResource( 276 )
-EditorIcons/icons/GuiUnchecked = SubResource( 277 )
-EditorIcons/icons/GuiVTick = SubResource( 278 )
-EditorIcons/icons/GuiViewportHdiagsplitter = SubResource( 279 )
-EditorIcons/icons/GuiViewportVdiagsplitter = SubResource( 280 )
-EditorIcons/icons/GuiViewportVhsplitter = SubResource( 281 )
-EditorIcons/icons/GuiVisibilityHidden = SubResource( 282 )
-EditorIcons/icons/GuiVisibilityVisible = SubResource( 283 )
-EditorIcons/icons/GuiVisibilityXray = SubResource( 284 )
-EditorIcons/icons/GuiVsplitBg = SubResource( 285 )
-EditorIcons/icons/GuiVsplitter = SubResource( 286 )
-EditorIcons/icons/HBoxContainer = SubResource( 287 )
-EditorIcons/icons/HScrollBar = SubResource( 288 )
-EditorIcons/icons/HSeparator = SubResource( 289 )
-EditorIcons/icons/HSlider = SubResource( 290 )
-EditorIcons/icons/HSplitContainer = SubResource( 291 )
-EditorIcons/icons/HTTPRequest = SubResource( 292 )
-EditorIcons/icons/Headphones = SubResource( 293 )
-EditorIcons/icons/Help = SubResource( 294 )
-EditorIcons/icons/HelpSearch = SubResource( 295 )
-EditorIcons/icons/HingeJoint = SubResource( 296 )
-EditorIcons/icons/History = SubResource( 297 )
-EditorIcons/icons/Hsize = SubResource( 298 )
-EditorIcons/icons/Image = SubResource( 299 )
-EditorIcons/icons/ImageTexture = SubResource( 300 )
-EditorIcons/icons/ImmediateGeometry = SubResource( 301 )
-EditorIcons/icons/ImportCheck = SubResource( 302 )
-EditorIcons/icons/ImportFail = SubResource( 303 )
-EditorIcons/icons/InformationSign = SubResource( 304 )
-EditorIcons/icons/InsertAfter = SubResource( 305 )
-EditorIcons/icons/InsertBefore = SubResource( 306 )
-EditorIcons/icons/Instance = SubResource( 307 )
-EditorIcons/icons/InstanceOptions = SubResource( 308 )
-EditorIcons/icons/InterpCubic = SubResource( 309 )
-EditorIcons/icons/InterpLinear = SubResource( 310 )
-EditorIcons/icons/InterpRaw = SubResource( 311 )
-EditorIcons/icons/InterpWrapClamp = SubResource( 312 )
-EditorIcons/icons/InterpWrapLoop = SubResource( 313 )
-EditorIcons/icons/InterpolatedCamera = SubResource( 314 )
-EditorIcons/icons/InverseKinematics = SubResource( 315 )
-EditorIcons/icons/ItemList = SubResource( 316 )
-EditorIcons/icons/JoyAxis = SubResource( 317 )
-EditorIcons/icons/JoyButton = SubResource( 318 )
-EditorIcons/icons/Joypad = SubResource( 319 )
-EditorIcons/icons/Key = SubResource( 320 )
-EditorIcons/icons/KeyAnimation = SubResource( 321 )
-EditorIcons/icons/KeyAudio = SubResource( 322 )
-EditorIcons/icons/KeyBezier = SubResource( 323 )
-EditorIcons/icons/KeyBezierHandle = SubResource( 324 )
-EditorIcons/icons/KeyBezierPoint = SubResource( 325 )
-EditorIcons/icons/KeyBezierSelected = SubResource( 326 )
-EditorIcons/icons/KeyCall = SubResource( 327 )
-EditorIcons/icons/KeyHover = SubResource( 328 )
-EditorIcons/icons/KeyInvalid = SubResource( 329 )
-EditorIcons/icons/KeyNext = SubResource( 330 )
-EditorIcons/icons/KeyPosition = SubResource( 331 )
-EditorIcons/icons/KeyRotation = SubResource( 332 )
-EditorIcons/icons/KeyScale = SubResource( 333 )
-EditorIcons/icons/KeySelected = SubResource( 334 )
-EditorIcons/icons/KeyValid = SubResource( 335 )
-EditorIcons/icons/KeyValue = SubResource( 336 )
-EditorIcons/icons/KeyXform = SubResource( 337 )
-EditorIcons/icons/Keyboard = SubResource( 338 )
-EditorIcons/icons/KinematicBody = SubResource( 339 )
-EditorIcons/icons/KinematicBody2D = SubResource( 340 )
-EditorIcons/icons/Label = SubResource( 341 )
-EditorIcons/icons/LargeTexture = SubResource( 342 )
-EditorIcons/icons/Light2D = SubResource( 343 )
-EditorIcons/icons/LightOccluder2D = SubResource( 344 )
-EditorIcons/icons/Line2D = SubResource( 345 )
-EditorIcons/icons/LineEdit = SubResource( 346 )
-EditorIcons/icons/LineShape2D = SubResource( 347 )
-EditorIcons/icons/LinkButton = SubResource( 348 )
-EditorIcons/icons/ListSelect = SubResource( 349 )
-EditorIcons/icons/Listener = SubResource( 350 )
-EditorIcons/icons/Load = SubResource( 351 )
-EditorIcons/icons/Lock = SubResource( 352 )
-EditorIcons/icons/LockViewport = SubResource( 353 )
-EditorIcons/icons/Logo = SubResource( 354 )
-EditorIcons/icons/Loop = SubResource( 355 )
-EditorIcons/icons/LoopInterpolation = SubResource( 356 )
-EditorIcons/icons/MainPlay = SubResource( 357 )
-EditorIcons/icons/MarginContainer = SubResource( 358 )
-EditorIcons/icons/MatchCase = SubResource( 359 )
-EditorIcons/icons/MaterialPreviewCube = SubResource( 360 )
-EditorIcons/icons/MaterialPreviewCubeOff = SubResource( 361 )
-EditorIcons/icons/MaterialPreviewLight1 = SubResource( 362 )
-EditorIcons/icons/MaterialPreviewLight1Off = SubResource( 363 )
-EditorIcons/icons/MaterialPreviewLight2 = SubResource( 364 )
-EditorIcons/icons/MaterialPreviewLight2Off = SubResource( 365 )
-EditorIcons/icons/MaterialPreviewSphere = SubResource( 366 )
-EditorIcons/icons/MaterialPreviewSphereOff = SubResource( 367 )
-EditorIcons/icons/MemberConstant = SubResource( 368 )
-EditorIcons/icons/MemberMethod = SubResource( 369 )
-EditorIcons/icons/MemberProperty = SubResource( 370 )
-EditorIcons/icons/MemberSignal = SubResource( 371 )
-EditorIcons/icons/MemberTheme = SubResource( 372 )
-EditorIcons/icons/MenuButton = SubResource( 373 )
-EditorIcons/icons/Mesh = SubResource( 374 )
-EditorIcons/icons/MeshInstance = SubResource( 375 )
-EditorIcons/icons/MeshInstance2D = SubResource( 376 )
-EditorIcons/icons/MeshLibrary = SubResource( 377 )
-EditorIcons/icons/MiniObject = SubResource( 378 )
-EditorIcons/icons/MirrorX = SubResource( 379 )
-EditorIcons/icons/MirrorY = SubResource( 380 )
-EditorIcons/icons/Mouse = SubResource( 381 )
-EditorIcons/icons/MoveDown = SubResource( 382 )
-EditorIcons/icons/MoveLeft = SubResource( 383 )
-EditorIcons/icons/MovePoint = SubResource( 384 )
-EditorIcons/icons/MoveRight = SubResource( 385 )
-EditorIcons/icons/MoveUp = SubResource( 386 )
-EditorIcons/icons/MultiEdit = SubResource( 387 )
-EditorIcons/icons/MultiLine = SubResource( 388 )
-EditorIcons/icons/MultiMesh = SubResource( 389 )
-EditorIcons/icons/MultiMeshInstance = SubResource( 390 )
-EditorIcons/icons/NativeScript = SubResource( 391 )
-EditorIcons/icons/Navigation = SubResource( 392 )
-EditorIcons/icons/Navigation2D = SubResource( 393 )
-EditorIcons/icons/NavigationMesh = SubResource( 394 )
-EditorIcons/icons/NavigationMeshInstance = SubResource( 395 )
-EditorIcons/icons/NavigationPolygon = SubResource( 396 )
-EditorIcons/icons/NavigationPolygonInstance = SubResource( 397 )
-EditorIcons/icons/New = SubResource( 398 )
-EditorIcons/icons/NewRoot = SubResource( 399 )
-EditorIcons/icons/Nil = SubResource( 400 )
-EditorIcons/icons/NinePatchRect = SubResource( 401 )
-EditorIcons/icons/Node = SubResource( 402 )
-EditorIcons/icons/Node2D = SubResource( 403 )
-EditorIcons/icons/NodePath = SubResource( 404 )
-EditorIcons/icons/NodeWarning = SubResource( 405 )
-EditorIcons/icons/NoiseTexture = SubResource( 406 )
-EditorIcons/icons/NonFavorite = SubResource( 407 )
-EditorIcons/icons/Object = SubResource( 408 )
-EditorIcons/icons/OccluderPolygon2D = SubResource( 409 )
-EditorIcons/icons/OmniLight = SubResource( 410 )
-EditorIcons/icons/Onion = SubResource( 411 )
-EditorIcons/icons/OptionButton = SubResource( 412 )
-EditorIcons/icons/OrientedPathFollow = SubResource( 413 )
-EditorIcons/icons/Override = SubResource( 414 )
-EditorIcons/icons/PackedDataContainer = SubResource( 415 )
-EditorIcons/icons/PackedScene = SubResource( 416 )
-EditorIcons/icons/PaintVertex = SubResource( 417 )
-EditorIcons/icons/Panel = SubResource( 418 )
-EditorIcons/icons/PanelContainer = SubResource( 419 )
-EditorIcons/icons/Panels1 = SubResource( 420 )
-EditorIcons/icons/Panels2 = SubResource( 421 )
-EditorIcons/icons/Panels2Alt = SubResource( 422 )
-EditorIcons/icons/Panels3 = SubResource( 423 )
-EditorIcons/icons/Panels3Alt = SubResource( 424 )
-EditorIcons/icons/Panels4 = SubResource( 425 )
-EditorIcons/icons/PanoramaSky = SubResource( 426 )
-EditorIcons/icons/ParallaxBackground = SubResource( 427 )
-EditorIcons/icons/ParallaxLayer = SubResource( 428 )
-EditorIcons/icons/ParticleAttractor2D = SubResource( 429 )
-EditorIcons/icons/Particles = SubResource( 430 )
-EditorIcons/icons/Particles2D = SubResource( 431 )
-EditorIcons/icons/ParticlesMaterial = SubResource( 432 )
-EditorIcons/icons/Path = SubResource( 433 )
-EditorIcons/icons/Path2D = SubResource( 434 )
-EditorIcons/icons/PathFollow = SubResource( 435 )
-EditorIcons/icons/PathFollow2D = SubResource( 436 )
-EditorIcons/icons/Pause = SubResource( 437 )
-EditorIcons/icons/PhysicalBone = SubResource( 438 )
-EditorIcons/icons/Pin = SubResource( 439 )
-EditorIcons/icons/PinJoint = SubResource( 440 )
-EditorIcons/icons/PinJoint2D = SubResource( 441 )
-EditorIcons/icons/PinPressed = SubResource( 442 )
-EditorIcons/icons/Plane = SubResource( 443 )
-EditorIcons/icons/PlaneMesh = SubResource( 444 )
-EditorIcons/icons/PlaneShape = SubResource( 445 )
-EditorIcons/icons/Play = SubResource( 446 )
-EditorIcons/icons/PlayBackwards = SubResource( 447 )
-EditorIcons/icons/PlayCustom = SubResource( 448 )
-EditorIcons/icons/PlayOverlay = SubResource( 449 )
-EditorIcons/icons/PlayScene = SubResource( 450 )
-EditorIcons/icons/PlayStart = SubResource( 451 )
-EditorIcons/icons/PlayStartBackwards = SubResource( 452 )
-EditorIcons/icons/PlayTravel = SubResource( 453 )
-EditorIcons/icons/PluginScript = SubResource( 454 )
-EditorIcons/icons/Polygon2D = SubResource( 455 )
-EditorIcons/icons/PolygonPathFinder = SubResource( 456 )
-EditorIcons/icons/PoolByteArray = SubResource( 457 )
-EditorIcons/icons/PoolColorArray = SubResource( 458 )
-EditorIcons/icons/PoolIntArray = SubResource( 459 )
-EditorIcons/icons/PoolRealArray = SubResource( 460 )
-EditorIcons/icons/PoolStringArray = SubResource( 461 )
-EditorIcons/icons/PoolVector2Array = SubResource( 462 )
-EditorIcons/icons/PoolVector3Array = SubResource( 463 )
-EditorIcons/icons/Popup = SubResource( 464 )
-EditorIcons/icons/PopupDialog = SubResource( 465 )
-EditorIcons/icons/PopupMenu = SubResource( 466 )
-EditorIcons/icons/PopupPanel = SubResource( 467 )
-EditorIcons/icons/Portal = SubResource( 468 )
-EditorIcons/icons/Position2D = SubResource( 469 )
-EditorIcons/icons/Position3D = SubResource( 470 )
-EditorIcons/icons/PrismMesh = SubResource( 471 )
-EditorIcons/icons/ProceduralSky = SubResource( 472 )
-EditorIcons/icons/Progress1 = SubResource( 473 )
-EditorIcons/icons/Progress2 = SubResource( 474 )
-EditorIcons/icons/Progress3 = SubResource( 475 )
-EditorIcons/icons/Progress4 = SubResource( 476 )
-EditorIcons/icons/Progress5 = SubResource( 477 )
-EditorIcons/icons/Progress6 = SubResource( 478 )
-EditorIcons/icons/Progress7 = SubResource( 479 )
-EditorIcons/icons/Progress8 = SubResource( 480 )
-EditorIcons/icons/ProgressBar = SubResource( 481 )
-EditorIcons/icons/ProximityGroup = SubResource( 482 )
-EditorIcons/icons/ProxyTexture = SubResource( 483 )
-EditorIcons/icons/Quad = SubResource( 484 )
-EditorIcons/icons/QuadMesh = SubResource( 485 )
-EditorIcons/icons/Quat = SubResource( 486 )
-EditorIcons/icons/RID = SubResource( 487 )
-EditorIcons/icons/RayCast = SubResource( 488 )
-EditorIcons/icons/RayCast2D = SubResource( 489 )
-EditorIcons/icons/RayShape = SubResource( 490 )
-EditorIcons/icons/RayShape2D = SubResource( 491 )
-EditorIcons/icons/Rayito = SubResource( 492 )
-EditorIcons/icons/Rect2 = SubResource( 493 )
-EditorIcons/icons/RectangleShape2D = SubResource( 494 )
-EditorIcons/icons/ReferenceRect = SubResource( 495 )
-EditorIcons/icons/ReflectionProbe = SubResource( 496 )
-EditorIcons/icons/RegionEdit = SubResource( 497 )
-EditorIcons/icons/Reload = SubResource( 498 )
-EditorIcons/icons/ReloadSmall = SubResource( 499 )
-EditorIcons/icons/RemoteTransform = SubResource( 500 )
-EditorIcons/icons/RemoteTransform2D = SubResource( 501 )
-EditorIcons/icons/Remove = SubResource( 502 )
-EditorIcons/icons/Rename = SubResource( 503 )
-EditorIcons/icons/Reparent = SubResource( 504 )
-EditorIcons/icons/ResourcePreloader = SubResource( 505 )
-EditorIcons/icons/RichTextLabel = SubResource( 506 )
-EditorIcons/icons/RigidBody = SubResource( 507 )
-EditorIcons/icons/RigidBody2D = SubResource( 508 )
-EditorIcons/icons/Room = SubResource( 509 )
-EditorIcons/icons/RoomBounds = SubResource( 510 )
-EditorIcons/icons/Rotate0 = SubResource( 511 )
-EditorIcons/icons/Rotate180 = SubResource( 512 )
-EditorIcons/icons/Rotate270 = SubResource( 513 )
-EditorIcons/icons/Rotate90 = SubResource( 514 )
-EditorIcons/icons/SampleLibrary = SubResource( 515 )
-EditorIcons/icons/Save = SubResource( 516 )
-EditorIcons/icons/Script = SubResource( 517 )
-EditorIcons/icons/ScriptCreate = SubResource( 518 )
-EditorIcons/icons/ScriptCreateDialog = SubResource( 519 )
-EditorIcons/icons/ScriptExtend = SubResource( 520 )
-EditorIcons/icons/ScriptRemove = SubResource( 521 )
-EditorIcons/icons/ScrollContainer = SubResource( 522 )
-EditorIcons/icons/Search = SubResource( 523 )
-EditorIcons/icons/SegmentShape2D = SubResource( 524 )
-EditorIcons/icons/Shader = SubResource( 525 )
-EditorIcons/icons/ShaderMaterial = SubResource( 526 )
-EditorIcons/icons/ShortCut = SubResource( 527 )
-EditorIcons/icons/ShrinkBottomDock = SubResource( 528 )
-EditorIcons/icons/Signal = SubResource( 529 )
-EditorIcons/icons/Signals = SubResource( 530 )
-EditorIcons/icons/SignalsAndGroups = SubResource( 531 )
-EditorIcons/icons/Skeleton = SubResource( 532 )
-EditorIcons/icons/Skeleton2D = SubResource( 533 )
-EditorIcons/icons/SliderJoint = SubResource( 534 )
-EditorIcons/icons/Slot = SubResource( 535 )
-EditorIcons/icons/Snap = SubResource( 536 )
-EditorIcons/icons/SnapGrid = SubResource( 537 )
-EditorIcons/icons/SoftBody = SubResource( 538 )
-EditorIcons/icons/Sort = SubResource( 539 )
-EditorIcons/icons/Spatial = SubResource( 540 )
-EditorIcons/icons/SpatialMaterial = SubResource( 541 )
-EditorIcons/icons/SphereMesh = SubResource( 542 )
-EditorIcons/icons/SphereShape = SubResource( 543 )
-EditorIcons/icons/SpinBox = SubResource( 544 )
-EditorIcons/icons/SpotLight = SubResource( 545 )
-EditorIcons/icons/Sprite = SubResource( 546 )
-EditorIcons/icons/Sprite3D = SubResource( 547 )
-EditorIcons/icons/SpriteFrames = SubResource( 548 )
-EditorIcons/icons/StaticBody = SubResource( 549 )
-EditorIcons/icons/StaticBody2D = SubResource( 550 )
-EditorIcons/icons/StatusError = SubResource( 551 )
-EditorIcons/icons/StatusSuccess = SubResource( 552 )
-EditorIcons/icons/StatusWarning = SubResource( 553 )
-EditorIcons/icons/Stop = SubResource( 554 )
-EditorIcons/icons/StreamTexture = SubResource( 555 )
-EditorIcons/icons/String = SubResource( 556 )
-EditorIcons/icons/StyleBoxEmpty = SubResource( 557 )
-EditorIcons/icons/StyleBoxFlat = SubResource( 558 )
-EditorIcons/icons/StyleBoxTexture = SubResource( 559 )
-EditorIcons/icons/TabContainer = SubResource( 560 )
-EditorIcons/icons/Tabs = SubResource( 561 )
-EditorIcons/icons/TestCube = SubResource( 562 )
-EditorIcons/icons/TextEdit = SubResource( 563 )
-EditorIcons/icons/TextFile = SubResource( 564 )
-EditorIcons/icons/Texture3D = SubResource( 565 )
-EditorIcons/icons/TextureArray = SubResource( 566 )
-EditorIcons/icons/TextureButton = SubResource( 567 )
-EditorIcons/icons/TextureProgress = SubResource( 568 )
-EditorIcons/icons/TextureRect = SubResource( 569 )
-EditorIcons/icons/Theme = SubResource( 570 )
-EditorIcons/icons/ThumbnailWait = SubResource( 571 )
-EditorIcons/icons/TileMap = SubResource( 572 )
-EditorIcons/icons/TileSet = SubResource( 573 )
-EditorIcons/icons/Time = SubResource( 574 )
-EditorIcons/icons/Timer = SubResource( 575 )
-EditorIcons/icons/ToolAddNode = SubResource( 576 )
-EditorIcons/icons/ToolButton = SubResource( 577 )
-EditorIcons/icons/ToolConnect = SubResource( 578 )
-EditorIcons/icons/ToolMove = SubResource( 579 )
-EditorIcons/icons/ToolPan = SubResource( 580 )
-EditorIcons/icons/ToolRotate = SubResource( 581 )
-EditorIcons/icons/ToolScale = SubResource( 582 )
-EditorIcons/icons/ToolSelect = SubResource( 583 )
-EditorIcons/icons/ToolTriangle = SubResource( 584 )
-EditorIcons/icons/Tools = SubResource( 585 )
-EditorIcons/icons/TouchScreenButton = SubResource( 586 )
-EditorIcons/icons/TrackAddKey = SubResource( 587 )
-EditorIcons/icons/TrackAddKeyHl = SubResource( 588 )
-EditorIcons/icons/TrackCapture = SubResource( 589 )
-EditorIcons/icons/TrackContinuous = SubResource( 590 )
-EditorIcons/icons/TrackDiscrete = SubResource( 591 )
-EditorIcons/icons/TrackTrigger = SubResource( 592 )
-EditorIcons/icons/Transform = SubResource( 593 )
-EditorIcons/icons/Transform2D = SubResource( 594 )
-EditorIcons/icons/TransitionEnd = SubResource( 595 )
-EditorIcons/icons/TransitionEndAuto = SubResource( 596 )
-EditorIcons/icons/TransitionEndAutoBig = SubResource( 597 )
-EditorIcons/icons/TransitionEndBig = SubResource( 598 )
-EditorIcons/icons/TransitionImmediate = SubResource( 599 )
-EditorIcons/icons/TransitionImmediateAuto = SubResource( 600 )
-EditorIcons/icons/TransitionImmediateAutoBig = SubResource( 601 )
-EditorIcons/icons/TransitionImmediateBig = SubResource( 602 )
-EditorIcons/icons/TransitionSync = SubResource( 603 )
-EditorIcons/icons/TransitionSyncAuto = SubResource( 604 )
-EditorIcons/icons/TransitionSyncAutoBig = SubResource( 605 )
-EditorIcons/icons/TransitionSyncBig = SubResource( 606 )
-EditorIcons/icons/Translation = SubResource( 607 )
-EditorIcons/icons/Transpose = SubResource( 608 )
-EditorIcons/icons/Tree = SubResource( 609 )
-EditorIcons/icons/Tween = SubResource( 610 )
-EditorIcons/icons/Unbone = SubResource( 611 )
-EditorIcons/icons/Ungroup = SubResource( 612 )
-EditorIcons/icons/Unlock = SubResource( 613 )
-EditorIcons/icons/UnpaintVertex = SubResource( 614 )
-EditorIcons/icons/Uv = SubResource( 615 )
-EditorIcons/icons/VBoxContainer = SubResource( 616 )
-EditorIcons/icons/VScrollBar = SubResource( 617 )
-EditorIcons/icons/VSeparator = SubResource( 618 )
-EditorIcons/icons/VSlider = SubResource( 619 )
-EditorIcons/icons/VSplitContainer = SubResource( 620 )
-EditorIcons/icons/Variant = SubResource( 621 )
-EditorIcons/icons/Vector2 = SubResource( 622 )
-EditorIcons/icons/Vector3 = SubResource( 623 )
-EditorIcons/icons/VehicleBody = SubResource( 624 )
-EditorIcons/icons/VehicleWheel = SubResource( 625 )
-EditorIcons/icons/VideoPlayer = SubResource( 626 )
-EditorIcons/icons/Viewport = SubResource( 627 )
-EditorIcons/icons/ViewportContainer = SubResource( 628 )
-EditorIcons/icons/ViewportSpeed = SubResource( 629 )
-EditorIcons/icons/ViewportTexture = SubResource( 630 )
-EditorIcons/icons/ViewportZoom = SubResource( 631 )
-EditorIcons/icons/VisibilityEnabler = SubResource( 632 )
-EditorIcons/icons/VisibilityEnabler2D = SubResource( 633 )
-EditorIcons/icons/VisibilityNotifier = SubResource( 634 )
-EditorIcons/icons/VisibilityNotifier2D = SubResource( 635 )
-EditorIcons/icons/VisualScript = SubResource( 636 )
-EditorIcons/icons/VisualShader = SubResource( 637 )
-EditorIcons/icons/VisualShaderPort = SubResource( 638 )
-EditorIcons/icons/Vulkan = SubResource( 639 )
-EditorIcons/icons/Warning = SubResource( 640 )
-EditorIcons/icons/WindowDialog = SubResource( 641 )
-EditorIcons/icons/World = SubResource( 642 )
-EditorIcons/icons/World2D = SubResource( 643 )
-EditorIcons/icons/WorldEnvironment = SubResource( 644 )
-EditorIcons/icons/YSort = SubResource( 645 )
-EditorIcons/icons/Zoom = SubResource( 646 )
-EditorIcons/icons/ZoomLess = SubResource( 647 )
-EditorIcons/icons/ZoomMore = SubResource( 648 )
-EditorIcons/icons/ZoomReset = SubResource( 649 )
-EditorIcons/icons/bool = SubResource( 650 )
-EditorIcons/icons/float = SubResource( 651 )
-EditorIcons/icons/int = SubResource( 652 )
-EditorSettingsDialog/styles/panel = SubResource( 653 )
-EditorStyles/styles/Background = SubResource( 654 )
-EditorStyles/styles/BottomPanelDebuggerOverride = SubResource( 655 )
-EditorStyles/styles/Content = SubResource( 656 )
-EditorStyles/styles/DebuggerPanel = SubResource( 657 )
-EditorStyles/styles/DebuggerTabBG = SubResource( 658 )
-EditorStyles/styles/DebuggerTabFG = SubResource( 659 )
-EditorStyles/styles/Focus = SubResource( 660 )
-EditorStyles/styles/Information3dViewport = SubResource( 661 )
-EditorStyles/styles/MenuHover = SubResource( 662 )
-EditorStyles/styles/MenuPanel = SubResource( 663 )
-EditorStyles/styles/PlayButtonPanel = SubResource( 664 )
-EditorStyles/styles/SceneTabBG = SubResource( 658 )
-EditorStyles/styles/SceneTabFG = SubResource( 659 )
-EditorStyles/styles/ScriptEditor = SubResource( 665 )
-EditorStyles/styles/ScriptEditorPanel = SubResource( 666 )
+EditorIcons/icons/2D = SubResource( 3 )
+EditorIcons/icons/3D = SubResource( 4 )
+EditorIcons/icons/AABB = SubResource( 5 )
+EditorIcons/icons/ARVRAnchor = SubResource( 6 )
+EditorIcons/icons/ARVRCamera = SubResource( 7 )
+EditorIcons/icons/ARVRController = SubResource( 8 )
+EditorIcons/icons/ARVROrigin = SubResource( 9 )
+EditorIcons/icons/AcceptDialog = SubResource( 10 )
+EditorIcons/icons/ActionCopy = SubResource( 11 )
+EditorIcons/icons/ActionCut = SubResource( 12 )
+EditorIcons/icons/ActionPaste = SubResource( 13 )
+EditorIcons/icons/Add = SubResource( 14 )
+EditorIcons/icons/AddAtlasTile = SubResource( 15 )
+EditorIcons/icons/AddAutotile = SubResource( 16 )
+EditorIcons/icons/AddSingleTile = SubResource( 17 )
+EditorIcons/icons/AddSplit = SubResource( 18 )
+EditorIcons/icons/Anchor = SubResource( 19 )
+EditorIcons/icons/AnimatedSprite = SubResource( 20 )
+EditorIcons/icons/AnimatedSprite3D = SubResource( 21 )
+EditorIcons/icons/AnimatedTexture = SubResource( 22 )
+EditorIcons/icons/Animation = SubResource( 23 )
+EditorIcons/icons/AnimationFilter = SubResource( 24 )
+EditorIcons/icons/AnimationPlayer = SubResource( 25 )
+EditorIcons/icons/AnimationTrackGroup = SubResource( 26 )
+EditorIcons/icons/AnimationTrackList = SubResource( 27 )
+EditorIcons/icons/AnimationTree = SubResource( 28 )
+EditorIcons/icons/AnimationTreePlayer = SubResource( 29 )
+EditorIcons/icons/Area = SubResource( 30 )
+EditorIcons/icons/Area2D = SubResource( 31 )
+EditorIcons/icons/Array = SubResource( 32 )
+EditorIcons/icons/ArrayMesh = SubResource( 33 )
+EditorIcons/icons/ArrowLeft = SubResource( 34 )
+EditorIcons/icons/ArrowRight = SubResource( 35 )
+EditorIcons/icons/ArrowUp = SubResource( 36 )
+EditorIcons/icons/AssetLib = SubResource( 37 )
+EditorIcons/icons/AtlasTexture = SubResource( 38 )
+EditorIcons/icons/AudioBusBypass = SubResource( 39 )
+EditorIcons/icons/AudioBusLayout = SubResource( 40 )
+EditorIcons/icons/AudioBusMute = SubResource( 41 )
+EditorIcons/icons/AudioBusSolo = SubResource( 42 )
+EditorIcons/icons/AudioStreamPlayer = SubResource( 43 )
+EditorIcons/icons/AudioStreamPlayer2D = SubResource( 44 )
+EditorIcons/icons/AudioStreamPlayer3D = SubResource( 45 )
+EditorIcons/icons/AudioStreamSample = SubResource( 46 )
+EditorIcons/icons/AutoEnd = SubResource( 47 )
+EditorIcons/icons/AutoPlay = SubResource( 48 )
+EditorIcons/icons/AutoTriangle = SubResource( 49 )
+EditorIcons/icons/Back = SubResource( 50 )
+EditorIcons/icons/BackBufferCopy = SubResource( 51 )
+EditorIcons/icons/Bake = SubResource( 52 )
+EditorIcons/icons/BakedLightmap = SubResource( 53 )
+EditorIcons/icons/BakedLightmapData = SubResource( 54 )
+EditorIcons/icons/Basis = SubResource( 55 )
+EditorIcons/icons/BezierHandlesBalanced = SubResource( 56 )
+EditorIcons/icons/BezierHandlesFree = SubResource( 57 )
+EditorIcons/icons/BezierHandlesMirror = SubResource( 58 )
+EditorIcons/icons/BitMap = SubResource( 59 )
+EditorIcons/icons/BitmapFont = SubResource( 60 )
+EditorIcons/icons/Blend = SubResource( 61 )
+EditorIcons/icons/Bone = SubResource( 62 )
+EditorIcons/icons/Bone2D = SubResource( 63 )
+EditorIcons/icons/BoneAttachment = SubResource( 64 )
+EditorIcons/icons/BoneTrack = SubResource( 65 )
+EditorIcons/icons/BoxShape = SubResource( 66 )
+EditorIcons/icons/BusVuDb = SubResource( 67 )
+EditorIcons/icons/BusVuEmpty = SubResource( 68 )
+EditorIcons/icons/BusVuFrozen = SubResource( 69 )
+EditorIcons/icons/BusVuFull = SubResource( 70 )
+EditorIcons/icons/Button = SubResource( 71 )
+EditorIcons/icons/ButtonGroup = SubResource( 72 )
+EditorIcons/icons/CPUParticles = SubResource( 73 )
+EditorIcons/icons/CPUParticles2D = SubResource( 74 )
+EditorIcons/icons/CSGBox = SubResource( 75 )
+EditorIcons/icons/CSGCapsule = SubResource( 76 )
+EditorIcons/icons/CSGCombiner = SubResource( 77 )
+EditorIcons/icons/CSGCylinder = SubResource( 78 )
+EditorIcons/icons/CSGMesh = SubResource( 79 )
+EditorIcons/icons/CSGPolygon = SubResource( 80 )
+EditorIcons/icons/CSGSphere = SubResource( 81 )
+EditorIcons/icons/CSGTorus = SubResource( 82 )
+EditorIcons/icons/Camera = SubResource( 83 )
+EditorIcons/icons/Camera2D = SubResource( 84 )
+EditorIcons/icons/CanvasItem = SubResource( 85 )
+EditorIcons/icons/CanvasItemMaterial = SubResource( 86 )
+EditorIcons/icons/CanvasItemShader = SubResource( 87 )
+EditorIcons/icons/CanvasItemShaderGraph = SubResource( 88 )
+EditorIcons/icons/CanvasLayer = SubResource( 89 )
+EditorIcons/icons/CanvasModulate = SubResource( 90 )
+EditorIcons/icons/CapsuleMesh = SubResource( 91 )
+EditorIcons/icons/CapsuleShape = SubResource( 92 )
+EditorIcons/icons/CapsuleShape2D = SubResource( 93 )
+EditorIcons/icons/CenterContainer = SubResource( 94 )
+EditorIcons/icons/CheckBox = SubResource( 95 )
+EditorIcons/icons/CheckButton = SubResource( 96 )
+EditorIcons/icons/Checkerboard = SubResource( 97 )
+EditorIcons/icons/CircleShape2D = SubResource( 98 )
+EditorIcons/icons/ClassList = SubResource( 99 )
+EditorIcons/icons/Clear = SubResource( 100 )
+EditorIcons/icons/Close = SubResource( 101 )
+EditorIcons/icons/Collapse = SubResource( 102 )
+EditorIcons/icons/CollisionPolygon = SubResource( 103 )
+EditorIcons/icons/CollisionPolygon2D = SubResource( 104 )
+EditorIcons/icons/CollisionShape = SubResource( 105 )
+EditorIcons/icons/CollisionShape2D = SubResource( 106 )
+EditorIcons/icons/Color = SubResource( 107 )
+EditorIcons/icons/ColorPick = SubResource( 108 )
+EditorIcons/icons/ColorPicker = SubResource( 109 )
+EditorIcons/icons/ColorPickerButton = SubResource( 110 )
+EditorIcons/icons/ColorRamp = SubResource( 111 )
+EditorIcons/icons/ColorRect = SubResource( 112 )
+EditorIcons/icons/ColorTrackVu = SubResource( 113 )
+EditorIcons/icons/ConcavePolygonShape = SubResource( 114 )
+EditorIcons/icons/ConcavePolygonShape2D = SubResource( 115 )
+EditorIcons/icons/ConeTwistJoint = SubResource( 116 )
+EditorIcons/icons/ConfirmationDialog = SubResource( 117 )
+EditorIcons/icons/Container = SubResource( 118 )
+EditorIcons/icons/Control = SubResource( 119 )
+EditorIcons/icons/ControlAlignBottomCenter = SubResource( 120 )
+EditorIcons/icons/ControlAlignBottomLeft = SubResource( 121 )
+EditorIcons/icons/ControlAlignBottomRight = SubResource( 122 )
+EditorIcons/icons/ControlAlignBottomWide = SubResource( 123 )
+EditorIcons/icons/ControlAlignCenter = SubResource( 124 )
+EditorIcons/icons/ControlAlignCenterLeft = SubResource( 125 )
+EditorIcons/icons/ControlAlignCenterRight = SubResource( 126 )
+EditorIcons/icons/ControlAlignLeftCenter = SubResource( 127 )
+EditorIcons/icons/ControlAlignLeftWide = SubResource( 128 )
+EditorIcons/icons/ControlAlignRightCenter = SubResource( 129 )
+EditorIcons/icons/ControlAlignRightWide = SubResource( 130 )
+EditorIcons/icons/ControlAlignTopCenter = SubResource( 131 )
+EditorIcons/icons/ControlAlignTopLeft = SubResource( 132 )
+EditorIcons/icons/ControlAlignTopRight = SubResource( 133 )
+EditorIcons/icons/ControlAlignTopWide = SubResource( 134 )
+EditorIcons/icons/ControlAlignWide = SubResource( 135 )
+EditorIcons/icons/ControlHcenterWide = SubResource( 136 )
+EditorIcons/icons/ControlLayout = SubResource( 137 )
+EditorIcons/icons/ControlVcenterWide = SubResource( 138 )
+EditorIcons/icons/ConvexPolygonShape = SubResource( 139 )
+EditorIcons/icons/ConvexPolygonShape2D = SubResource( 140 )
+EditorIcons/icons/CopyNodePath = SubResource( 141 )
+EditorIcons/icons/CreateNewSceneFrom = SubResource( 142 )
+EditorIcons/icons/CubeMap = SubResource( 143 )
+EditorIcons/icons/CubeMesh = SubResource( 144 )
+EditorIcons/icons/Curve = SubResource( 145 )
+EditorIcons/icons/Curve2D = SubResource( 146 )
+EditorIcons/icons/Curve3D = SubResource( 147 )
+EditorIcons/icons/CurveClose = SubResource( 148 )
+EditorIcons/icons/CurveConstant = SubResource( 149 )
+EditorIcons/icons/CurveCreate = SubResource( 150 )
+EditorIcons/icons/CurveCurve = SubResource( 151 )
+EditorIcons/icons/CurveDelete = SubResource( 152 )
+EditorIcons/icons/CurveEdit = SubResource( 153 )
+EditorIcons/icons/CurveIn = SubResource( 154 )
+EditorIcons/icons/CurveInOut = SubResource( 155 )
+EditorIcons/icons/CurveLinear = SubResource( 156 )
+EditorIcons/icons/CurveOut = SubResource( 157 )
+EditorIcons/icons/CurveOutIn = SubResource( 158 )
+EditorIcons/icons/CurveTexture = SubResource( 159 )
+EditorIcons/icons/CylinderMesh = SubResource( 160 )
+EditorIcons/icons/CylinderShape = SubResource( 161 )
+EditorIcons/icons/DampedSpringJoint2D = SubResource( 162 )
+EditorIcons/icons/Debug = SubResource( 163 )
+EditorIcons/icons/DebugContinue = SubResource( 164 )
+EditorIcons/icons/DebugNext = SubResource( 165 )
+EditorIcons/icons/DebugStep = SubResource( 166 )
+EditorIcons/icons/DefaultProjectIcon = SubResource( 167 )
+EditorIcons/icons/DeleteSplit = SubResource( 168 )
+EditorIcons/icons/Dictionary = SubResource( 169 )
+EditorIcons/icons/DirectionalLight = SubResource( 170 )
+EditorIcons/icons/DistractionFree = SubResource( 171 )
+EditorIcons/icons/Duplicate = SubResource( 172 )
+EditorIcons/icons/DynamicFont = SubResource( 173 )
+EditorIcons/icons/DynamicFontData = SubResource( 174 )
+EditorIcons/icons/Edit = SubResource( 175 )
+EditorIcons/icons/EditBezier = SubResource( 176 )
+EditorIcons/icons/EditKey = SubResource( 177 )
+EditorIcons/icons/EditPivot = SubResource( 178 )
+EditorIcons/icons/EditResource = SubResource( 179 )
+EditorIcons/icons/Editor3DHandle = SubResource( 180 )
+EditorIcons/icons/EditorControlAnchor = SubResource( 181 )
+EditorIcons/icons/EditorHandle = SubResource( 182 )
+EditorIcons/icons/EditorHandleAdd = SubResource( 183 )
+EditorIcons/icons/EditorPivot = SubResource( 184 )
+EditorIcons/icons/EditorPlugin = SubResource( 185 )
+EditorIcons/icons/EditorPosition = SubResource( 186 )
+EditorIcons/icons/EditorPositionPrevious = SubResource( 187 )
+EditorIcons/icons/EditorPositionUnselected = SubResource( 188 )
+EditorIcons/icons/Enum = SubResource( 189 )
+EditorIcons/icons/Environment = SubResource( 190 )
+EditorIcons/icons/Error = SubResource( 191 )
+EditorIcons/icons/ErrorSign = SubResource( 192 )
+EditorIcons/icons/ExpandBottomDock = SubResource( 193 )
+EditorIcons/icons/Favorites = SubResource( 194 )
+EditorIcons/icons/File = SubResource( 195 )
+EditorIcons/icons/FileBigThumb = SubResource( 196 )
+EditorIcons/icons/FileBroken = SubResource( 197 )
+EditorIcons/icons/FileBrokenBigThumb = SubResource( 198 )
+EditorIcons/icons/FileDead = SubResource( 199 )
+EditorIcons/icons/FileDeadBigThumb = SubResource( 200 )
+EditorIcons/icons/FileDeadMediumThumb = SubResource( 201 )
+EditorIcons/icons/FileDialog = SubResource( 202 )
+EditorIcons/icons/FileList = SubResource( 203 )
+EditorIcons/icons/FileMediumThumb = SubResource( 204 )
+EditorIcons/icons/FileThumbnail = SubResource( 205 )
+EditorIcons/icons/Filesystem = SubResource( 206 )
+EditorIcons/icons/FixedMaterial = SubResource( 207 )
+EditorIcons/icons/FixedSpatialMaterial = SubResource( 208 )
+EditorIcons/icons/Folder = SubResource( 209 )
+EditorIcons/icons/FolderBigThumb = SubResource( 210 )
+EditorIcons/icons/FolderMediumThumb = SubResource( 211 )
+EditorIcons/icons/Font = SubResource( 212 )
+EditorIcons/icons/Forward = SubResource( 213 )
+EditorIcons/icons/GDNativeLibrary = SubResource( 214 )
+EditorIcons/icons/GDScript = SubResource( 215 )
+EditorIcons/icons/GIProbe = SubResource( 216 )
+EditorIcons/icons/GIProbeData = SubResource( 217 )
+EditorIcons/icons/Generic6DOFJoint = SubResource( 218 )
+EditorIcons/icons/GizmoBakedLightmap = SubResource( 219 )
+EditorIcons/icons/GizmoCamera = SubResource( 220 )
+EditorIcons/icons/GizmoDirectionalLight = SubResource( 221 )
+EditorIcons/icons/GizmoGIProbe = SubResource( 222 )
+EditorIcons/icons/GizmoLight = SubResource( 223 )
+EditorIcons/icons/GizmoListener = SubResource( 224 )
+EditorIcons/icons/GizmoParticles = SubResource( 225 )
+EditorIcons/icons/GizmoReflectionProbe = SubResource( 226 )
+EditorIcons/icons/GizmoSpatialSamplePlayer = SubResource( 227 )
+EditorIcons/icons/GizmoSpatialStreamPlayer = SubResource( 228 )
+EditorIcons/icons/GizmoSpotLight = SubResource( 229 )
+EditorIcons/icons/Godot = SubResource( 230 )
+EditorIcons/icons/GodotDocs = SubResource( 231 )
+EditorIcons/icons/Gradient = SubResource( 232 )
+EditorIcons/icons/GradientTexture = SubResource( 233 )
+EditorIcons/icons/GraphEdit = SubResource( 234 )
+EditorIcons/icons/GraphNode = SubResource( 235 )
+EditorIcons/icons/Grid = SubResource( 236 )
+EditorIcons/icons/GridContainer = SubResource( 237 )
+EditorIcons/icons/GridMap = SubResource( 238 )
+EditorIcons/icons/GrooveJoint2D = SubResource( 239 )
+EditorIcons/icons/Group = SubResource( 240 )
+EditorIcons/icons/GroupViewport = SubResource( 241 )
+EditorIcons/icons/Groups = SubResource( 242 )
+EditorIcons/icons/GuiChecked = SubResource( 243 )
+EditorIcons/icons/GuiClose = SubResource( 244 )
+EditorIcons/icons/GuiCloseCustomizable = SubResource( 245 )
+EditorIcons/icons/GuiDropdown = SubResource( 246 )
+EditorIcons/icons/GuiEllipsis = SubResource( 247 )
+EditorIcons/icons/GuiGraphNodePort = SubResource( 248 )
+EditorIcons/icons/GuiHTick = SubResource( 249 )
+EditorIcons/icons/GuiHsplitter = SubResource( 250 )
+EditorIcons/icons/GuiMiniCheckerboard = SubResource( 1 )
+EditorIcons/icons/GuiMiniTabMenu = SubResource( 251 )
+EditorIcons/icons/GuiOptionArrow = SubResource( 252 )
+EditorIcons/icons/GuiProgressBar = SubResource( 253 )
+EditorIcons/icons/GuiProgressFill = SubResource( 254 )
+EditorIcons/icons/GuiRadioChecked = SubResource( 255 )
+EditorIcons/icons/GuiRadioUnchecked = SubResource( 256 )
+EditorIcons/icons/GuiResizer = SubResource( 257 )
+EditorIcons/icons/GuiScrollArrowLeft = SubResource( 258 )
+EditorIcons/icons/GuiScrollArrowRight = SubResource( 259 )
+EditorIcons/icons/GuiScrollBg = SubResource( 260 )
+EditorIcons/icons/GuiScrollGrabber = SubResource( 261 )
+EditorIcons/icons/GuiScrollGrabberHl = SubResource( 262 )
+EditorIcons/icons/GuiScrollGrabberPressed = SubResource( 263 )
+EditorIcons/icons/GuiSliderGrabber = SubResource( 264 )
+EditorIcons/icons/GuiSliderGrabberHl = SubResource( 265 )
+EditorIcons/icons/GuiSpinboxUpdown = SubResource( 266 )
+EditorIcons/icons/GuiTab = SubResource( 267 )
+EditorIcons/icons/GuiTabMenu = SubResource( 268 )
+EditorIcons/icons/GuiToggleOff = SubResource( 269 )
+EditorIcons/icons/GuiToggleOn = SubResource( 270 )
+EditorIcons/icons/GuiTreeArrowDown = SubResource( 271 )
+EditorIcons/icons/GuiTreeArrowRight = SubResource( 272 )
+EditorIcons/icons/GuiTreeArrowUp = SubResource( 273 )
+EditorIcons/icons/GuiTreeOption = SubResource( 274 )
+EditorIcons/icons/GuiTreeUpdown = SubResource( 275 )
+EditorIcons/icons/GuiUnchecked = SubResource( 276 )
+EditorIcons/icons/GuiVTick = SubResource( 277 )
+EditorIcons/icons/GuiViewportHdiagsplitter = SubResource( 278 )
+EditorIcons/icons/GuiViewportVdiagsplitter = SubResource( 279 )
+EditorIcons/icons/GuiViewportVhsplitter = SubResource( 280 )
+EditorIcons/icons/GuiVisibilityHidden = SubResource( 281 )
+EditorIcons/icons/GuiVisibilityVisible = SubResource( 282 )
+EditorIcons/icons/GuiVisibilityXray = SubResource( 283 )
+EditorIcons/icons/GuiVsplitBg = SubResource( 284 )
+EditorIcons/icons/GuiVsplitter = SubResource( 285 )
+EditorIcons/icons/HBoxContainer = SubResource( 286 )
+EditorIcons/icons/HScrollBar = SubResource( 287 )
+EditorIcons/icons/HSeparator = SubResource( 288 )
+EditorIcons/icons/HSlider = SubResource( 289 )
+EditorIcons/icons/HSplitContainer = SubResource( 290 )
+EditorIcons/icons/HTTPRequest = SubResource( 291 )
+EditorIcons/icons/Headphones = SubResource( 292 )
+EditorIcons/icons/Help = SubResource( 293 )
+EditorIcons/icons/HelpSearch = SubResource( 294 )
+EditorIcons/icons/HingeJoint = SubResource( 295 )
+EditorIcons/icons/History = SubResource( 296 )
+EditorIcons/icons/Hsize = SubResource( 297 )
+EditorIcons/icons/Image = SubResource( 298 )
+EditorIcons/icons/ImageTexture = SubResource( 299 )
+EditorIcons/icons/ImmediateGeometry = SubResource( 300 )
+EditorIcons/icons/ImportCheck = SubResource( 301 )
+EditorIcons/icons/ImportFail = SubResource( 302 )
+EditorIcons/icons/InformationSign = SubResource( 303 )
+EditorIcons/icons/InsertAfter = SubResource( 304 )
+EditorIcons/icons/InsertBefore = SubResource( 305 )
+EditorIcons/icons/Instance = SubResource( 306 )
+EditorIcons/icons/InstanceOptions = SubResource( 307 )
+EditorIcons/icons/InterpCubic = SubResource( 308 )
+EditorIcons/icons/InterpLinear = SubResource( 309 )
+EditorIcons/icons/InterpRaw = SubResource( 310 )
+EditorIcons/icons/InterpWrapClamp = SubResource( 311 )
+EditorIcons/icons/InterpWrapLoop = SubResource( 312 )
+EditorIcons/icons/InterpolatedCamera = SubResource( 313 )
+EditorIcons/icons/InverseKinematics = SubResource( 314 )
+EditorIcons/icons/ItemList = SubResource( 315 )
+EditorIcons/icons/JoyAxis = SubResource( 316 )
+EditorIcons/icons/JoyButton = SubResource( 317 )
+EditorIcons/icons/Joypad = SubResource( 318 )
+EditorIcons/icons/Key = SubResource( 319 )
+EditorIcons/icons/KeyAnimation = SubResource( 320 )
+EditorIcons/icons/KeyAudio = SubResource( 321 )
+EditorIcons/icons/KeyBezier = SubResource( 322 )
+EditorIcons/icons/KeyBezierHandle = SubResource( 323 )
+EditorIcons/icons/KeyBezierPoint = SubResource( 324 )
+EditorIcons/icons/KeyBezierSelected = SubResource( 325 )
+EditorIcons/icons/KeyCall = SubResource( 326 )
+EditorIcons/icons/KeyHover = SubResource( 327 )
+EditorIcons/icons/KeyInvalid = SubResource( 328 )
+EditorIcons/icons/KeyNext = SubResource( 329 )
+EditorIcons/icons/KeyPosition = SubResource( 330 )
+EditorIcons/icons/KeyRotation = SubResource( 331 )
+EditorIcons/icons/KeyScale = SubResource( 332 )
+EditorIcons/icons/KeySelected = SubResource( 333 )
+EditorIcons/icons/KeyValid = SubResource( 334 )
+EditorIcons/icons/KeyValue = SubResource( 335 )
+EditorIcons/icons/KeyXform = SubResource( 336 )
+EditorIcons/icons/Keyboard = SubResource( 337 )
+EditorIcons/icons/KinematicBody = SubResource( 338 )
+EditorIcons/icons/KinematicBody2D = SubResource( 339 )
+EditorIcons/icons/Label = SubResource( 340 )
+EditorIcons/icons/LargeTexture = SubResource( 341 )
+EditorIcons/icons/Light2D = SubResource( 342 )
+EditorIcons/icons/LightOccluder2D = SubResource( 343 )
+EditorIcons/icons/Line2D = SubResource( 344 )
+EditorIcons/icons/LineEdit = SubResource( 345 )
+EditorIcons/icons/LineShape2D = SubResource( 346 )
+EditorIcons/icons/LinkButton = SubResource( 347 )
+EditorIcons/icons/ListSelect = SubResource( 348 )
+EditorIcons/icons/Listener = SubResource( 349 )
+EditorIcons/icons/Load = SubResource( 350 )
+EditorIcons/icons/Lock = SubResource( 351 )
+EditorIcons/icons/LockViewport = SubResource( 352 )
+EditorIcons/icons/Logo = SubResource( 353 )
+EditorIcons/icons/Loop = SubResource( 354 )
+EditorIcons/icons/LoopInterpolation = SubResource( 355 )
+EditorIcons/icons/MainPlay = SubResource( 356 )
+EditorIcons/icons/MarginContainer = SubResource( 357 )
+EditorIcons/icons/MatchCase = SubResource( 358 )
+EditorIcons/icons/MaterialPreviewCube = SubResource( 359 )
+EditorIcons/icons/MaterialPreviewCubeOff = SubResource( 360 )
+EditorIcons/icons/MaterialPreviewLight1 = SubResource( 361 )
+EditorIcons/icons/MaterialPreviewLight1Off = SubResource( 362 )
+EditorIcons/icons/MaterialPreviewLight2 = SubResource( 363 )
+EditorIcons/icons/MaterialPreviewLight2Off = SubResource( 364 )
+EditorIcons/icons/MaterialPreviewSphere = SubResource( 365 )
+EditorIcons/icons/MaterialPreviewSphereOff = SubResource( 366 )
+EditorIcons/icons/MemberConstant = SubResource( 367 )
+EditorIcons/icons/MemberMethod = SubResource( 368 )
+EditorIcons/icons/MemberProperty = SubResource( 369 )
+EditorIcons/icons/MemberSignal = SubResource( 370 )
+EditorIcons/icons/MemberTheme = SubResource( 371 )
+EditorIcons/icons/MenuButton = SubResource( 372 )
+EditorIcons/icons/Mesh = SubResource( 373 )
+EditorIcons/icons/MeshInstance = SubResource( 374 )
+EditorIcons/icons/MeshInstance2D = SubResource( 375 )
+EditorIcons/icons/MeshLibrary = SubResource( 376 )
+EditorIcons/icons/MiniObject = SubResource( 377 )
+EditorIcons/icons/MirrorX = SubResource( 378 )
+EditorIcons/icons/MirrorY = SubResource( 379 )
+EditorIcons/icons/Mouse = SubResource( 380 )
+EditorIcons/icons/MoveDown = SubResource( 381 )
+EditorIcons/icons/MoveLeft = SubResource( 382 )
+EditorIcons/icons/MovePoint = SubResource( 383 )
+EditorIcons/icons/MoveRight = SubResource( 384 )
+EditorIcons/icons/MoveUp = SubResource( 385 )
+EditorIcons/icons/MultiEdit = SubResource( 386 )
+EditorIcons/icons/MultiLine = SubResource( 387 )
+EditorIcons/icons/MultiMesh = SubResource( 388 )
+EditorIcons/icons/MultiMeshInstance = SubResource( 389 )
+EditorIcons/icons/NativeScript = SubResource( 390 )
+EditorIcons/icons/Navigation = SubResource( 391 )
+EditorIcons/icons/Navigation2D = SubResource( 392 )
+EditorIcons/icons/NavigationMesh = SubResource( 393 )
+EditorIcons/icons/NavigationMeshInstance = SubResource( 394 )
+EditorIcons/icons/NavigationPolygon = SubResource( 395 )
+EditorIcons/icons/NavigationPolygonInstance = SubResource( 396 )
+EditorIcons/icons/New = SubResource( 397 )
+EditorIcons/icons/NewRoot = SubResource( 398 )
+EditorIcons/icons/Nil = SubResource( 399 )
+EditorIcons/icons/NinePatchRect = SubResource( 400 )
+EditorIcons/icons/Node = SubResource( 401 )
+EditorIcons/icons/Node2D = SubResource( 402 )
+EditorIcons/icons/NodePath = SubResource( 403 )
+EditorIcons/icons/NodeWarning = SubResource( 404 )
+EditorIcons/icons/NoiseTexture = SubResource( 405 )
+EditorIcons/icons/NonFavorite = SubResource( 406 )
+EditorIcons/icons/Object = SubResource( 407 )
+EditorIcons/icons/OccluderPolygon2D = SubResource( 408 )
+EditorIcons/icons/OmniLight = SubResource( 409 )
+EditorIcons/icons/Onion = SubResource( 410 )
+EditorIcons/icons/OptionButton = SubResource( 411 )
+EditorIcons/icons/OrientedPathFollow = SubResource( 412 )
+EditorIcons/icons/Override = SubResource( 413 )
+EditorIcons/icons/PackedDataContainer = SubResource( 414 )
+EditorIcons/icons/PackedScene = SubResource( 415 )
+EditorIcons/icons/PaintVertex = SubResource( 416 )
+EditorIcons/icons/Panel = SubResource( 417 )
+EditorIcons/icons/PanelContainer = SubResource( 418 )
+EditorIcons/icons/Panels1 = SubResource( 419 )
+EditorIcons/icons/Panels2 = SubResource( 420 )
+EditorIcons/icons/Panels2Alt = SubResource( 421 )
+EditorIcons/icons/Panels3 = SubResource( 422 )
+EditorIcons/icons/Panels3Alt = SubResource( 423 )
+EditorIcons/icons/Panels4 = SubResource( 424 )
+EditorIcons/icons/PanoramaSky = SubResource( 425 )
+EditorIcons/icons/ParallaxBackground = SubResource( 426 )
+EditorIcons/icons/ParallaxLayer = SubResource( 427 )
+EditorIcons/icons/ParticleAttractor2D = SubResource( 428 )
+EditorIcons/icons/Particles = SubResource( 429 )
+EditorIcons/icons/Particles2D = SubResource( 430 )
+EditorIcons/icons/ParticlesMaterial = SubResource( 431 )
+EditorIcons/icons/Path = SubResource( 432 )
+EditorIcons/icons/Path2D = SubResource( 433 )
+EditorIcons/icons/PathFollow = SubResource( 434 )
+EditorIcons/icons/PathFollow2D = SubResource( 435 )
+EditorIcons/icons/Pause = SubResource( 436 )
+EditorIcons/icons/PhysicalBone = SubResource( 437 )
+EditorIcons/icons/Pin = SubResource( 438 )
+EditorIcons/icons/PinJoint = SubResource( 439 )
+EditorIcons/icons/PinJoint2D = SubResource( 440 )
+EditorIcons/icons/PinPressed = SubResource( 441 )
+EditorIcons/icons/Plane = SubResource( 442 )
+EditorIcons/icons/PlaneMesh = SubResource( 443 )
+EditorIcons/icons/PlaneShape = SubResource( 444 )
+EditorIcons/icons/Play = SubResource( 445 )
+EditorIcons/icons/PlayBackwards = SubResource( 446 )
+EditorIcons/icons/PlayCustom = SubResource( 447 )
+EditorIcons/icons/PlayOverlay = SubResource( 448 )
+EditorIcons/icons/PlayScene = SubResource( 449 )
+EditorIcons/icons/PlayStart = SubResource( 450 )
+EditorIcons/icons/PlayStartBackwards = SubResource( 451 )
+EditorIcons/icons/PlayTravel = SubResource( 452 )
+EditorIcons/icons/PluginScript = SubResource( 453 )
+EditorIcons/icons/Polygon2D = SubResource( 454 )
+EditorIcons/icons/PolygonPathFinder = SubResource( 455 )
+EditorIcons/icons/PoolByteArray = SubResource( 456 )
+EditorIcons/icons/PoolColorArray = SubResource( 457 )
+EditorIcons/icons/PoolIntArray = SubResource( 458 )
+EditorIcons/icons/PoolRealArray = SubResource( 459 )
+EditorIcons/icons/PoolStringArray = SubResource( 460 )
+EditorIcons/icons/PoolVector2Array = SubResource( 461 )
+EditorIcons/icons/PoolVector3Array = SubResource( 462 )
+EditorIcons/icons/Popup = SubResource( 463 )
+EditorIcons/icons/PopupDialog = SubResource( 464 )
+EditorIcons/icons/PopupMenu = SubResource( 465 )
+EditorIcons/icons/PopupPanel = SubResource( 466 )
+EditorIcons/icons/Portal = SubResource( 467 )
+EditorIcons/icons/Position2D = SubResource( 468 )
+EditorIcons/icons/Position3D = SubResource( 469 )
+EditorIcons/icons/PrismMesh = SubResource( 470 )
+EditorIcons/icons/ProceduralSky = SubResource( 471 )
+EditorIcons/icons/Progress1 = SubResource( 472 )
+EditorIcons/icons/Progress2 = SubResource( 473 )
+EditorIcons/icons/Progress3 = SubResource( 474 )
+EditorIcons/icons/Progress4 = SubResource( 475 )
+EditorIcons/icons/Progress5 = SubResource( 476 )
+EditorIcons/icons/Progress6 = SubResource( 477 )
+EditorIcons/icons/Progress7 = SubResource( 478 )
+EditorIcons/icons/Progress8 = SubResource( 479 )
+EditorIcons/icons/ProgressBar = SubResource( 480 )
+EditorIcons/icons/ProximityGroup = SubResource( 481 )
+EditorIcons/icons/ProxyTexture = SubResource( 482 )
+EditorIcons/icons/Quad = SubResource( 483 )
+EditorIcons/icons/QuadMesh = SubResource( 484 )
+EditorIcons/icons/Quat = SubResource( 485 )
+EditorIcons/icons/RID = SubResource( 486 )
+EditorIcons/icons/RayCast = SubResource( 487 )
+EditorIcons/icons/RayCast2D = SubResource( 488 )
+EditorIcons/icons/RayShape = SubResource( 489 )
+EditorIcons/icons/RayShape2D = SubResource( 490 )
+EditorIcons/icons/Rayito = SubResource( 491 )
+EditorIcons/icons/Rect2 = SubResource( 492 )
+EditorIcons/icons/RectangleShape2D = SubResource( 493 )
+EditorIcons/icons/ReferenceRect = SubResource( 494 )
+EditorIcons/icons/ReflectionProbe = SubResource( 495 )
+EditorIcons/icons/RegionEdit = SubResource( 496 )
+EditorIcons/icons/Reload = SubResource( 497 )
+EditorIcons/icons/ReloadSmall = SubResource( 498 )
+EditorIcons/icons/RemoteTransform = SubResource( 499 )
+EditorIcons/icons/RemoteTransform2D = SubResource( 500 )
+EditorIcons/icons/Remove = SubResource( 501 )
+EditorIcons/icons/Rename = SubResource( 502 )
+EditorIcons/icons/Reparent = SubResource( 503 )
+EditorIcons/icons/ResourcePreloader = SubResource( 504 )
+EditorIcons/icons/RichTextLabel = SubResource( 505 )
+EditorIcons/icons/RigidBody = SubResource( 506 )
+EditorIcons/icons/RigidBody2D = SubResource( 507 )
+EditorIcons/icons/Room = SubResource( 508 )
+EditorIcons/icons/RoomBounds = SubResource( 509 )
+EditorIcons/icons/Rotate0 = SubResource( 510 )
+EditorIcons/icons/Rotate180 = SubResource( 511 )
+EditorIcons/icons/Rotate270 = SubResource( 512 )
+EditorIcons/icons/Rotate90 = SubResource( 513 )
+EditorIcons/icons/SampleLibrary = SubResource( 514 )
+EditorIcons/icons/Save = SubResource( 515 )
+EditorIcons/icons/Script = SubResource( 516 )
+EditorIcons/icons/ScriptCreate = SubResource( 517 )
+EditorIcons/icons/ScriptCreateDialog = SubResource( 518 )
+EditorIcons/icons/ScriptExtend = SubResource( 519 )
+EditorIcons/icons/ScriptRemove = SubResource( 520 )
+EditorIcons/icons/ScrollContainer = SubResource( 521 )
+EditorIcons/icons/Search = SubResource( 522 )
+EditorIcons/icons/SegmentShape2D = SubResource( 523 )
+EditorIcons/icons/Shader = SubResource( 524 )
+EditorIcons/icons/ShaderMaterial = SubResource( 525 )
+EditorIcons/icons/ShortCut = SubResource( 526 )
+EditorIcons/icons/ShrinkBottomDock = SubResource( 527 )
+EditorIcons/icons/Signal = SubResource( 528 )
+EditorIcons/icons/Signals = SubResource( 529 )
+EditorIcons/icons/SignalsAndGroups = SubResource( 530 )
+EditorIcons/icons/Skeleton = SubResource( 531 )
+EditorIcons/icons/Skeleton2D = SubResource( 532 )
+EditorIcons/icons/SliderJoint = SubResource( 533 )
+EditorIcons/icons/Slot = SubResource( 534 )
+EditorIcons/icons/Snap = SubResource( 535 )
+EditorIcons/icons/SnapGrid = SubResource( 536 )
+EditorIcons/icons/SoftBody = SubResource( 537 )
+EditorIcons/icons/Sort = SubResource( 538 )
+EditorIcons/icons/Spatial = SubResource( 539 )
+EditorIcons/icons/SpatialMaterial = SubResource( 540 )
+EditorIcons/icons/SphereMesh = SubResource( 541 )
+EditorIcons/icons/SphereShape = SubResource( 542 )
+EditorIcons/icons/SpinBox = SubResource( 543 )
+EditorIcons/icons/SpotLight = SubResource( 544 )
+EditorIcons/icons/Sprite = SubResource( 545 )
+EditorIcons/icons/Sprite3D = SubResource( 546 )
+EditorIcons/icons/SpriteFrames = SubResource( 547 )
+EditorIcons/icons/StaticBody = SubResource( 548 )
+EditorIcons/icons/StaticBody2D = SubResource( 549 )
+EditorIcons/icons/StatusError = SubResource( 550 )
+EditorIcons/icons/StatusSuccess = SubResource( 551 )
+EditorIcons/icons/StatusWarning = SubResource( 552 )
+EditorIcons/icons/Stop = SubResource( 553 )
+EditorIcons/icons/StreamTexture = SubResource( 554 )
+EditorIcons/icons/String = SubResource( 555 )
+EditorIcons/icons/StyleBoxEmpty = SubResource( 556 )
+EditorIcons/icons/StyleBoxFlat = SubResource( 557 )
+EditorIcons/icons/StyleBoxTexture = SubResource( 558 )
+EditorIcons/icons/TabContainer = SubResource( 559 )
+EditorIcons/icons/Tabs = SubResource( 560 )
+EditorIcons/icons/TestCube = SubResource( 561 )
+EditorIcons/icons/TextEdit = SubResource( 562 )
+EditorIcons/icons/TextFile = SubResource( 563 )
+EditorIcons/icons/Texture3D = SubResource( 564 )
+EditorIcons/icons/TextureArray = SubResource( 565 )
+EditorIcons/icons/TextureButton = SubResource( 566 )
+EditorIcons/icons/TextureProgress = SubResource( 567 )
+EditorIcons/icons/TextureRect = SubResource( 568 )
+EditorIcons/icons/Theme = SubResource( 569 )
+EditorIcons/icons/ThumbnailWait = SubResource( 570 )
+EditorIcons/icons/TileMap = SubResource( 571 )
+EditorIcons/icons/TileSet = SubResource( 572 )
+EditorIcons/icons/Time = SubResource( 573 )
+EditorIcons/icons/Timer = SubResource( 574 )
+EditorIcons/icons/ToolAddNode = SubResource( 575 )
+EditorIcons/icons/ToolButton = SubResource( 576 )
+EditorIcons/icons/ToolConnect = SubResource( 577 )
+EditorIcons/icons/ToolMove = SubResource( 578 )
+EditorIcons/icons/ToolPan = SubResource( 579 )
+EditorIcons/icons/ToolRotate = SubResource( 580 )
+EditorIcons/icons/ToolScale = SubResource( 581 )
+EditorIcons/icons/ToolSelect = SubResource( 582 )
+EditorIcons/icons/ToolTriangle = SubResource( 583 )
+EditorIcons/icons/Tools = SubResource( 584 )
+EditorIcons/icons/TouchScreenButton = SubResource( 585 )
+EditorIcons/icons/TrackAddKey = SubResource( 586 )
+EditorIcons/icons/TrackAddKeyHl = SubResource( 587 )
+EditorIcons/icons/TrackCapture = SubResource( 588 )
+EditorIcons/icons/TrackContinuous = SubResource( 589 )
+EditorIcons/icons/TrackDiscrete = SubResource( 590 )
+EditorIcons/icons/TrackTrigger = SubResource( 591 )
+EditorIcons/icons/Transform = SubResource( 592 )
+EditorIcons/icons/Transform2D = SubResource( 593 )
+EditorIcons/icons/TransitionEnd = SubResource( 594 )
+EditorIcons/icons/TransitionEndAuto = SubResource( 595 )
+EditorIcons/icons/TransitionEndAutoBig = SubResource( 596 )
+EditorIcons/icons/TransitionEndBig = SubResource( 597 )
+EditorIcons/icons/TransitionImmediate = SubResource( 598 )
+EditorIcons/icons/TransitionImmediateAuto = SubResource( 599 )
+EditorIcons/icons/TransitionImmediateAutoBig = SubResource( 600 )
+EditorIcons/icons/TransitionImmediateBig = SubResource( 601 )
+EditorIcons/icons/TransitionSync = SubResource( 602 )
+EditorIcons/icons/TransitionSyncAuto = SubResource( 603 )
+EditorIcons/icons/TransitionSyncAutoBig = SubResource( 604 )
+EditorIcons/icons/TransitionSyncBig = SubResource( 605 )
+EditorIcons/icons/Translation = SubResource( 606 )
+EditorIcons/icons/Transpose = SubResource( 607 )
+EditorIcons/icons/Tree = SubResource( 608 )
+EditorIcons/icons/Tween = SubResource( 609 )
+EditorIcons/icons/Unbone = SubResource( 610 )
+EditorIcons/icons/Ungroup = SubResource( 611 )
+EditorIcons/icons/Unlock = SubResource( 612 )
+EditorIcons/icons/UnpaintVertex = SubResource( 613 )
+EditorIcons/icons/Uv = SubResource( 614 )
+EditorIcons/icons/VBoxContainer = SubResource( 615 )
+EditorIcons/icons/VScrollBar = SubResource( 616 )
+EditorIcons/icons/VSeparator = SubResource( 617 )
+EditorIcons/icons/VSlider = SubResource( 618 )
+EditorIcons/icons/VSplitContainer = SubResource( 619 )
+EditorIcons/icons/Variant = SubResource( 620 )
+EditorIcons/icons/Vector2 = SubResource( 621 )
+EditorIcons/icons/Vector3 = SubResource( 622 )
+EditorIcons/icons/VehicleBody = SubResource( 623 )
+EditorIcons/icons/VehicleWheel = SubResource( 624 )
+EditorIcons/icons/VideoPlayer = SubResource( 625 )
+EditorIcons/icons/Viewport = SubResource( 626 )
+EditorIcons/icons/ViewportContainer = SubResource( 627 )
+EditorIcons/icons/ViewportSpeed = SubResource( 628 )
+EditorIcons/icons/ViewportTexture = SubResource( 629 )
+EditorIcons/icons/ViewportZoom = SubResource( 630 )
+EditorIcons/icons/VisibilityEnabler = SubResource( 631 )
+EditorIcons/icons/VisibilityEnabler2D = SubResource( 632 )
+EditorIcons/icons/VisibilityNotifier = SubResource( 633 )
+EditorIcons/icons/VisibilityNotifier2D = SubResource( 634 )
+EditorIcons/icons/VisualScript = SubResource( 635 )
+EditorIcons/icons/VisualShader = SubResource( 636 )
+EditorIcons/icons/VisualShaderPort = SubResource( 637 )
+EditorIcons/icons/Vulkan = SubResource( 638 )
+EditorIcons/icons/Warning = SubResource( 639 )
+EditorIcons/icons/WindowDialog = SubResource( 640 )
+EditorIcons/icons/World = SubResource( 641 )
+EditorIcons/icons/World2D = SubResource( 642 )
+EditorIcons/icons/WorldEnvironment = SubResource( 643 )
+EditorIcons/icons/YSort = SubResource( 644 )
+EditorIcons/icons/Zoom = SubResource( 645 )
+EditorIcons/icons/ZoomLess = SubResource( 646 )
+EditorIcons/icons/ZoomMore = SubResource( 647 )
+EditorIcons/icons/ZoomReset = SubResource( 648 )
+EditorIcons/icons/bool = SubResource( 649 )
+EditorIcons/icons/float = SubResource( 650 )
+EditorIcons/icons/int = SubResource( 651 )
+EditorSettingsDialog/styles/panel = SubResource( 652 )
+EditorStyles/styles/Background = SubResource( 653 )
+EditorStyles/styles/BottomPanelDebuggerOverride = SubResource( 654 )
+EditorStyles/styles/Content = SubResource( 655 )
+EditorStyles/styles/DebuggerPanel = SubResource( 656 )
+EditorStyles/styles/DebuggerTabBG = SubResource( 657 )
+EditorStyles/styles/DebuggerTabFG = SubResource( 658 )
+EditorStyles/styles/Focus = SubResource( 659 )
+EditorStyles/styles/Information3dViewport = SubResource( 660 )
+EditorStyles/styles/MenuHover = SubResource( 661 )
+EditorStyles/styles/MenuPanel = SubResource( 662 )
+EditorStyles/styles/PlayButtonPanel = SubResource( 663 )
+EditorStyles/styles/SceneTabBG = SubResource( 657 )
+EditorStyles/styles/SceneTabFG = SubResource( 658 )
+EditorStyles/styles/ScriptEditor = SubResource( 664 )
+EditorStyles/styles/ScriptEditorPanel = SubResource( 665 )
 FileDialog/colors/files_disabled = Color( 1, 1, 1, 0.3 )
 FileDialog/icons/folder = ExtResource( 8 )
 FileDialog/icons/parent_folder = ExtResource( 9 )
@@ -5167,11 +5167,11 @@ GraphEdit/constants/bezier_len_neg = 160
 GraphEdit/constants/bezier_len_pos = 80
 GraphEdit/constants/port_grab_distance_horizontal = 48
 GraphEdit/constants/port_grab_distance_vertical = 6
-GraphEdit/icons/minus = SubResource( 647 )
-GraphEdit/icons/more = SubResource( 648 )
-GraphEdit/icons/reset = SubResource( 649 )
-GraphEdit/icons/snap = SubResource( 537 )
-GraphEdit/styles/bg = SubResource( 667 )
+GraphEdit/icons/minus = SubResource( 646 )
+GraphEdit/icons/more = SubResource( 647 )
+GraphEdit/icons/reset = SubResource( 648 )
+GraphEdit/icons/snap = SubResource( 536 )
+GraphEdit/styles/bg = SubResource( 666 )
 GraphNode/colors/close_color = Color( 1, 1, 1, 0.7 )
 GraphNode/colors/title_color = Color( 1, 1, 1, 1 )
 GraphNode/constants/close_h_offset = 20
@@ -5181,34 +5181,34 @@ GraphNode/constants/separation = 1
 GraphNode/constants/title_h_offset = -16
 GraphNode/constants/title_offset = 20
 GraphNode/fonts/title_font = null
-GraphNode/icons/close = SubResource( 246 )
-GraphNode/icons/port = SubResource( 249 )
-GraphNode/icons/resizer = SubResource( 258 )
-GraphNode/styles/breakpoint = SubResource( 668 )
-GraphNode/styles/comment = SubResource( 669 )
-GraphNode/styles/commentfocus = SubResource( 670 )
+GraphNode/icons/close = SubResource( 245 )
+GraphNode/icons/port = SubResource( 248 )
+GraphNode/icons/resizer = SubResource( 257 )
+GraphNode/styles/breakpoint = SubResource( 667 )
+GraphNode/styles/comment = SubResource( 668 )
+GraphNode/styles/commentfocus = SubResource( 669 )
 GraphNode/styles/defaultfocus = null
 GraphNode/styles/defaultframe = null
-GraphNode/styles/frame = SubResource( 671 )
-GraphNode/styles/position = SubResource( 672 )
-GraphNode/styles/selectedframe = SubResource( 673 )
-GraphNode/styles/state_machine_frame = SubResource( 674 )
-GraphNode/styles/state_machine_selectedframe = SubResource( 675 )
+GraphNode/styles/frame = SubResource( 670 )
+GraphNode/styles/position = SubResource( 671 )
+GraphNode/styles/selectedframe = SubResource( 672 )
+GraphNode/styles/state_machine_frame = SubResource( 673 )
+GraphNode/styles/state_machine_selectedframe = SubResource( 674 )
 GridContainer/constants/hseparation = 16
 GridContainer/constants/vseparation = 16
 GridContainer/constants/vseperation = 16
 HBoxContainer/constants/separation = 16
-HScrollBar/icons/decrement = SubResource( 676 )
-HScrollBar/icons/decrement_highlight = SubResource( 676 )
-HScrollBar/icons/increment = SubResource( 676 )
-HScrollBar/icons/increment_highlight = SubResource( 676 )
+HScrollBar/icons/decrement = SubResource( 675 )
+HScrollBar/icons/decrement_highlight = SubResource( 675 )
+HScrollBar/icons/increment = SubResource( 675 )
+HScrollBar/icons/increment_highlight = SubResource( 675 )
 HScrollBar/styles/grabber = ExtResource( 11 )
 HScrollBar/styles/grabber_highlight = ExtResource( 11 )
 HScrollBar/styles/grabber_pressed = ExtResource( 11 )
 HScrollBar/styles/scroll = ExtResource( 12 )
 HScrollBar/styles/scroll_focus = null
 HSeparator/constants/separation = 16
-HSeparator/styles/separator = SubResource( 677 )
+HSeparator/styles/separator = SubResource( 676 )
 HSlider/icons/grabber = null
 HSlider/icons/grabber_disabled = null
 HSlider/icons/grabber_highlight = null
@@ -5234,11 +5234,11 @@ ItemList/constants/vseparation = 16
 ItemList/fonts/font = null
 ItemList/styles/bg = null
 ItemList/styles/bg_focus = null
-ItemList/styles/cursor = SubResource( 678 )
-ItemList/styles/cursor_unfocused = SubResource( 678 )
-ItemList/styles/selected = SubResource( 679 )
-ItemList/styles/selected_focus = SubResource( 680 )
-Label/colors/font_color = Color( 0.79902, 0.807843, 0.827451, 1 )
+ItemList/styles/cursor = SubResource( 677 )
+ItemList/styles/cursor_unfocused = SubResource( 677 )
+ItemList/styles/selected = SubResource( 678 )
+ItemList/styles/selected_focus = SubResource( 679 )
+Label/colors/font_color = Color( 0, 0, 0, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 Label/constants/line_spacing = 3
@@ -5246,7 +5246,7 @@ Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/fonts/font = null
-Label/styles/normal = SubResource( 664 )
+Label/styles/normal = SubResource( 663 )
 LineEdit/colors/clear_button_color = Color( 1, 1, 1, 1 )
 LineEdit/colors/clear_button_color_pressed = Color( 0.411765, 0.611765, 0.909804, 1 )
 LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
@@ -5290,13 +5290,13 @@ OptionButton/constants/arrow_margin = 4
 OptionButton/constants/hseparation = 4
 OptionButton/constants/modulate_arrow = 1
 OptionButton/fonts/font = null
-OptionButton/icons/arrow = SubResource( 253 )
+OptionButton/icons/arrow = SubResource( 252 )
 OptionButton/styles/disabled = null
 OptionButton/styles/focus = null
 OptionButton/styles/hover = null
 OptionButton/styles/normal = null
 OptionButton/styles/pressed = null
-Panel/styles/panel = null
+Panel/styles/panel = ExtResource( 1 )
 Panel/styles/panelf = null
 Panel/styles/panelnc = null
 PanelContainer/styles/panel = null
@@ -5310,22 +5310,22 @@ PopupMenu/fonts/font = null
 PopupMenu/icons/checked = null
 PopupMenu/icons/radio_checked = null
 PopupMenu/icons/radio_unchecked = null
-PopupMenu/icons/submenu = SubResource( 36 )
+PopupMenu/icons/submenu = SubResource( 35 )
 PopupMenu/icons/unchecked = null
-PopupMenu/icons/visibility_hidden = SubResource( 282 )
-PopupMenu/icons/visibility_visible = SubResource( 283 )
-PopupMenu/icons/visibility_xray = SubResource( 284 )
+PopupMenu/icons/visibility_hidden = SubResource( 281 )
+PopupMenu/icons/visibility_visible = SubResource( 282 )
+PopupMenu/icons/visibility_xray = SubResource( 283 )
 PopupMenu/styles/disabled = ExtResource( 1 )
 PopupMenu/styles/focus = ExtResource( 1 )
 PopupMenu/styles/hover = ExtResource( 1 )
-PopupMenu/styles/labeled_separator_left = SubResource( 681 )
-PopupMenu/styles/labeled_separator_right = SubResource( 682 )
+PopupMenu/styles/labeled_separator_left = SubResource( 680 )
+PopupMenu/styles/labeled_separator_right = SubResource( 681 )
 PopupMenu/styles/normal = ExtResource( 1 )
 PopupMenu/styles/panel = ExtResource( 1 )
 PopupMenu/styles/panel_disabled = ExtResource( 1 )
 PopupMenu/styles/pressed = ExtResource( 1 )
-PopupMenu/styles/separator = SubResource( 683 )
-PopupPanel/styles/panel = SubResource( 684 )
+PopupMenu/styles/separator = SubResource( 682 )
+PopupPanel/styles/panel = SubResource( 683 )
 ProgressBar/colors/font_color = Color( 0.79902, 0.807843, 0.827451, 1 )
 ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 ProgressBar/fonts/font = null
@@ -5347,7 +5347,7 @@ RichTextLabel/fonts/bold_italics_font = null
 RichTextLabel/fonts/italics_font = null
 RichTextLabel/fonts/mono_font = null
 RichTextLabel/fonts/normal_font = null
-RichTextLabel/styles/focus = SubResource( 685 )
+RichTextLabel/styles/focus = SubResource( 684 )
 RichTextLabel/styles/normal = null
 ScrollContainer/styles/bg = null
 SpinBox/icons/updown = null
@@ -5360,16 +5360,16 @@ TabContainer/constants/label_valign_fg = 0
 TabContainer/constants/side_margin = 0
 TabContainer/constants/top_margin = 24
 TabContainer/fonts/font = null
-TabContainer/icons/decrement = SubResource( 259 )
-TabContainer/icons/decrement_highlight = SubResource( 259 )
-TabContainer/icons/increment = SubResource( 260 )
-TabContainer/icons/increment_highlight = SubResource( 260 )
-TabContainer/icons/menu = SubResource( 269 )
+TabContainer/icons/decrement = SubResource( 258 )
+TabContainer/icons/decrement_highlight = SubResource( 258 )
+TabContainer/icons/increment = SubResource( 259 )
+TabContainer/icons/increment_highlight = SubResource( 259 )
+TabContainer/icons/menu = SubResource( 268 )
 TabContainer/icons/menu_highlight = null
-TabContainer/icons/menu_hl = SubResource( 269 )
+TabContainer/icons/menu_hl = SubResource( 268 )
 TabContainer/styles/panel = null
 TabContainer/styles/tab_bg = null
-TabContainer/styles/tab_fg = SubResource( 686 )
+TabContainer/styles/tab_fg = SubResource( 685 )
 Tabs/colors/font_color_bg = Color( 1, 1, 1, 0.3 )
 Tabs/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 Tabs/colors/font_color_fg = Color( 0.79902, 0.807843, 0.827451, 1 )
@@ -5378,16 +5378,16 @@ Tabs/constants/label_valign_bg = 2
 Tabs/constants/label_valign_fg = 0
 Tabs/constants/top_margin = 24
 Tabs/fonts/font = null
-Tabs/icons/close = SubResource( 245 )
-Tabs/icons/decrement = SubResource( 259 )
-Tabs/icons/decrement_highlight = SubResource( 259 )
-Tabs/icons/increment = SubResource( 260 )
-Tabs/icons/increment_highlight = SubResource( 260 )
-Tabs/styles/button = SubResource( 663 )
-Tabs/styles/button_pressed = SubResource( 663 )
+Tabs/icons/close = SubResource( 244 )
+Tabs/icons/decrement = SubResource( 258 )
+Tabs/icons/decrement_highlight = SubResource( 258 )
+Tabs/icons/increment = SubResource( 259 )
+Tabs/icons/increment_highlight = SubResource( 259 )
+Tabs/styles/button = SubResource( 662 )
+Tabs/styles/button_pressed = SubResource( 662 )
 Tabs/styles/panel = null
-Tabs/styles/tab_bg = SubResource( 658 )
-Tabs/styles/tab_fg = SubResource( 659 )
+Tabs/styles/tab_bg = SubResource( 657 )
+Tabs/styles/tab_fg = SubResource( 658 )
 TextEdit/colors/background_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/brace_mismatch_color = Color( 0, 0, 0, 1 )
 TextEdit/colors/breakpoint_color = Color( 0, 0, 0, 1 )
@@ -5416,11 +5416,11 @@ TextEdit/constants/completion_max_width = 50
 TextEdit/constants/completion_scroll_width = 3
 TextEdit/constants/line_spacing = 4
 TextEdit/fonts/font = null
-TextEdit/icons/tab = SubResource( 268 )
+TextEdit/icons/tab = SubResource( 267 )
 TextEdit/styles/completion = null
 TextEdit/styles/focus = null
 TextEdit/styles/normal = null
-TextEdit/styles/read_only = SubResource( 1 )
+TextEdit/styles/read_only = SubResource( 686 )
 ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
 ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 ToolButton/colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -5480,10 +5480,10 @@ Tree/styles/title_button_hover = null
 Tree/styles/title_button_normal = null
 Tree/styles/title_button_pressed = null
 VBoxContainer/constants/separation = 16
-VScrollBar/icons/decrement = SubResource( 676 )
-VScrollBar/icons/decrement_highlight = SubResource( 676 )
-VScrollBar/icons/increment = SubResource( 676 )
-VScrollBar/icons/increment_highlight = SubResource( 676 )
+VScrollBar/icons/decrement = SubResource( 675 )
+VScrollBar/icons/decrement_highlight = SubResource( 675 )
+VScrollBar/icons/increment = SubResource( 675 )
+VScrollBar/icons/increment_highlight = SubResource( 675 )
 VScrollBar/styles/grabber = SubResource( 690 )
 VScrollBar/styles/grabber_highlight = SubResource( 690 )
 VScrollBar/styles/grabber_pressed = SubResource( 690 )
@@ -5502,7 +5502,7 @@ VSlider/styles/grabber_highlight = null
 VSlider/styles/slider = SubResource( 692 )
 VSplitContainer/constants/autohide = 1
 VSplitContainer/constants/separation = 16
-VSplitContainer/icons/grabber = SubResource( 286 )
+VSplitContainer/icons/grabber = SubResource( 285 )
 VSplitContainer/styles/bg = null
 WindowDialog/colors/title_color = Color( 0.79902, 0.807843, 0.827451, 1 )
 WindowDialog/constants/close_h_ofs = 22
@@ -5510,7 +5510,7 @@ WindowDialog/constants/close_v_ofs = 20
 WindowDialog/constants/scaleborder_size = 4
 WindowDialog/constants/title_height = 24
 WindowDialog/fonts/title_font = null
-WindowDialog/icons/close = SubResource( 245 )
-WindowDialog/icons/close_highlight = SubResource( 245 )
+WindowDialog/icons/close = SubResource( 244 )
+WindowDialog/icons/close_highlight = SubResource( 244 )
 WindowDialog/styles/panel = SubResource( 693 )
 

@@ -17,12 +17,18 @@ public class EditorHandler : Node2D
 
     // Entities
     private bool PlacingEnt = false;
+    private bool MovingEnt = false;
+    private bool Snapping = true;
 
     private PackedScene Chest;
     private PackedScene FireArea;
     private PackedScene OilArea;
+    private PackedScene Tree;
+    private PackedScene Rock;
 
     private Entity SelectedEnt;
+    private Vector2 TargetPosition;
+
     private Node2D PreviewEnt;
 
     // Reference to other nodes.
@@ -35,6 +41,7 @@ public class EditorHandler : Node2D
     private Popup ScaleBar;
     private TextureProgress ScaleBarBar;
     
+
     public override void _Ready()
     {
         
@@ -53,44 +60,89 @@ public class EditorHandler : Node2D
         FireArea = ResourceLoader.Load("res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn") as PackedScene;
         Chest = ResourceLoader.Load("res://Content/Scenes/Entities/Chest.tscn") as PackedScene;
         OilArea = ResourceLoader.Load("res://Content/Scenes/Entities/Oil/OilArea.tscn") as PackedScene;
+        Tree = ResourceLoader.Load("res://Content/Scenes/Entities/Trees/Tree.tscn") as PackedScene;
+        Rock = ResourceLoader.Load("res://Content/Scenes/Entities/Rocks/Rock.tscn") as PackedScene;
     }
+
 
     // Verifie les Inputs a chaque frame.
     public override void _Input(InputEvent @event)
     {
-        if (PlacingEnt && @event.IsActionPressed("Click"))
+        if(MovingEnt && !PlacingEnt && @event.IsActionPressed("Delete"))
+        {
+            SelectedEnt.QueueFree();
+            MovingEnt = PlacingEnt = false;
+        }
+        if(!PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt)
+        {
+            SelectedEnt = Editor.GetEntity(Editor.Camera.GetGlobalMousePosition()) as Entity ;
+            if(SelectedEnt != null) 
+                MovingEnt = true;  
+        }
+        else if(MovingEnt && !PlacingEnt && @event.IsActionPressed("Click") )
+        {
             PlaceEntity();
+        }
 
-        if (PlacingEnt && @event.IsActionPressed("ui_cancel"))
+        // Placing entities
+        if (PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt) 
+            PlaceEntity();
+            
+
+        // Scaling up the Entity with Shift Scroll wheel.
+        if(PlacingEnt && @event.IsActionPressed("ZoomIn") && Input.IsActionPressed("Shift") )
+        {
+            SelectedEnt.Scale += new Vector2(0.15f,0.15f);
+            ScaleBarBar.Value = SelectedEnt.Scale.x;    
+        }
+        if(PlacingEnt && @event.IsActionPressed("ZoomOut") && Input.IsActionPressed("Shift"))
+        {
+            SelectedEnt.Scale -= new Vector2(0.15f, 0.15f);
+            ScaleBarBar.Value = SelectedEnt.Scale.x;
+        }
+        
+        // Canceling
+        if (PlacingEnt && @event.IsActionPressed("ui_cancel") || MovingEnt && @event.IsActionPressed("ui_cancel"))
             ClearSelected();
 
-        if (@event.IsActionPressed("RightClick")) // EditorMode est un controle dans project settings
+        // EditorMode est un controle dans project settings
+        if (@event.IsActionPressed("RightClick")) 
         {
             PlacingEnt = false;
             ClearSelected();
             EditorMenu.PopupCenteredMinsize();
             EditorMenu.RectGlobalPosition = GetGlobalMousePosition();
         }
-        if(PlacingEnt && @event.IsActionPressed("ui_up"))
-        {
-            SelectedEnt.Scale += new Vector2(0.15f,0.15f);
-            ScaleBarBar.Value = SelectedEnt.Scale.x;
-        }
-        else if(PlacingEnt && @event.IsActionPressed("ui_down") )
-        {
-            SelectedEnt.Scale -= new Vector2(0.15f, 0.15f);
-            ScaleBarBar.Value = SelectedEnt.Scale.x;
-        }
+
     }
+
+
     public override void _Process(float delta)
     {
-        if (PlacingEnt)
+        if(PlacingEnt)  (
+            GetNode("Action") as Label).Text = "Placing : " + SelectedEnt.Name;
+        else if(MovingEnt) 
+            (GetNode("Action") as Label).Text = "Moving : " + SelectedEnt.Name;
+        else (
+            GetNode("Action") as Label).Text = "Idling";
+
+        if (PlacingEnt || MovingEnt)
         {
-            SelectedEnt.GlobalPosition = Editor.Camera.GetGlobalMousePosition();
+            TargetPosition = Editor.Camera.GetGlobalMousePosition();
+            if(Snapping)
+            {
+                int SnapX = (int)(TargetPosition.x - TargetPosition.x % 8);
+                int SnapY = (int)(TargetPosition.y - TargetPosition.y % 8);
+                SelectedEnt.GlobalPosition = new Vector2(SnapX, SnapY);
+            }
+                    
             SelectedEnt.Selected = true;
-            ScaleBar.RectGlobalPosition = GetGlobalMousePosition(); //+ new Vector2(25, -25);
+            ScaleBar.RectGlobalPosition = GetGlobalMousePosition();
         }
+        ScaleBarBar.Visible = PlacingEnt;
     }
+
+
     private void MakeMenu()
     {
         EditorMenu.AddItem("Add new Entity", 0);
@@ -99,18 +151,18 @@ public class EditorHandler : Node2D
         EditorMenu.AddItem("Test");
         EditorMenu.AddItem("Test");
         EditorMenu.AddItem("Test");
-
     }
+
 
     private void PlaceEntity()
     {
-        var position = Editor.Camera.GetGlobalMousePosition();
+        var position = SelectedEnt.GlobalPosition;
 
         // Creating node
         if (SelectedEnt is Chest) {
             Chest chest = SelectedEnt.Duplicate() as Chest;
             chest.GlobalPosition = position;
-            chest.Name = "ChestTest";
+            chest.Name = "Chest";
             chest.Selected = false;
             Editor.Entities.AddChild(chest);
         }
@@ -127,42 +179,46 @@ public class EditorHandler : Node2D
         {
             Oil oilArea = SelectedEnt.Duplicate() as Oil; ;
             oilArea.GlobalPosition = position;
-            oilArea.Name = "FireArea";
+            oilArea.Name = "OilArea";
             oilArea.Selected = false;
             Editor.Entities.AddChild(oilArea);
 
-            (SelectedEnt as Oil).RandomSize();
+            //(SelectedEnt as Oil).RandomSize();
             ScaleBarBar.Value = SelectedEnt.Scale.x;
         }
+        else
+        {
+            Entity newEnt = SelectedEnt.Duplicate() as Entity;
+            newEnt.GlobalPosition = position;
+            newEnt.Name = "Tree";
+            Editor.Entities.AddChild(newEnt);
+            ScaleBarBar.Value = SelectedEnt.Scale.x;
+        }
+
+        if(MovingEnt) 
+        {
+            MovingEnt = false;
+            PlacingEnt = false;
+            SelectedEnt.QueueFree();
+        }
         
-        GD.Print("Added new Chest entity");
     }
+
 
     private void ClearSelected()
     {
         if(SelectedEnt != null)
             SelectedEnt.QueueFree();
+
         SelectedEnt = null;
         PlacingEnt = false;
     }
 
-    private void EnterEditorMode()
-    {
-        // TODO: Activer le mode Editor.
-        GD.Print("Editor mode activated");
-    }
 
-    private void LeaveEditorMode()
-    {
-        // TODO: Desactiver le mode Editor.
-        GD.Print("Editor mode deactivated");
-    }
-	
 	private void _on_EditorMenu_id_pressed(int ID)
 	{
         switch (ID)
         {
-            
             // Asset explorer
             case 0:
                 EntExplorer.PopupCenteredMinsize();
@@ -170,6 +226,7 @@ public class EditorHandler : Node2D
                 break;
         }
 	}
+
 
 	private void EntExplorerSelected(int index)
 	{
@@ -191,16 +248,31 @@ public class EditorHandler : Node2D
                 break;
             case 2:
                 Oil oilArea = OilArea.Instance() as Oil;
-                oilArea.RandomSize();
+                //oilArea.RandomSize();
                 Editor.Entities.AddChild(oilArea);
                 SelectedEnt = oilArea;
                 PlacingEnt = true;
                 break;
+            case 3:
+                Node2D tree = Tree.Instance() as Node2D;
+                Editor.Entities.AddChild(tree);
+                SelectedEnt = tree as Entity;
+                PlacingEnt = true;
+                break;
+            case 4:
+                Node2D rock = Rock.Instance() as Node2D;
+                Editor.Entities.AddChild(rock);
+                SelectedEnt = rock as Entity;
+                PlacingEnt = true;
+                break;
         }
+
+        SelectedEnt.Selected = true;
         EntExplorer.Hide();
 
         SelectedEnt.SetProcess(false);
         SelectedEnt.SetPhysicsProcess(false);
     }
-}
 
+
+}

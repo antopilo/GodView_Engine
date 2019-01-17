@@ -14,6 +14,8 @@ public class Editor : Node2D
     public static PopupMenu MainMenu;
 
     public static PackedScene GameScene;
+
+
     public void GetNodes()
     {
         if (!GetTree().GetRoot().HasNode("Editor")){
@@ -35,19 +37,22 @@ public class Editor : Node2D
 
     }
 
+
     public override void _Ready()
     {
         GameScene = ResourceLoader.Load("res://Content/Scenes/EmptyLevel.tscn") as PackedScene;
         GetNodes();
     }
 
+
     public override void _Process(float delta){
         if(!EditorMode)
             GetNodes();
 
-        if(EditorMode && Input.IsActionJustPressed("ui_cancel"))
+        if(EditorMode && Input.IsActionJustPressed("EditorMode"))
             EnterGameMode();
     }
+
 
     public void SaveLevel(string pPath)
     {
@@ -60,6 +65,7 @@ public class Editor : Node2D
         ResourceSaver.Save(pPath, savedLevel); // Save the PackedScene
     }
 
+
     // This makes sure that everynode contained in the Currentlevel gets saved
     // in the packed scene level. See EnterDebugMode() for more.
     private void SetOwners(Node pNode)
@@ -70,14 +76,15 @@ public class Editor : Node2D
                 continue;
 
             node.SetOwner( CurrentLevel );
-
-            //GD.Print("ChangedOwner of :" + node.Name + " -> to: " + CurrentLevel.Name);
+            GD.Print(node);
             if(node is Entity)
                 continue;
 
-            if(node.GetChildren().Count > 0) SetOwners(node); // Recursivity
+            if(node.GetChildren().Count > 0) 
+                SetOwners(node); // Recursivity
         }       
     }
+
 
     private void EnterGameMode()
     {
@@ -87,6 +94,7 @@ public class Editor : Node2D
         GetTree().ChangeSceneTo(GameScene);
     }
 
+
     public void LoadLevel(string pPath)
     {
         GD.Print("Loading Level... at path: " + pPath);
@@ -94,4 +102,20 @@ public class Editor : Node2D
         level.Name = "CurrentLevel";
         GetTree().GetRoot().GetNode("Editor/ViewportContainer/Viewport").AddChild(level);
     }
+
+    public static Node2D GetEntity(Vector2 pPosition)
+    {
+        foreach(Node2D node in Editor.Entities.GetChildren())
+        {
+            if( node.GetGlobalPosition().x - 16 < pPosition.x && 
+                node.GetGlobalPosition().x + 16 > pPosition.x &&
+                node.GetGlobalPosition().y + 16 > pPosition.y &&
+                node.GetGlobalPosition().y - 16 < pPosition.y)
+            {
+                return node;
+            }
+        }
+        return null;
+    }
+    
 }

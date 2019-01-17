@@ -15,9 +15,9 @@ public class EditorCamera : Camera2D
         else if(@event.IsActionReleased("MiddleMouse"))
             Panning = false;
 
-        if (@event.IsActionReleased("ZoomIn"))
+        if (@event.IsActionReleased("ZoomIn") && !Input.IsActionPressed("Shift") )
             this.Zoom /= new Vector2(1.1f, 1.1f);
-        else if (@event.IsActionReleased("ZoomOut"))
+        if (@event.IsActionReleased("ZoomOut") && !Input.IsActionPressed("Shift") )
             this.Zoom *= new Vector2(1.1f, 1.1f);
     }
     public override void _Process(float delta)
