@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Engine/Styles/StyleBoxNormal.tres" type="StyleBox" id=1]
 [ext_resource path="res://Engine/Fonts/Dynamics/Regular.tres" type="DynamicFont" id=2]
@@ -10,9 +10,11 @@
 [ext_resource path="res://Content/Art/Spells/Oil/oilArea.png" type="Texture" id=8]
 [ext_resource path="res://Content/Art/Entities/Trees/Tree01.png" type="Texture" id=9]
 [ext_resource path="res://Content/Art/Entities/Rocks/Rock1.png" type="Texture" id=10]
-[ext_resource path="res://Content/Art/UI/HealthBarBehind.png" type="Texture" id=11]
-[ext_resource path="res://Content/Art/UI/HealthBarBG.png" type="Texture" id=12]
-[ext_resource path="res://Content/Art/UI/HealthBarProg.png" type="Texture" id=13]
+[ext_resource path="res://Content/Art/Entities/Bush/Bush2.png" type="Texture" id=11]
+[ext_resource path="res://Content/Art/Entities/Bush/Bush3.png" type="Texture" id=12]
+[ext_resource path="res://Content/Art/UI/HealthBarBehind.png" type="Texture" id=13]
+[ext_resource path="res://Content/Art/UI/HealthBarBG.png" type="Texture" id=14]
+[ext_resource path="res://Content/Art/UI/HealthBarProg.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -133,7 +135,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 
 [node name="EntExplorer" type="Popup" parent="EditorHandler"]
-visible = true
 margin_left = 1279.0
 margin_top = 744.0
 margin_right = 1590.0
@@ -142,7 +143,7 @@ margin_bottom = 915.0
 [node name="ItemList" type="ItemList" parent="EditorHandler/EntExplorer"]
 margin_right = 311.0
 margin_bottom = 171.0
-items = [ "Chest", ExtResource( 6 ), false, "FireArea", ExtResource( 7 ), false, "OilArea", ExtResource( 8 ), false, "Tree", ExtResource( 9 ), false, "Rock", ExtResource( 10 ), false ]
+items = [ "Chest", ExtResource( 6 ), false, "FireArea", ExtResource( 7 ), false, "OilArea", ExtResource( 8 ), false, "Tree", ExtResource( 9 ), false, "Rock", ExtResource( 10 ), false, "Bush1", ExtResource( 11 ), false, "Bush2", ExtResource( 12 ), false ]
 max_columns = 8
 same_column_width = true
 fixed_column_width = 93
@@ -166,9 +167,9 @@ step = 0.15
 value = 1.05
 allow_greater = true
 allow_lesser = true
-texture_under = ExtResource( 11 )
-texture_over = ExtResource( 12 )
-texture_progress = ExtResource( 13 )
+texture_under = ExtResource( 13 )
+texture_over = ExtResource( 14 )
+texture_progress = ExtResource( 15 )
 nine_patch_stretch = true
 stretch_margin_left = 3
 stretch_margin_top = 3

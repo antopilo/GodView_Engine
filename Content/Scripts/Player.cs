@@ -63,6 +63,8 @@ public class Player : KinematicBody2D
         
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
+
+        GD.Print(this.GlobalPosition);
     }
 
     private void UpdateSprite()
@@ -155,7 +157,7 @@ public class Player : KinematicBody2D
 		if(Input.IsActionJustPressed("ui_interact") && InteractableObject.Count > 0)
 		{
 			if( (InteractableObject[0] as Node2D).HasMethod("Interact") )
-			    (InteractableObject[0] as Chest).Interact();
+			    InteractableObject[0].Call("Interact");
 		}
 
         (GetNode("Label") as Label).Text = InteractableObject.Count > 0 ? (InteractableObject[0] as Node2D).Name : "Nothing..";
@@ -190,7 +192,6 @@ public class Player : KinematicBody2D
         // TODO: Death of player.
         Alive = false;
     }
-	
 	
 
 	#region Signal

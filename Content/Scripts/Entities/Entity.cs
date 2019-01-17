@@ -61,7 +61,10 @@ public class Entity : Node2D
 
         var position = new Vector2(-Width / 2, 0);
         var rectangle = new Rect2(position, new Vector2(Width, -Height));
+
         DrawRect(rectangle, new Color("E50000"), false);
+        DrawLine(new Vector2(-3, 0), new Vector2(3, 0), new Color(1, 1, 0), 1.25f);
+        DrawLine(new Vector2(0, -3), new Vector2(0, 3), new Color(1, 1, 0), 1.25f);
     }
 
     // Input a global position and returns if that position is located

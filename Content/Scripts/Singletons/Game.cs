@@ -26,49 +26,57 @@ public class Game : Node
 
         // If the singleton is loaded in the DebugMode the references won't
         // be valid so we skip the script. Making the singleton useless.
-        if (!GetTree().GetRoot().HasNode("Game"))
-            return;
+        if (!GetTree().GetRoot().HasNode("Game")) return;
 
-        
+        GameNode = GetTree().GetRoot().GetNode("Game") as Node2D;
         FirstSpellSlot = GetTree().GetRoot().GetNode("Game/UI/Screen/SelectedSpell") as Control;
         SecondSpellSlot = GetTree().GetRoot().GetNode("Game/UI/Screen/SecondSpell") as Control;
-        Entities = GetTree().GetRoot().GetNode("Game/CurrentLevel/Layers/Entities") as YSort;
-        CurrentLevel = GetTree().GetRoot().GetNode("Game/CurrentLevel") as Level;
-        Hand = GetTree().GetRoot().GetNode("Game/CurrentLevel/Layers/Hand") as Hand;
-        
-        if(CurrentLevel is null) GD.Print("Current Level not found");
+
+        LoadLevel("res://editorLevel.tscn");
+
+        CurrentLevel = GameNode.GetNode("CurrentLevel") as Level;
+        Entities = CurrentLevel.GetNode("Layers/Entities") as YSort;
+
+        InGame = true;
+
+        CurrentLevel.SpawnPlayer();
+        Hand = Entities.GetNode("Player/Hand") as Hand;
+
+        if(CurrentLevel is null) 
+            GD.Print("Current Level not found");
             
         // The rest should only be references used in the debug mode.
-        if(!DebugMode)
-            return;
-
+        if(!DebugMode) return;
+        
         // Gets the Editor scene in case the player has access to the debug mode.
         EditorScene = ResourceLoader.Load("res://Engine/Scenes/Main.tscn") as PackedScene;
     }
 
     private void GetNodes()
     {
-        if(!GetTree().GetRoot().HasNode("Game")){
-            return;
-        }
+       if (!GetTree().GetRoot().HasNode("Game")) return;
 
         GameNode = GetTree().GetRoot().GetNode("Game") as Node2D;
-        // Changing bool to make sure that the nodes don't get loaded multiple times
-        
-        InGame = true;
-        LoadLevel("res://editorLevel.tscn");
-        Entities = GetTree().GetRoot().GetNode("Game/CurrentLevel/Layers/Entities") as YSort;
-        // Getting references.
-        
         FirstSpellSlot = GetTree().GetRoot().GetNode("Game/UI/Screen/SelectedSpell") as Control;
         SecondSpellSlot = GetTree().GetRoot().GetNode("Game/UI/Screen/SecondSpell") as Control;
-        
-        CurrentLevel = GetTree().GetRoot().GetNode("Game/CurrentLevel") as Level;
 
+        LoadLevel("res://editorLevel.tscn");
+
+        CurrentLevel = GameNode.GetNode("CurrentLevel") as Level;
+        Entities = CurrentLevel.GetNode("Layers/Entities") as YSort;
+
+        InGame = true;
+        
+        CurrentLevel.SpawnPlayer();
+        Hand = Entities.GetNode("Player/Hand") as Hand;
+
+        if(CurrentLevel is null) 
+            GD.Print("Current Level not found");
+            
     }
     override public void _Process(float delta)
     {
-        if(!InGame)
+        if( !InGame )
             GetNodes();
         
         // Checks for the debugMode toggle every frame
@@ -114,7 +122,8 @@ public class Game : Node
         GD.Print("Debug Mode - Loading Level... at path: " + pPath);
         Level level = (ResourceLoader.Load(pPath) as PackedScene).Instance() as Level;
         level.Name = "CurrentLevel";
-        GetTree().GetRoot().GetNode("Game").AddChild(level);
+        if(GameNode != null) GameNode.AddChild(level);
+            
         //(GetTree().GetRoot().GetNode("Game") as Node).AddChild(CurrentLevel);
     }
 }   

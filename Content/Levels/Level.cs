@@ -23,11 +23,11 @@ public class Level : Node2D
     }
 
     public void SpawnPlayer(){
-        if(!Game.InGame)
+        if(!Game.InGame || Game.Entities.HasNode("Player"))
             return;
 
         Player Player = Game.PlayerScene.Instance() as Player;
-        //Player.GlobalPosition = (Game.Entities.GetNode("Spawn") as Position2D).GlobalPosition;
-        GetNode("Layers/Entities").AddChild( Game.PlayerScene.Instance() );
+        Player.Name = "Player";
+        GetNode("Layers/Entities").AddChild( Player );
     }
 }

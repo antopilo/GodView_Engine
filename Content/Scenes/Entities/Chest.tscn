@@ -43,6 +43,7 @@ z_index = -1
 texture = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+show_behind_parent = true
 position = Vector2( 0, -8 )
 frames = SubResource( 1 )
 animation = "Close"

@@ -44,7 +44,6 @@ public class Hand : Position2D
     public void SetAllSpell()
     {
         AllSpell = new Spell[2];
-
         AllSpell[0] = this.GetNode("Water") as Spell;
         AllSpell[1] = this.GetNode("Fire") as Spell;
     }

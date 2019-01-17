@@ -1,3 +1,4 @@
+
 using Godot;
 using System;
 
@@ -9,19 +10,22 @@ public class Dropped : Node2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        RandomSpell = Game.Hand.AllSpell[GenerateSpell()];
+        GenerateSpell();
         (this.GetNode("AnimatedSprite") as AnimatedSprite).Animation = RandomSpell.Name;
     }
 
-    public int GenerateSpell()
+    public void GenerateSpell()
     {
         RandomNumberGenerator rng = new RandomNumberGenerator();
+        rng.Randomize();
         IndexRS = rng.RandiRange(0,1);
-        return IndexRS;
+        RandomSpell = Game.Hand.AllSpell[IndexRS];
     }
 
     public void Interact()
     {
-        Game.Hand.ChangeSpell(0, RandomSpell);
+        //RandomSpell = Game.Hand.AllSpell[GenerateSpell()];
+        //Game.Hand.ChangeSpell(0, RandomSpell);
     }
+
 }

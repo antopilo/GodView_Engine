@@ -9,9 +9,7 @@ public class Chest : Entity
 	public bool Opened = false;
     
     private Spell[] AllSpell;
-
 	private AnimatedSprite _Sprite;
-	
     private PackedScene DroppedS;
 
     // Called when the node enters the scene tree for the first time.
@@ -25,15 +23,16 @@ public class Chest : Entity
 	public override void _Process(float Delta)
 	{
         base._Process(Delta);
-        
         _Sprite.Animation = Opened ? "Open" : "Close";
 	}
 
 	public void Interact()
 	{
-		Opened = true;
+        if(Opened) return;
+        Opened = true;
         var drop = DroppedS.Instance() as Dropped;
-        drop.GlobalPosition = this.GlobalPosition + new Vector2(0, 16);
-        Game.Entities.AddChild(drop);
+        drop.GlobalPosition = this.GlobalPosition - new Vector2(0, -32);
+        Game.Entities.AddChild(drop, true);
 	}
+
 }

@@ -21,10 +21,8 @@ public class EditorHandler : Node2D
     private bool Snapping = true;
 
     private PackedScene Chest;
-    private PackedScene FireArea;
-    private PackedScene OilArea;
-    private PackedScene Tree;
-    private PackedScene Rock;
+    private PackedScene FireArea, OilArea;
+    private PackedScene Tree, Rock, Bush1, Bush2;
 
     private Entity SelectedEnt;
     private Vector2 TargetPosition;
@@ -62,6 +60,9 @@ public class EditorHandler : Node2D
         OilArea = ResourceLoader.Load("res://Content/Scenes/Entities/Oil/OilArea.tscn") as PackedScene;
         Tree = ResourceLoader.Load("res://Content/Scenes/Entities/Trees/Tree.tscn") as PackedScene;
         Rock = ResourceLoader.Load("res://Content/Scenes/Entities/Rocks/Rock.tscn") as PackedScene;
+        Bush1 = ResourceLoader.Load("res://Content/Scenes/Entities/Bush/Bush1.tscn") as PackedScene;
+        Bush2 = ResourceLoader.Load("res://Content/Scenes/Entities/Bush/Bush2.tscn") as PackedScene;
+
     }
 
 
@@ -95,6 +96,7 @@ public class EditorHandler : Node2D
             SelectedEnt.Scale += new Vector2(0.15f,0.15f);
             ScaleBarBar.Value = SelectedEnt.Scale.x;    
         }
+
         if(PlacingEnt && @event.IsActionPressed("ZoomOut") && Input.IsActionPressed("Shift"))
         {
             SelectedEnt.Scale -= new Vector2(0.15f, 0.15f);
@@ -102,11 +104,11 @@ public class EditorHandler : Node2D
         }
         
         // Canceling
-        if (PlacingEnt && @event.IsActionPressed("ui_cancel") || MovingEnt && @event.IsActionPressed("ui_cancel"))
+        if (PlacingEnt && @event.IsActionPressed("ui_cancel"))
             ClearSelected();
 
         // EditorMode est un controle dans project settings
-        if (@event.IsActionPressed("RightClick")) 
+        if (@event.IsActionPressed("RightClick") && !MovingEnt) 
         {
             PlacingEnt = false;
             ClearSelected();
@@ -122,13 +124,13 @@ public class EditorHandler : Node2D
         if(PlacingEnt)  (
             GetNode("Action") as Label).Text = "Placing : " + SelectedEnt.Name;
         else if(MovingEnt) 
-            (GetNode("Action") as Label).Text = "Moving : " + SelectedEnt.Name;
+            (GetNode("Action") as Label).Text = "Moving : ";
         else (
             GetNode("Action") as Label).Text = "Idling";
 
         if (PlacingEnt || MovingEnt)
         {
-            TargetPosition = Editor.Camera.GetGlobalMousePosition();
+            TargetPosition = Editor.Camera.GetGlobalMousePosition() + new Vector2(4,4);
             if(Snapping)
             {
                 int SnapX = (int)(TargetPosition.x - TargetPosition.x % 8);
@@ -156,55 +158,32 @@ public class EditorHandler : Node2D
 
     private void PlaceEntity()
     {
+        // Duplicating & Settings propreties for the new Entity
         var position = SelectedEnt.GlobalPosition;
+        var Child = SelectedEnt.Duplicate() as Entity;
+        Child.GlobalPosition = position;
+        Child.Selected = false;
 
-        // Creating node
-        if (SelectedEnt is Chest) {
-            Chest chest = SelectedEnt.Duplicate() as Chest;
-            chest.GlobalPosition = position;
-            chest.Name = "Chest";
-            chest.Selected = false;
-            Editor.Entities.AddChild(chest);
-        }
-        else if(SelectedEnt is FireArea)
-        {
-            FireArea fireArea = SelectedEnt.Duplicate() as FireArea;
-            fireArea.GlobalPosition = position;
-            fireArea.Burning = true;
-            fireArea.Name = "FireArea";
-            fireArea.Selected = false;
-            Editor.Entities.AddChild(fireArea);
-        }
-        else if (SelectedEnt is Oil)
-        {
-            Oil oilArea = SelectedEnt.Duplicate() as Oil; ;
-            oilArea.GlobalPosition = position;
-            oilArea.Name = "OilArea";
-            oilArea.Selected = false;
-            Editor.Entities.AddChild(oilArea);
+        // Special Exeption for some Entities.
+        if(SelectedEnt is FireArea)
+            (Child as FireArea).Burning = true;
 
-            //(SelectedEnt as Oil).RandomSize();
-            ScaleBarBar.Value = SelectedEnt.Scale.x;
-        }
-        else
-        {
-            Entity newEnt = SelectedEnt.Duplicate() as Entity;
-            newEnt.GlobalPosition = position;
-            newEnt.Name = "Tree";
-            Editor.Entities.AddChild(newEnt);
-            ScaleBarBar.Value = SelectedEnt.Scale.x;
-        }
+        // Adding the entity to the current level.
+        Editor.Entities.AddChild(Child);
 
+        // If is only moving an entity. Then Unselect.
         if(MovingEnt) 
         {
-            MovingEnt = false;
-            PlacingEnt = false;
+            MovingEnt = PlacingEnt = false;
             SelectedEnt.QueueFree();
+            return;
         }
-        
+
+        // Ajusting visual stuff.
+        ScaleBarBar.Value =  SelectedEnt.Scale.x;
     }
 
-
+    // Not sure if useful. really.
     private void ClearSelected()
     {
         if(SelectedEnt != null)
@@ -214,62 +193,45 @@ public class EditorHandler : Node2D
         PlacingEnt = false;
     }
 
-
+    // When selecting something in the Right click menu.
 	private void _on_EditorMenu_id_pressed(int ID)
 	{
         switch (ID)
         {
-            // Asset explorer
-            case 0:
+            case 0: // Opening the asset explorer.
                 EntExplorer.PopupCenteredMinsize();
                 (EntExplorer.GetNode("ItemList") as ItemList).UnselectAll();
                 break;
         }
 	}
 
-
+    // TO ADD NEW ENTITIES:
+    // First be sure to add the item in the Godot editor.
+    // Then add a new case for your new item
 	private void EntExplorerSelected(int index)
 	{
         ClearSelected();
+        Entity newEnt = null;
         switch (index)
         {
-            case 0:
-                Chest chest = Chest.Instance() as Chest;
-                Editor.Entities.AddChild(chest);
-                SelectedEnt = chest;
-                PlacingEnt = true;
-                break;
-            case 1:
-                FireArea fireArea = FireArea.Instance() as FireArea;
-                Editor.Entities.AddChild(fireArea);
-                fireArea.Burning = false;
-                SelectedEnt = fireArea;
-                PlacingEnt = true;
-                break;
-            case 2:
-                Oil oilArea = OilArea.Instance() as Oil;
-                //oilArea.RandomSize();
-                Editor.Entities.AddChild(oilArea);
-                SelectedEnt = oilArea;
-                PlacingEnt = true;
-                break;
-            case 3:
-                Node2D tree = Tree.Instance() as Node2D;
-                Editor.Entities.AddChild(tree);
-                SelectedEnt = tree as Entity;
-                PlacingEnt = true;
-                break;
-            case 4:
-                Node2D rock = Rock.Instance() as Node2D;
-                Editor.Entities.AddChild(rock);
-                SelectedEnt = rock as Entity;
-                PlacingEnt = true;
-                break;
+            case 0: newEnt = Chest.Instance() as Entity; break;
+            case 1: newEnt = FireArea.Instance() as Entity; break;
+            case 2: newEnt = OilArea.Instance() as Entity; break;
+            case 3: newEnt = Tree.Instance() as Entity; break;
+            case 4: newEnt = Rock.Instance() as Entity; break;
+            case 5: newEnt = Bush1.Instance() as Entity; break;
+            case 6: newEnt = Bush2.Instance() as Entity; break;
+            //case 7: newEnt = ****.Instance() as Entity; break;
+            // Add new entity here. Same as above.
         }
+        // Adding to the scene.
+        Editor.Entities.AddChild(newEnt);
+        SelectedEnt = newEnt as Entity;
+        PlacingEnt = SelectedEnt.Selected = true;
 
-        SelectedEnt.Selected = true;
         EntExplorer.Hide();
 
+        // Making sure that the preview doesnt Interact
         SelectedEnt.SetProcess(false);
         SelectedEnt.SetPhysicsProcess(false);
     }

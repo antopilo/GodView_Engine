@@ -46,6 +46,7 @@ Impact = ExtResource( 2 )
 editor/display_folded = true
 rotation = -1.5708
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="AnimatedSprite"]
