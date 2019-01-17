@@ -8,12 +8,12 @@
 [ext_resource path="res://Content/Scenes/Entities/Trees/Tree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Content/Scripts/Entities/Entity.cs" type="Script" id=7]
 [ext_resource path="res://Content/Scenes/Entities/Rocks/Rock.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Content/Scripts/Entities/Chest/Chest.cs" type="Script" id=10]
-[ext_resource path="res://Content/Scenes/Entities/Bush/Bush1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Content/Scenes/Entities/Bush/Bush2.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Content/Scenes/Entities/Oil/OilArea.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Content/Scripts/Entities/Oil/Oil.cs" type="Script" id=14]
+[ext_resource path="res://Content/Scenes/Entities/Bush/Bush1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Content/Scenes/Entities/Bush/Bush2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Content/Scenes/Entities/Oil/OilArea.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Content/Scripts/Entities/Oil/Oil.cs" type="Script" id=12]
+[ext_resource path="res://Content/Scenes/Entities/Chest.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Content/Scripts/Entities/Chest/Chest.cs" type="Script" id=14]
 
 [sub_resource type="CSharpScript" id=1]
 
@@ -189,24 +189,12 @@ position = Vector2( 560, 288 )
 script = ExtResource( 7 )
 
 [node name="@Tree@12" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-position = Vector2( 560, 336 )
+position = Vector2( 552, 336 )
 script = ExtResource( 7 )
 
 [node name="@Tree@13" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
 position = Vector2( 568, 440 )
 script = ExtResource( 7 )
-
-[node name="Chest" type="Node2D" parent="Layers/Entities" groups=[
-"Interact",
-] instance=ExtResource( 9 )]
-position = Vector2( 448, 240 )
-script = ExtResource( 10 )
-
-[node name="@Chest@14" type="Node2D" parent="Layers/Entities" groups=[
-"Interact",
-] instance=ExtResource( 9 )]
-position = Vector2( 424, 240 )
-script = ExtResource( 10 )
 
 [node name="@Tree@11" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
 position = Vector2( 192, 32 )
@@ -220,11 +208,6 @@ script = ExtResource( 7 )
 
 [node name="@Tree@13" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
 position = Vector2( 128, 104 )
-scale = Vector2( 0.25, 0.25 )
-script = ExtResource( 7 )
-
-[node name="@Tree@14" type="Node2D" parent="Layers/Entities" instance=ExtResource( 6 )]
-position = Vector2( 176, 128 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 7 )
 
@@ -258,129 +241,148 @@ position = Vector2( 32, 152 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 7 )
 
-[node name="@Bush@10" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
+[node name="@Bush@10" type="Node2D" parent="Layers/Entities" instance=ExtResource( 9 )]
 position = Vector2( 224, 272 )
 script = ExtResource( 7 )
 
-[node name="@Bush@11" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
+[node name="@Bush@11" type="Node2D" parent="Layers/Entities" instance=ExtResource( 9 )]
 position = Vector2( 240, 264 )
 script = ExtResource( 7 )
 
-[node name="Bush" type="Node2D" parent="Layers/Entities" instance=ExtResource( 12 )]
+[node name="Bush" type="Node2D" parent="Layers/Entities" instance=ExtResource( 10 )]
 position = Vector2( 440, 288 )
 script = ExtResource( 7 )
 
-[node name="@Bush@12" type="Node2D" parent="Layers/Entities" instance=ExtResource( 12 )]
+[node name="@Bush@12" type="Node2D" parent="Layers/Entities" instance=ExtResource( 10 )]
 position = Vector2( 240, 280 )
 script = ExtResource( 7 )
 
-[node name="@OilArea@10" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@10" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 344, 296 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@11" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@11" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 360, 296 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@12" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@12" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 352, 304 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@13" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@13" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 352, 312 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@14" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@14" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 368, 312 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@15" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@15" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 368, 312 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@16" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@16" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 376, 296 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@17" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@17" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 384, 304 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@18" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@18" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 384, 312 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@19" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@19" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 376, 320 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@20" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@20" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 368, 320 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@21" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@21" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 368, 320 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@22" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@22" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 392, 328 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@23" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@23" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 392, 328 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@24" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@24" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 400, 312 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
-[node name="@OilArea@25" type="Node2D" parent="Layers/Entities" instance=ExtResource( 13 )]
+[node name="@OilArea@25" type="Node2D" parent="Layers/Entities" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 400, 312 )
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
 [node name="Chest10" type="Node2D" parent="Layers/Entities" groups=[
 "Interact",
-] instance=ExtResource( 9 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 80, 64 )
-script = ExtResource( 10 )
+script = ExtResource( 14 )
 
 [node name="@Chest10@11" type="Node2D" parent="Layers/Entities" groups=[
 "Interact",
-] instance=ExtResource( 9 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 96, 64 )
-script = ExtResource( 10 )
+script = ExtResource( 14 )
 
 [node name="@Chest10@12" type="Node2D" parent="Layers/Entities" groups=[
 "Interact",
-] instance=ExtResource( 9 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 112, 64 )
-script = ExtResource( 10 )
+script = ExtResource( 14 )
 
 [node name="@Chest10@13" type="Node2D" parent="Layers/Entities" groups=[
 "Interact",
-] instance=ExtResource( 9 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 128, 64 )
-script = ExtResource( 10 )
+script = ExtResource( 14 )
 
 [node name="@Chest10@14" type="Node2D" parent="Layers/Entities" groups=[
 "Interact",
-] instance=ExtResource( 9 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 144, 64 )
-script = ExtResource( 10 )
+script = ExtResource( 14 )
+
+[node name="Chest14" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 13 )]
+position = Vector2( 80, 80 )
+script = ExtResource( 14 )
+
+[node name="@Chest@10" type="Node2D" parent="Layers/Entities" groups=[
+"Interact",
+] instance=ExtResource( 13 )]
+position = Vector2( 96, 80 )
+script = ExtResource( 14 )
+
+[node name="Spawn" type="Position2D" parent="Layers/Entities"]
+position = Vector2( 232, 193 )
+
+[node name="@Bush@10" type="Node2D" parent="Layers/Entities" instance=ExtResource( 10 )]
+position = Vector2( 176, 104 )
+script = ExtResource( 7 )
 

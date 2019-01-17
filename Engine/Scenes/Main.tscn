@@ -72,11 +72,9 @@ text = "Level"
 flat = false
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-editor/display_folded = true
-margin_top = 26.0
+margin_top = 51.0
 margin_right = 1600.0
-margin_bottom = 926.0
-mouse_filter = 2
+margin_bottom = 951.0
 mouse_default_cursor_shape = 3
 stretch = true
 
@@ -135,10 +133,10 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 
 [node name="EntExplorer" type="Popup" parent="EditorHandler"]
-margin_left = 1279.0
-margin_top = 744.0
-margin_right = 1590.0
-margin_bottom = 915.0
+margin_left = 644.0
+margin_top = 366.0
+margin_right = 955.0
+margin_bottom = 537.0
 
 [node name="ItemList" type="ItemList" parent="EditorHandler/EntExplorer"]
 margin_right = 311.0
@@ -179,6 +177,7 @@ stretch_margin_bottom = 3
 [node name="GameHandler" type="Node2D" parent="."]
 
 [node name="SideMenu" type="Control" parent="."]
+editor/display_folded = true
 margin_left = 1353.0
 margin_right = 1577.0
 margin_bottom = 926.0
@@ -245,4 +244,6 @@ size_flags_horizontal = 3
 text = "LightGrass"
 
 [connection signal="id_pressed" from="EditorHandler/EditorMenu" to="EditorHandler" method="_on_EditorMenu_id_pressed"]
+[connection signal="popup_hide" from="EditorHandler/EditorMenu" to="EditorHandler" method="_on_EditorMenu_popup_hide"]
+[connection signal="popup_hide" from="EditorHandler/EntExplorer" to="EditorHandler" method="_on_EntExplorer_popup_hide"]
 [connection signal="item_selected" from="EditorHandler/EntExplorer/ItemList" to="EditorHandler" method="EntExplorerSelected"]

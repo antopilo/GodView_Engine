@@ -69,7 +69,6 @@
     <Compile Include="Engine\Scripts\Handlers\EditorHandler.cs" />
     <Compile Include="Engine\Scripts\Objects\SpriteStack.cs" />
     <Compile Include="Engine\Scripts\Singletons\Editor.cs" />
-    <Compile Include="Engine\Scripts\Switcher\EditorSwitcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

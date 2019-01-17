@@ -34,6 +34,7 @@ public class EditorHandler : Node2D
     private Node2D NodeHandler;
     private Node2D LevelHandler;
 
+    private bool InEditorMenu;
     private PopupMenu EditorMenu;
     private Popup EntExplorer;
     private Popup ScaleBar;
@@ -65,7 +66,6 @@ public class EditorHandler : Node2D
 
     }
 
-
     // Verifie les Inputs a chaque frame.
     public override void _Input(InputEvent @event)
     {
@@ -74,19 +74,28 @@ public class EditorHandler : Node2D
             SelectedEnt.QueueFree();
             MovingEnt = PlacingEnt = false;
         }
-        if(!PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt)
+        // EditorMode est un controle dans project settings
+        if (@event.IsActionPressed("RightClick") && !MovingEnt) 
+        {
+            PlacingEnt = false;
+            InEditorMenu = true;
+            ClearSelected();
+            EditorMenu.PopupCenteredMinsize();
+            EditorMenu.RectGlobalPosition = GetGlobalMousePosition();
+        }
+        else if(!PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt && !InEditorMenu)
         {
             SelectedEnt = Editor.GetEntity(Editor.Camera.GetGlobalMousePosition()) as Entity ;
             if(SelectedEnt != null) 
                 MovingEnt = true;  
         }
-        else if(MovingEnt && !PlacingEnt && @event.IsActionPressed("Click") )
+        else if(MovingEnt && !PlacingEnt && @event.IsActionPressed("Click") && !InEditorMenu )
         {
             PlaceEntity();
         }
 
         // Placing entities
-        if (PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt) 
+        if (PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt && !InEditorMenu) 
             PlaceEntity();
             
 
@@ -107,14 +116,7 @@ public class EditorHandler : Node2D
         if (PlacingEnt && @event.IsActionPressed("ui_cancel"))
             ClearSelected();
 
-        // EditorMode est un controle dans project settings
-        if (@event.IsActionPressed("RightClick") && !MovingEnt) 
-        {
-            PlacingEnt = false;
-            ClearSelected();
-            EditorMenu.PopupCenteredMinsize();
-            EditorMenu.RectGlobalPosition = GetGlobalMousePosition();
-        }
+        
 
     }
 
@@ -130,6 +132,8 @@ public class EditorHandler : Node2D
 
         if (PlacingEnt || MovingEnt)
         {
+            if (SelectedEnt == null)
+                return;
             TargetPosition = Editor.Camera.GetGlobalMousePosition() + new Vector2(4,4);
             if(Snapping)
             {
@@ -158,6 +162,11 @@ public class EditorHandler : Node2D
 
     private void PlaceEntity()
     {
+        if(SelectedEnt == null){
+            PlacingEnt = false;
+            MovingEnt = false;
+            return;
+        }
         // Duplicating & Settings propreties for the new Entity
         var position = SelectedEnt.GlobalPosition;
         var Child = SelectedEnt.Duplicate() as Entity;
@@ -186,11 +195,14 @@ public class EditorHandler : Node2D
     // Not sure if useful. really.
     private void ClearSelected()
     {
+        InEditorMenu = false;
+        
+        PlacingEnt = false;
+
         if(SelectedEnt != null)
             SelectedEnt.QueueFree();
-
         SelectedEnt = null;
-        PlacingEnt = false;
+        
     }
 
     // When selecting something in the Right click menu.
@@ -200,6 +212,7 @@ public class EditorHandler : Node2D
         {
             case 0: // Opening the asset explorer.
                 EntExplorer.PopupCenteredMinsize();
+                
                 (EntExplorer.GetNode("ItemList") as ItemList).UnselectAll();
                 break;
         }
@@ -230,11 +243,17 @@ public class EditorHandler : Node2D
         PlacingEnt = SelectedEnt.Selected = true;
 
         EntExplorer.Hide();
+        InEditorMenu = false;
 
         // Making sure that the preview doesnt Interact
         SelectedEnt.SetProcess(false);
         SelectedEnt.SetPhysicsProcess(false);
     }
 
+    public void _on_EditorMenu_popup_hide()
+    {
+        return;
+    } 
 
+    public void _on_EntExplorer_popup_hide() => InEditorMenu = false;
 }
