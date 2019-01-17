@@ -13,6 +13,8 @@ public class Game : Node
     public static Level CurrentLevel;
     public static PackedScene PlayerScene;
 
+    public static Hand Hand;
+
     // Editor Scene
     private PackedScene EditorScene;
 
@@ -32,6 +34,7 @@ public class Game : Node
         SecondSpellSlot = GetTree().GetRoot().GetNode("Game/UI/Screen/SecondSpell") as Control;
         Entities = GetTree().GetRoot().GetNode("Game/CurrentLevel/Layers/Entities") as YSort;
         CurrentLevel = GetTree().GetRoot().GetNode("Game/CurrentLevel") as Level;
+        Hand = GetTree().GetRoot().GetNode("Game/CurrentLevel/Layers/Hand") as Hand;
         
         if(CurrentLevel is null) GD.Print("Current Level not found");
             

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Content/Scripts/DroppedItem/Dropped.cs" type="Script" id=1]
+[ext_resource path="res://Content/Art/Animation/SpellIcons.tres" type="SpriteFrames" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 8, 8 )
+
+[node name="Drop" type="Node2D" groups=[
+"Interact",
+]]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 2 )
+animation = "Fire"
+frame = 30
+playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+

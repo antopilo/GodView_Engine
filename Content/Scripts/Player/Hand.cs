@@ -3,11 +3,15 @@ using System;
 
 public class Hand : Position2D
 {
-    private Spell[] SpellPool;
+    public Spell[] SpellPool;
+
+    public Spell[] AllSpell;
 
     // Called when the node is loaded.
     public override void _Ready()
     {
+        SetAllSpell();
+
         SpellPool = new Spell[2];
 
         // Ajouter les 2 seuls spell lol
@@ -34,6 +38,15 @@ public class Hand : Position2D
     public void UnlockSpell(Spell pSpell)
     {
         pSpell.Unlocked = true;
+    }
+
+    //Set all spell.
+    public void SetAllSpell()
+    {
+        AllSpell = new Spell[2];
+
+        AllSpell[0] = this.GetNode("Water") as Spell;
+        AllSpell[1] = this.GetNode("Fire") as Spell;
     }
 
     // Change an equipped spell for a new one.
