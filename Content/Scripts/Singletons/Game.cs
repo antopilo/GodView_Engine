@@ -59,7 +59,7 @@ public class Game : Node
         Hand = Entities.GetNode("Player/Hand") as Hand;
 
         if(CurrentLevel is null) 
-            GD.PrintErr("GAME: Current Level not found");
+            GD.PrintErr("[GAME] Current Level not found");
             
     }
     override public void _Process(float delta)
@@ -70,15 +70,15 @@ public class Game : Node
         // Checks for the debugMode toggle every frame
         // only if the DebugMode boolean is enabled.
         if( Input.IsActionJustPressed("DebugMode") && DebugMode && InGameMode)
-            EnterDebugMode();
+            LeaveGameMode();
     }
     
     // This handles the transition between the debug mode and the game scne.
     // All it does is saves the currentLevel in a packedScene so that the editor can
     // Edit and load it afterwards. The same will be done with loading the levels.
-    private void EnterDebugMode()
+    private void LeaveGameMode()
     {
-        GD.Print("Entering Debug Mode");
+        GD.Print("[Game] Leaving Game mode");
         InGameMode = false;
         GetTree().ChangeSceneTo(EditorScene); // Switch to the editor view.
     }
@@ -102,7 +102,7 @@ public class Game : Node
 
     public void LoadLevel(string pPath)
     {
-        GD.Print("Debug Mode - Loading Level... at path: " + pPath);
+        GD.Print("[Game] Loading level: " + pPath);
         Level level = (ResourceLoader.Load(pPath) as PackedScene).Instance() as Level;
         level.Name = "CurrentLevel";
         if(GameNode != null) 

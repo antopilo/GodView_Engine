@@ -44,26 +44,22 @@ hue_variation = 0.06
 hue_variation_random = 1.0
 
 [node name="OilArea" type="Node2D"]
-editor/display_folded = true
+z_index = -1
 script = ExtResource( 1 )
 SizeReduction = Vector2( 0.5, 0.5 )
 OilIgnitedColor = Color( 1, 1, 1, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -12 )
 scale = Vector2( 0.75, 0.75 )
 z_index = -1
 texture = ExtResource( 2 )
 
 [node name="HitZone" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 0, -12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitZone"]
 shape = SubResource( 1 )
 
 [node name="Flames" type="Particles2D" parent="."]
-position = Vector2( 0, -12 )
 emitting = false
 amount = 75
 lifetime = 2.0

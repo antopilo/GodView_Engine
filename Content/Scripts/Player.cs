@@ -16,26 +16,23 @@ public class Player : KinematicBody2D
     // References
     public Camera2D PlayerCamera;
     public Position2D HandPosition;
-
     private Sprite SpriteNode;
     private Sprite OutlineSprite;
     private Sprite ShadowSprite;
 
-    public bool Hurting = false;
-    private TextureProgress HealthBar;
-    private Particles2D HealthParticles;
-
-    // States
-    public bool Alive = true;
-
-    private float MaxHealth = 100;
-    private float Health;
-
+    // Health
     [Export] private Color FullHealthTint = new Color("63c74d");
     [Export] private Color MidHealthTint = new Color("f77622");
     [Export] private Color LowHealthTint = new Color("e43b44");
-    
-    // Logic stuff
+
+    public bool Alive = true;
+    public bool Hurting = false;
+    private float MaxHealth = 100;
+    private float Health;
+    private TextureProgress HealthBar;
+    private Particles2D HealthParticles;
+
+    // Interaction
 	private List<Node2D> InteractableObject = new List<Node2D>(99);
 
     // Called when the node enters the scene tree for the first time.
@@ -58,9 +55,7 @@ public class Player : KinematicBody2D
         GetInputDirection(); // Obtient la Direction des inputs
         UpdateVelocity(); // Calculate acceleration and other stuff.
         MoveAndSlide(Velocity); // Move
-
         UpdateParticles();
-        
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
     }

@@ -2,14 +2,14 @@ using Godot;
 using System;
 
 // This is a Fire Area that hurts the player when on it.
-// It make sure to not execute
+// It make sure to not execute useless code if the player
+// Has not been in the zone yet. 
 public class FireArea : Entity
 {
     public bool Burning = true;
 
     [Export] private float TracerDistanceSpacing = 25;
     [Export] private float DamagePerSecond = 5;
-
     private Particles2D Flames;
     private bool PlayerPresent = false;
     private Player _Player = null;
@@ -25,18 +25,22 @@ public class FireArea : Entity
     public override void _PhysicsProcess(float delta)
     {
         Flames.Emitting = Burning;
-        if(Selected) Flames.Emitting = true;
-
-        if (_Player == null) return; // Check if the player exists
-            
-        if (PlayerPresent && Burning)
-        {
-            _Player.HurtPlayer(DamagePerSecond / 60);
-            _Player.Hurting = true;
-        }
-        else
-            _Player.Hurting = false;
         
+        if(Selected) 
+            Flames.Emitting = true;
+
+        if (_Player != null)
+        {
+            if (PlayerPresent && Burning)
+            {
+                _Player.HurtPlayer(DamagePerSecond / 60);
+                _Player.Hurting = true;
+            }
+            else
+            {
+                 _Player.Hurting = false;
+            }
+        }
     }
 
 

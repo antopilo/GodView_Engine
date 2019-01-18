@@ -43,7 +43,8 @@ public class EditorHandler : Node2D
 
     public override void _Ready()
     {
-        
+        GD.Print("[Editor] EditorHandler Initialized.");
+
         // Fait les references aux autres nodes.
         GameHandler = GetNode("../GameHandler") as Node2D;
         NodeHandler = GetNode("NodeHandler") as Node2D;
@@ -54,7 +55,9 @@ public class EditorHandler : Node2D
 
         ScaleBar = GetNode("ScaleBar") as Popup;
         ScaleBarBar = ScaleBar.GetNode("Bar") as TextureProgress;
+
         MakeMenu();
+        GD.Print("[Editor] MainMenu Initialized.");
 
         FireArea = ResourceLoader.Load("res://Content/Scenes/Entities/Spells/FireAOE/FireArea.tscn") as PackedScene;
         Chest = ResourceLoader.Load("res://Content/Scenes/Entities/Chest.tscn") as PackedScene;
@@ -64,6 +67,7 @@ public class EditorHandler : Node2D
         Bush1 = ResourceLoader.Load("res://Content/Scenes/Entities/Bush/Bush1.tscn") as PackedScene;
         Bush2 = ResourceLoader.Load("res://Content/Scenes/Entities/Bush/Bush2.tscn") as PackedScene;
 
+        GD.Print("[Editor] EditorHandler references loaded.");
     }
 
     // Verifie les Inputs a chaque frame.
@@ -74,48 +78,47 @@ public class EditorHandler : Node2D
             SelectedEnt.QueueFree();
             MovingEnt = PlacingEnt = false;
         }
+
         // EditorMode est un controle dans project settings
         if (@event.IsActionPressed("RightClick")) 
         {
             if(MovingEnt)
                 PlaceEntity();
+
             ClearSelected();
+
             EditorMenu.PopupCenteredMinsize();
             EditorMenu.RectGlobalPosition = GetGlobalMousePosition();
         }
-        else if(!PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt && !InEditorMenu)
+        else if(!InEditorMenu && !PlacingEnt && !MovingEnt && @event.IsActionPressed("Click") )
         {
             SelectedEnt = Editor.GetEntity(Editor.Camera.GetGlobalMousePosition()) as Entity ;
             if(SelectedEnt != null) 
                 MovingEnt = true;  
         }
-        else if(MovingEnt && !PlacingEnt && @event.IsActionPressed("Click") && !InEditorMenu )
+        else if(!InEditorMenu && PlacingEnt && !MovingEnt && @event.IsActionPressed("Click") )
             PlaceEntity();
-
         // Placing entities
-        if (PlacingEnt && @event.IsActionPressed("Click") && !MovingEnt && !InEditorMenu) 
+        else if(!InEditorMenu && !PlacingEnt && MovingEnt && @event.IsActionPressed("Click") ) 
             PlaceEntity();
             
 
         // Scaling up the Entity with Shift Scroll wheel.
-        if(PlacingEnt && @event.IsActionPressed("ZoomIn") && Input.IsActionPressed("Shift") )
+        if((PlacingEnt || MovingEnt) && @event.IsActionPressed("ZoomIn") && Input.IsActionPressed("Shift"))
         {
             SelectedEnt.Scale += new Vector2(0.15f,0.15f);
             ScaleBarBar.Value = SelectedEnt.Scale.x;    
         }
-
-        if(PlacingEnt && @event.IsActionPressed("ZoomOut") && Input.IsActionPressed("Shift"))
+        if((PlacingEnt || MovingEnt) && @event.IsActionPressed("ZoomOut") && Input.IsActionPressed("Shift"))
         {
             SelectedEnt.Scale -= new Vector2(0.15f, 0.15f);
             ScaleBarBar.Value = SelectedEnt.Scale.x;
         }
         
         // Canceling
-        if (PlacingEnt || MovingEnt && @event.IsActionPressed("ui_cancel"))
+        if ((PlacingEnt || MovingEnt) && @event.IsActionPressed("ui_cancel"))
             ClearSelected();
-
         
-
     }
 
 
@@ -138,7 +141,7 @@ public class EditorHandler : Node2D
             SelectedEnt.Selected = true;
             ScaleBar.RectGlobalPosition = GetGlobalMousePosition();
         }
-        ScaleBarBar.Visible = PlacingEnt;
+        ScaleBarBar.Visible = PlacingEnt || MovingEnt;
     }
 
 
@@ -153,6 +156,7 @@ public class EditorHandler : Node2D
         // Duplicating & Settings propreties for the new Entity
         var position = SelectedEnt.GlobalPosition;
         var Child = SelectedEnt.Duplicate() as Entity;
+
         Child.GlobalPosition = position;
         Child.Selected = false;
 
@@ -161,14 +165,13 @@ public class EditorHandler : Node2D
             (Child as FireArea).Burning = true;
 
         // Adding the entity to the current level.
-        Editor.Entities.AddChild(Child);
+        Editor.Entities.AddChild(Child, true);
 
-        // If is only moving an entity. Then Unselect.
         if(MovingEnt)
             ClearSelected();
-        else // Ajusting visual stuff.
+        else
             ScaleBarBar.Value =  SelectedEnt.Scale.x;
-        
+       
     }
 
     // Not sure if useful. really.
@@ -176,8 +179,10 @@ public class EditorHandler : Node2D
     {
         // Set everything to falseé
         InEditorMenu = MovingEnt = PlacingEnt = false;
+
         if(SelectedEnt != null) 
             SelectedEnt.QueueFree();
+
         SelectedEnt = null;
         
     }
@@ -200,8 +205,9 @@ public class EditorHandler : Node2D
     // Then add a new case for your new item
 	private void EntExplorerSelected(int index)
 	{
-        ClearSelected();
+        //ClearSelected();
         Entity newEnt = null;
+
         switch (index)
         {
             case 0: newEnt = Chest.Instance() as Entity; break;
@@ -214,8 +220,14 @@ public class EditorHandler : Node2D
             //case 7: newEnt = ****.Instance() as Entity; break;
             // Add new entity here. Same as above.
         }
+
+        // Add Special per entity conditions here
+        // Exemple:
+        // if(newEnt is FireArea) 
+        //     (newEnt as FireArea).Burning = false;
+
         // Adding to the scene.
-        Editor.Entities.AddChild(newEnt);
+        Editor.Entities.AddChild(newEnt, true);
         SelectedEnt = newEnt as Entity;
         PlacingEnt = SelectedEnt.Selected = true;
 
@@ -232,5 +244,6 @@ public class EditorHandler : Node2D
         return;
     } 
 
-    public void _on_EntExplorer_popup_hide() => InEditorMenu = false;
+    public void _on_EntExplorer_popup_hide() 
+        => InEditorMenu = false;
 }

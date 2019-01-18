@@ -28,7 +28,7 @@ public class WaterBall : Node2D
             Die();
     }
 
-    // Called a Body enters the hitZone.
+    // Called a Physic Body enters the hitZone.
     private void _on_Area2D_body_entered(object body)
     {
         if(body is Player)
@@ -44,15 +44,18 @@ public class WaterBall : Node2D
 
     private void Die()
     {
-        if(Impact == null) return;
+        // If an impact param is set. Then instance the impact scene.
+        if(Impact != null) 
+        {
+            var impact = Impact.Instance() as Node2D;
+            impact.GlobalPosition = this.GlobalPosition;
+            Game.Entities.AddChild(impact);
+        }
 
-        var impact = Impact.Instance() as Node2D;
-        impact.GlobalPosition = this.GlobalPosition;
-        Game.Entities.AddChild(impact);
-
+        // Clearning the projectile from the scene.
         (GetNode("Area2D") as Area2D).SetDeferred("monitoring", false);
         (GetNode("Area2D") as Area2D).SetDeferred("monitorable", false);
-
-        QueueFree();
+        (this).CallDeferred("queue_free");
     }
+
 }

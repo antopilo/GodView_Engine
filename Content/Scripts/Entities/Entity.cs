@@ -29,9 +29,11 @@ public class Entity : Node2D
     // Gets the size of the sprite in pixels. Useful for drawing DebugFrame
     private void GetSize()
     {
-        if (this.HasNode("Sprite")) // If node has Sprite node.
+        if (HasNode("Sprite")) // If node has Sprite node.
         {
-            if (GetNode("Sprite") is AnimatedSprite) return;
+            if (GetNode("Sprite") is AnimatedSprite) 
+                return;
+
             // Gettings the size in pixels of the Sprite node.
             Sprite sprite = GetNode("Sprite") as Sprite; 
             Height = sprite.Texture.GetHeight() * sprite.Scale.y;
@@ -41,7 +43,9 @@ public class Entity : Node2D
 
     public override void _Process(float delta)
     {
-        Update();
+        //if(Name == "Spawn") 
+            //Visible = Editor.EditorMode;
+        //Update();
     }
 
     // Drawing a rectangle around the entity if Selected
@@ -49,6 +53,12 @@ public class Entity : Node2D
     // Width of the sprite Node.
     public override void _Draw()
     {
+        if(!Game.InGameMode)
+        {
+            DrawLine(new Vector2(-3, 0), new Vector2(3, 0), new Color(1, 1, 0), 1.25f);
+            DrawLine(new Vector2(0, -3), new Vector2(0, 3), new Color(1, 1, 0), 1.25f);
+        }
+        
         if (!Selected)  return;
            
         if (this.HasNode("Sprite"))
@@ -63,8 +73,7 @@ public class Entity : Node2D
         var rectangle = new Rect2(position, new Vector2(Width, -Height));
 
         DrawRect(rectangle, new Color("E50000"), false);
-        DrawLine(new Vector2(-3, 0), new Vector2(3, 0), new Color(1, 1, 0), 1.25f);
-        DrawLine(new Vector2(0, -3), new Vector2(0, 3), new Color(1, 1, 0), 1.25f);
+        
     }
 
     // Input a global position and returns if that position is located
