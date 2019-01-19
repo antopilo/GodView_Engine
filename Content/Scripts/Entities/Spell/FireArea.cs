@@ -21,7 +21,6 @@ public class FireArea : Entity
         Flames = GetNode("Flames") as Particles2D;
     }
 
-
     public override void _PhysicsProcess(float delta)
     {
         Flames.Emitting = Burning;
@@ -69,4 +68,5 @@ public class FireArea : Entity
         if(body is Player)
             PlayerPresent = false;
     }
+
 }

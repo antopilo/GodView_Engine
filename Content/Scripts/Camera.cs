@@ -8,7 +8,6 @@ public class Camera : Camera2D
     public bool Shaking = false;
 
     private Timer _Timer;
-
     private Player _Player;
     private float ZoomStep = 1;
     private float Amount;
@@ -41,6 +40,8 @@ public class Camera : Camera2D
         }
         Zoom = new Vector2(ZoomModifier / 2, ZoomModifier / 2);
     }
+
+
     public override void _Input(InputEvent @event)
     {
         if (@event.IsActionPressed("ZoomIn"))

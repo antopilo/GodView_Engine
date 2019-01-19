@@ -4,8 +4,10 @@ using System;
 public class Entity : Node2D
 {
     [Export] public float Height = 16, Width = 16;
-    public bool Selected = false, Active = true;
+    [Export ]public bool Selected = false, Active = true, CastShadow = true;
 
+    private ShaderMaterial ShadowMaterial;
+    private CanvasItemMaterial ShadowBlend;
     // Gets the size
     public Vector2 Size
     {
@@ -14,16 +16,37 @@ public class Entity : Node2D
 
     public override void _Ready()
     {
+        ShadowMaterial = (ShaderMaterial)ResourceLoader.Load("res://Content/Shaders/Shadow.tres");
+        ShadowBlend = (CanvasItemMaterial)ResourceLoader.Load("res://Content/Shaders/ShadowBlend.tres");
+
         if (this.HasNode("Shadow"))
         {
             //GetSize(); // Get the size of the Sprite.
 
             // Settings correct height and width for the Shadow Shader.
             var shadow = GetNode("Shadow") as Sprite;
-            if(shadow.Material == null) return;
+            if(shadow.Material == null)
+                return;
             (shadow.Material as ShaderMaterial).SetShaderParam("Height", Width);
             (shadow.Material as ShaderMaterial).SetShaderParam("Width", Height);
         }
+        else
+            MakeShadow();
+    }
+
+    private void MakeShadow()
+    {
+        if(!HasNode("Sprite") )
+            return;
+        Sprite ShadowSprite = (Sprite)(GetNode("Sprite") as Sprite).Duplicate();
+
+        ShadowSprite.Material = ShadowMaterial;
+        ShadowSprite.ShowBehindParent = true;
+        ShadowSprite.ZIndex = -1;
+        ShadowSprite.SelfModulate = new Color(0, 0, 0, 0.25f);
+        AddChild(ShadowSprite);
+        ShadowSprite.Name = "Shadow";
+
     }
 
     // Gets the size of the sprite in pixels. Useful for drawing DebugFrame

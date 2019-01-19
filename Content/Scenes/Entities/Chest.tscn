@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Content/Scripts/Entities/Chest/Chest.cs" type="Script" id=1]
 [ext_resource path="res://Content/Shaders/Shadow.tres" type="Material" id=2]
@@ -8,7 +8,10 @@
 [ext_resource path="res://Content/Art/Entities/Chest/Chest3.png" type="Texture" id=6]
 [ext_resource path="res://Content/Art/Entities/Chest/Chest2.png" type="Texture" id=7]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="CanvasItemMaterial" id=1]
+
+
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ) ],
@@ -22,21 +25,22 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
 extents = Vector2( 9, 4 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 
 extents = Vector2( 6.99999, 2.02886 )
 
 [node name="Chest" type="Node2D" groups=[
 "Interact",
 ]]
+position = Vector2( 0, -1 )
 script = ExtResource( 1 )
 
 [node name="Shadow" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 0.380392 )
+self_modulate = Color( 0, 0, 0, 0.176471 )
 material = ExtResource( 2 )
 position = Vector2( 0, -8 )
 z_index = -1
@@ -44,8 +48,9 @@ texture = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 show_behind_parent = true
+material = SubResource( 1 )
 position = Vector2( 0, -8 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "Close"
 frame = 4
 playing = true
@@ -56,12 +61,14 @@ monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionSpace"]
 position = Vector2( 0, 4 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Collision" type="StaticBody2D" parent="."]
 position = Vector2( 0, -8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
 position = Vector2( 0, 6 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
 

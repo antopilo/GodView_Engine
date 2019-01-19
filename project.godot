@@ -28,7 +28,6 @@ GameRefs="*res://Content/Scripts/Singletons/Game.cs"
 
 window/size/width=1600
 window/size/height=900
-window/size/resizable=false
 window/size/test_width=1600
 window/size/test_height=900
 window/stretch/mode="viewport"
@@ -130,7 +129,6 @@ Delete={
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
 quality/2d/use_pixel_snap=true
-threads/thread_model=2
 quality/filters/anisotropic_filter_level=1
 quality/filters/use_nearest_mipmap_filter=true
 environment/default_environment="res://default_env.tres"

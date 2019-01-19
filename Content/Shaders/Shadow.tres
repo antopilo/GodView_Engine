@@ -10,15 +10,15 @@ uniform float Width = 16;
 
 void vertex() {
 	if (VERTEX.y <= 0.0) {
-		VERTEX.x -= cos(SunAngle ) * Height;
-		VERTEX.y -= sin(SunAngle ) * (Height) ;
+		VERTEX.x -= cos( radians(SunAngle) ) * Width;
+		VERTEX.y -= sin(radians(SunAngle) ) * (Height) ;
 	}
 }"
 
 [resource]
 
 shader = SubResource( 1 )
-shader_param/SunAngle = 5.0
+shader_param/SunAngle = 7.0
 shader_param/Height = 16.0
 shader_param/Width = 16.0
 

@@ -18,9 +18,10 @@ public class Game : Node
     public static PackedScene PlayerScene;
     public static Hand Hand;
 
+
     public override void _Ready()       
     {
-        PlayerScene = ResourceLoader.Load("res://Content/Scenes/Player.tscn") as PackedScene;
+        PlayerScene = (PackedScene)ResourceLoader.Load("res://Content/Scenes/Player.tscn");
 
         // If the singleton is loaded in the DebugMode the references won't
         // be valid so we skip the script. Making the singleton useless.
@@ -38,16 +39,19 @@ public class Game : Node
         EditorScene = ResourceLoader.Load("res://Engine/Scenes/Main.tscn") as PackedScene;
     }
 
+
     private void GetNodes()
     {
-        if (!GetTree().GetRoot().HasNode("Game")) // If in editor, skip.
+        // If in editor, skip.
+        if (!GetTree().GetRoot().HasNode("Game")) 
             return;
 
         GameNode = GetTree().GetRoot().GetNode("Game") as Node2D;
         FirstSpellSlot = GameNode.GetNode("UI/Screen/SelectedSpell") as Control;
         SecondSpellSlot = GameNode.GetNode("UI/Screen/SecondSpell") as Control;
 
-        LoadLevel("res://editorLevel.tscn"); // Load level. TODO: Add path support. 
+        // TODO: Add path support.
+        LoadLevel("res://editorLevel.tscn"); // Load level. 
 
         CurrentLevel = GameNode.GetNode("CurrentLevel") as Level;
         Entities = CurrentLevel.GetNode("Layers/Entities") as YSort;
@@ -62,6 +66,8 @@ public class Game : Node
             GD.PrintErr("[GAME] Current Level not found");
             
     }
+
+    /// Executed every frame.
     override public void _Process(float delta)
     {
         if( !InGameMode ) 
@@ -73,6 +79,7 @@ public class Game : Node
             LeaveGameMode();
     }
     
+
     // This handles the transition between the debug mode and the game scne.
     // All it does is saves the currentLevel in a packedScene so that the editor can
     // Edit and load it afterwards. The same will be done with loading the levels.
@@ -82,6 +89,7 @@ public class Game : Node
         InGameMode = false;
         GetTree().ChangeSceneTo(EditorScene); // Switch to the editor view.
     }
+
 
     // This makes sure that everynode contained in the Currentlevel gets saved
     // in the packed scene level. See EnterDebugMode() for more.
@@ -96,9 +104,10 @@ public class Game : Node
 
             // If the node has childrens, then SetOwners recursivly.
             if(node.GetChildren().Count > 0) 
-                SetOwners(node); // <-- Recursivity
+                SetOwners(node); // Recursivity
         }       
     }
+    
 
     public void LoadLevel(string pPath)
     {
@@ -108,4 +117,6 @@ public class Game : Node
         if(GameNode != null) 
             GameNode.AddChild(level);
     }
+
+
 }   
