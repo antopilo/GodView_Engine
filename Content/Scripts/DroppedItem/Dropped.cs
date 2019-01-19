@@ -25,7 +25,8 @@ public class Dropped : Node2D
     public void Interact()
     {
         //RandomSpell = Game.Hand.AllSpell[GenerateSpell()];
-        //Game.Hand.ChangeSpell(0, RandomSpell);
+        Game.Hand.ChangeSpell(0, RandomSpell);
+        this.QueueFree();
     }
 
 }

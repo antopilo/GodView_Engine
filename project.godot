@@ -128,6 +128,7 @@ Delete={
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
+quality/2d/use_pixel_snap=true
 quality/filters/anisotropic_filter_level=1
 quality/filters/use_nearest_mipmap_filter=true
 environment/default_environment="res://default_env.tres"

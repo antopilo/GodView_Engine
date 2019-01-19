@@ -28,7 +28,6 @@ emission_sphere_radius = 2.27
 flag_disable_z = true
 gravity = Vector3( -250, 0, 0 )
 initial_velocity = 20.0
-angular_velocity = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 color = Color( 0.968627, 0.462745, 0.133333, 1 )
@@ -39,14 +38,15 @@ radius = 5.0
 
 [node name="FireBall" type="Node2D"]
 script = ExtResource( 1 )
-DieDistance = 160.0
+DieDistance = 32.0
 Impact = ExtResource( 2 )
+ProjectileSpeed = 75.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 editor/display_folded = true
 rotation = -1.5708
 frames = SubResource( 1 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="AnimatedSprite"]

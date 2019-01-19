@@ -4,8 +4,10 @@ using System;
 public class Entity : Node2D
 {
     [Export] public float Height = 16, Width = 16;
-    public bool Selected = false, Active = true;
+    [Export ]public bool Selected = false, Active = true, CastShadow = true;
 
+    private ShaderMaterial ShadowMaterial;
+    private CanvasItemMaterial ShadowBlend;
     // Gets the size
     public Vector2 Size
     {
@@ -14,24 +16,47 @@ public class Entity : Node2D
 
     public override void _Ready()
     {
+        ShadowMaterial = (ShaderMaterial)ResourceLoader.Load("res://Content/Shaders/Shadow.tres");
+        ShadowBlend = (CanvasItemMaterial)ResourceLoader.Load("res://Content/Shaders/ShadowBlend.tres");
+
         if (this.HasNode("Shadow"))
         {
             //GetSize(); // Get the size of the Sprite.
 
             // Settings correct height and width for the Shadow Shader.
             var shadow = GetNode("Shadow") as Sprite;
-            if(shadow.Material == null) return;
+            if(shadow.Material == null)
+                return;
             (shadow.Material as ShaderMaterial).SetShaderParam("Height", Width);
             (shadow.Material as ShaderMaterial).SetShaderParam("Width", Height);
         }
+        else
+            MakeShadow();
+    }
+
+    private void MakeShadow()
+    {
+        if(!HasNode("Sprite") )
+            return;
+        Sprite ShadowSprite = (Sprite)(GetNode("Sprite") as Sprite).Duplicate();
+
+        ShadowSprite.Material = ShadowMaterial;
+        ShadowSprite.ShowBehindParent = true;
+        ShadowSprite.ZIndex = -1;
+        ShadowSprite.SelfModulate = new Color(0, 0, 0, 0.25f);
+        AddChild(ShadowSprite);
+        ShadowSprite.Name = "Shadow";
+
     }
 
     // Gets the size of the sprite in pixels. Useful for drawing DebugFrame
     private void GetSize()
     {
-        if (this.HasNode("Sprite")) // If node has Sprite node.
+        if (HasNode("Sprite")) // If node has Sprite node.
         {
-            if (GetNode("Sprite") is AnimatedSprite) return;
+            if (GetNode("Sprite") is AnimatedSprite) 
+                return;
+
             // Gettings the size in pixels of the Sprite node.
             Sprite sprite = GetNode("Sprite") as Sprite; 
             Height = sprite.Texture.GetHeight() * sprite.Scale.y;
@@ -41,7 +66,9 @@ public class Entity : Node2D
 
     public override void _Process(float delta)
     {
-        Update();
+        //if(Name == "Spawn") 
+            //Visible = Editor.EditorMode;
+        //Update();
     }
 
     // Drawing a rectangle around the entity if Selected
@@ -49,6 +76,12 @@ public class Entity : Node2D
     // Width of the sprite Node.
     public override void _Draw()
     {
+        if(!Game.InGameMode)
+        {
+            DrawLine(new Vector2(-3, 0), new Vector2(3, 0), new Color(1, 1, 0), 1.25f);
+            DrawLine(new Vector2(0, -3), new Vector2(0, 3), new Color(1, 1, 0), 1.25f);
+        }
+        
         if (!Selected)  return;
            
         if (this.HasNode("Sprite"))
@@ -63,8 +96,7 @@ public class Entity : Node2D
         var rectangle = new Rect2(position, new Vector2(Width, -Height));
 
         DrawRect(rectangle, new Color("E50000"), false);
-        DrawLine(new Vector2(-3, 0), new Vector2(3, 0), new Color(1, 1, 0), 1.25f);
-        DrawLine(new Vector2(0, -3), new Vector2(0, 3), new Color(1, 1, 0), 1.25f);
+        
     }
 
     // Input a global position and returns if that position is located
