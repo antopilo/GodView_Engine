@@ -3,7 +3,6 @@
 [ext_resource path="res://Content/Shaders/vignette.png" type="Texture" id=1]
 
 [sub_resource type="Shader" id=1]
-
 code = "shader_type canvas_item;
 uniform sampler2D vignette;
 
@@ -15,7 +14,6 @@ void fragment() {
 }"
 
 [resource]
-
 shader = SubResource( 1 )
 shader_param/vignette = ExtResource( 1 )
 

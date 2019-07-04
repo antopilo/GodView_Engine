@@ -47,9 +47,9 @@ public class WaterBall : Node2D
         // If an impact param is set. Then instance the impact scene.
         if(Impact != null) 
         {
-            var impact = Impact.Instance() as Node2D;
-            impact.GlobalPosition = this.GlobalPosition;
-            Game.Entities.AddChild(impact);
+            var impact = (Node2D)Impact.Instance();
+            impact.GlobalPosition = GlobalPosition;
+            Game.Entities.CallDeferred("add_child", impact);
         }
 
         // Clearning the projectile from the scene.

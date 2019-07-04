@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/ToggleOff.png-2a440080eb09cea77d051838e553a1ba.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

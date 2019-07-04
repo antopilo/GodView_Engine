@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/TilesetLightGrass.png-d369f031679527b2e67272a41949c6af.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

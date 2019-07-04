@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/WaterOrb30.png-e8a1d51e5770d2e475a030d35988b595.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

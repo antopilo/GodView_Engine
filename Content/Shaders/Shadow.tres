@@ -1,7 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=2]
 
 [sub_resource type="Shader" id=1]
-
 code = "shader_type canvas_item;
 
 uniform float SunAngle = 0;
@@ -16,7 +15,6 @@ void vertex() {
 }"
 
 [resource]
-
 shader = SubResource( 1 )
 shader_param/SunAngle = 7.0
 shader_param/Height = 16.0

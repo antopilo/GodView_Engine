@@ -21,7 +21,6 @@ public class Camera : Camera2D
     public override void _Ready()
     {
         _Player = GetParent() as Player;
-        //Shake(1, 5);
     }
 
     public override void _PhysicsProcess(float delta)

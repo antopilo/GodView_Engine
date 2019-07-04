@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/SpellContainerFrame.png-afa6d09570c024fabe79511f945a2dad.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/FlameOrb32.png-57915b6a58cc2b213fe2c76a981e914f.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

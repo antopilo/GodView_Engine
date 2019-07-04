@@ -12,8 +12,6 @@ public class SpriteStack : Node2D
 
     public override void _Ready()
     {
-
-        GD.Print(TestLoadPath);
         //if(TestLoadPath != "")
             //MakeStackFromPath(TestLoadPath);
     }
@@ -48,7 +46,7 @@ public class SpriteStack : Node2D
 
             Layers[Layers.Length - 1] = sprite;
             this.AddChild(sprite);
-            //GD.Print("SpriteStacker added: " + sprite.Name);
+
             // Increasing the offset for next layer.
             offset += 1;
         }
@@ -105,7 +103,7 @@ public class SpriteStack : Node2D
             else if ( !file.BeginsWith(".") && file.EndsWith(".png") ) // making sure its a png
                 files[files.Length - 1] = file;
         }
-        //GD.Print("SpriteStacker detected files: " + files.ToString());
+
         // Close the listing
         folder.ListDirEnd(); 
 

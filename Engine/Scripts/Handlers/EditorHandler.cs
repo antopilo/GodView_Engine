@@ -90,35 +90,47 @@ public class EditorHandler : Node2D
             EditorMenu.PopupCenteredMinsize();
             EditorMenu.RectGlobalPosition = GetGlobalMousePosition();
         }
-        else if(!InEditorMenu && !PlacingEnt && !MovingEnt && @event.IsActionPressed("Click") )
+        if (@event.IsActionPressed("Click"))
         {
-            SelectedEnt = Editor.GetEntity(Editor.Camera.GetGlobalMousePosition()) as Entity ;
-            if(SelectedEnt != null) 
-                MovingEnt = true;  
-        }
-        else if(!InEditorMenu && PlacingEnt && !MovingEnt && @event.IsActionPressed("Click") )
-            PlaceEntity();
-        // Placing entities
-        else if(!InEditorMenu && !PlacingEnt && MovingEnt && @event.IsActionPressed("Click") ) 
-            PlaceEntity();
-            
+            // If is not in any menu.
+            if (!InEditorMenu)
+            {
+                // If not placing or moving, then select.
+                if (!PlacingEnt && !MovingEnt)
+                {
+                    SelectedEnt = Editor.GetEntity(Editor.Camera.GetGlobalMousePosition()) as Entity;
 
-        // Scaling up the Entity with Shift Scroll wheel.
-        if((PlacingEnt || MovingEnt) && @event.IsActionPressed("ZoomIn") && Input.IsActionPressed("Shift"))
-        {
-            SelectedEnt.Scale += new Vector2(0.15f,0.15f);
-            ScaleBarBar.Value = SelectedEnt.Scale.x;    
-        }
-        if((PlacingEnt || MovingEnt) && @event.IsActionPressed("ZoomOut") && Input.IsActionPressed("Shift"))
-        {
-            SelectedEnt.Scale -= new Vector2(0.15f, 0.15f);
-            ScaleBarBar.Value = SelectedEnt.Scale.x;
+                    if (SelectedEnt != null)
+                        MovingEnt = true;
+                }
+                else if(PlacingEnt != MovingEnt)
+                {
+                    // Else, it means you are placing an entity.
+                    PlaceEntity();
+                }
+            }
         }
         
-        // Canceling
-        if ((PlacingEnt || MovingEnt) && @event.IsActionPressed("ui_cancel"))
-            ClearSelected();
-        
+        // If Placing or moving an entity
+        // SHIFT + SCROLL = Scale the selected entity.
+        if(PlacingEnt || MovingEnt)
+        {
+            if (@event.IsActionPressed("Shift") && @event.IsActionPressed("ZoomIn"))
+            {
+
+                SelectedEnt.Scale += new Vector2(0.15f, 0.15f);
+                ScaleBarBar.Value = SelectedEnt.Scale.x;
+            }
+            else if (@event.IsActionPressed("Shift") && @event.IsActionPressed("ZoomOut"))
+            {
+                SelectedEnt.Scale -= new Vector2(0.15f, 0.15f);
+                ScaleBarBar.Value = SelectedEnt.Scale.x;
+            }
+            else if (@event.IsActionPressed("ui_cancel"))
+            {
+                ClearSelected();
+            }
+        }
     }
 
 

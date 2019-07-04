@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Editor : Node2D
+public class Editor : Node
 {
     public static bool EditorMode = false;
 

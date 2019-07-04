@@ -4,21 +4,14 @@ using System.Collections.Generic;
 
 public class Player : KinematicBody2D
 {
-    // Physics
-    const float ACCELERATION = 35;
-    const float DECELERATION = 10;
-    const float MAXSPEED = 100;
-    const float STOP_TRESHOLD = 10.1f;
-    
-    private Vector2 InputDirection = new Vector2();
-    private Vector2 Velocity = new Vector2();
-
     // References
     public Camera2D PlayerCamera;
     public Position2D HandPosition;
     private Sprite SpriteNode;
     private Sprite OutlineSprite;
     private Sprite ShadowSprite;
+
+    private StateMachine StateMachine; 
 
     // Health
     [Export] private Color FullHealthTint = new Color("63c74d");
@@ -47,14 +40,24 @@ public class Player : KinematicBody2D
         HealthParticles = HealthBar.GetNode("Particles2D") as Particles2D;
 
         Health = MaxHealth;
+
+        // Create state machine with player as parameter.
+        StateMachine = new StateMachine(this);
+
+        // Adds possible states.
+        StateMachine.AddState(new Idle());
+        StateMachine.AddState(new Move());
+        StateMachine.AddState(new Jump());
+
+        // Set the state.
+        StateMachine.SetState("Move");
     }
 
     // Called 60 times per second.
     public override void _PhysicsProcess(float delta)
     {
-        GetInputDirection(); // Obtient la Direction des inputs
-        UpdateVelocity(); // Calculate acceleration and other stuff.
-        MoveAndSlide(Velocity); // Move
+        StateMachine.Update(delta);
+
         UpdateParticles();
         UpdateSprite(); // Adjust the Sprite of the player
 		GetInteractable(); // Check for interactable objects
@@ -80,51 +83,6 @@ public class Player : KinematicBody2D
     private void UpdateParticles()
     {
         HealthParticles.Emitting = Hurting;
-    }
-
-    private void GetInputDirection()
-    {
-        // Horizontal Inputs.
-        if (Input.IsActionPressed("ui_left"))
-            InputDirection.x = -1;
-        else if (Input.IsActionPressed("ui_right"))
-            InputDirection.x = 1;
-        else
-            InputDirection.x = 0;
-
-        // Vertical Inputs.
-        if (Input.IsActionPressed("ui_up")) 
-            InputDirection.y = -1;
-        else if (Input.IsActionPressed("ui_down")) 
-            InputDirection.y = 1;
-        else 
-            InputDirection.y = 0;
-            
-    }
-
-    private void UpdateVelocity()
-    {
-        // Acceleration
-        Velocity.x += InputDirection.x * ACCELERATION;
-        Velocity.y += InputDirection.y * ACCELERATION;
-
-        // Max Speed
-        if (Mathf.Abs(Velocity.x) > MAXSPEED)
-            Velocity.x = MAXSPEED * Mathf.Sign(Velocity.x);
-        if (Mathf.Abs(Velocity.y) > MAXSPEED)
-            Velocity.y = MAXSPEED * Mathf.Sign(Velocity.y);
-
-        // Deceleration
-        if (InputDirection.x == 0)
-            Velocity.x -= DECELERATION * Mathf.Sign(Velocity.x);
-        if (InputDirection.y == 0)
-            Velocity.y -= DECELERATION * Mathf.Sign(Velocity.y);
-
-        // Zero snapping
-        if (Mathf.Abs(Velocity.x) < STOP_TRESHOLD && InputDirection.x == 0)
-            Velocity.x = 0;
-        if (Mathf.Abs(Velocity.y) < STOP_TRESHOLD && InputDirection.y == 0)
-            Velocity.y = 0;
     }
 	
 	private void GetInteractable()
@@ -161,6 +119,7 @@ public class Player : KinematicBody2D
         } 
     }
 
+
     public void HurtPlayer(float amount)
     {
         HealthBar.Value = Health -= amount;
@@ -180,6 +139,7 @@ public class Player : KinematicBody2D
         if (Health <= 0)
             Die();
     }
+
 
     private void Die()
     {

@@ -8,6 +8,7 @@ public class Entity : Node2D
 
     private ShaderMaterial ShadowMaterial;
     private CanvasItemMaterial ShadowBlend;
+
     // Gets the size
     public Vector2 Size
     {

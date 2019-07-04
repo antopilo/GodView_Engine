@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/MoveHandle.png-4e18b0a5154b3d24700edc1812a9e3e5.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
