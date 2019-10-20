@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/docs/GodViewBanner.png?style=flat-square"
+<img width="50%"src="/docs/GodViewBanner.png?style=flat-square"
       alt="Logo Banner" />
 </p>
 
